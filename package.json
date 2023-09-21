@@ -1,11 +1,38 @@
 {
   "name": "gemuani",
+  "author": "separatrix",
+  "license": "MIT",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "stylelint": "stylelint \"**/*.css\" --fix"
+  },
+  "dependencies": {
+    "@next/font": "13.1.2",
+    "@types/react-dom": "18.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "eslint": "8.32.0",
+    "eslint-config-next": "13.1.2",
+    "next": "^13.1.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
+    "@types/classnames": "^2.3.1",
+    "@types/node": "^20.6.3",
+    "@types/react": "^18.2.22",
+    "date-fns": "^2.30.0",
+    "framer-motion": "^10.16.4",
+    "react-hot-toast": "^2.4.1",
+    "stylelint": "^13.0.0",
+    "stylelint-config-standard": "^19.0.0",
+    "stylelint-order": "^4.0.0",
+    "stylelint-order-config-standard": "^0.1.3",
+    "typescript": "^4.9.4"
   }
 }
