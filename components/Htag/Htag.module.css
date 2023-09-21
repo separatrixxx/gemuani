@@ -1,0 +1,72 @@
+.xl,
+.l,
+.m,
+.s,
+.xs,
+.xxs {
+	width: fit-content;
+	margin: 0;
+
+	color: var(--dark);
+}
+
+.xl {
+	font-size: 1.5rem;
+	font-size: 24px;
+	font-weight: 500;
+	font-style: normal;
+	line-height: 30px;
+}
+
+.l {
+	font-size: 1.125rem;
+	font-weight: 400;
+	line-height: 1.75rem;
+}
+
+.m {
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5rem;
+}
+
+.s {
+	font-size: 0.875rem;
+	font-weight: 400;
+	line-height: 1.25rem;
+}
+
+.xs {
+	font-size: 0.75rem;
+	font-weight: 400;
+	line-height: 1rem;
+}
+
+.xxs {
+	font-size: 0.65rem;
+	font-weight: 400;
+	line-height: 1rem;
+}
+
+@media (max-width: 580px) {
+	.xl {
+		font-size: 18px;
+		line-height: 24px;
+	}
+
+	.m {
+		font-size: 0.875rem;
+		line-height: 1.25rem;
+	}
+
+	.s {
+		font-size: 0.75rem;
+		line-height: 1rem;
+	}
+
+	.xs {
+		font-size: 0.65rem;
+		font-weight: 400;
+		line-height: 1rem;
+	}
+}

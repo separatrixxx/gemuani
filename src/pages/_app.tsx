@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta property='og:title' content='Gemuani' />
         <meta property='og:description' content='Authentic Georgian Freeze-Dried Delights.' />
         <meta charSet="utf-8" />
-        <link rel="icon" href="/favicon.ico" type='image/ico' />
+        <link rel="icon" href="/logo.svg" type='image/svg+xml' />
       </Head>
       <Component {...pageProps} />
     </>

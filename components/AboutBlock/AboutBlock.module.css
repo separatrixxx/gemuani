@@ -1,0 +1,20 @@
+.aboutBlock {
+	display: grid;
+	align-items: center;
+
+	width: 100%;
+	margin-top: 60px;
+	justify-items: center;
+}
+
+.text {
+	width: 50%;
+
+	text-align: center;
+}
+
+.span {
+	color: var(--accent);
+
+	font-weight: 700;
+}
