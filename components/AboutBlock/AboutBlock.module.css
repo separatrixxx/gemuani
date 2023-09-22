@@ -1,14 +1,11 @@
 .aboutBlock {
 	display: grid;
 	align-items: center;
-
-	width: 100%;
-	margin-top: 60px;
 	justify-items: center;
 }
 
 .text {
-	width: 50%;
+	width: 70%;
 
 	text-align: center;
 }

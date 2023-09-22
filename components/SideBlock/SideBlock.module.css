@@ -1,0 +1,44 @@
+.wrapper {
+	width: 80%;
+}
+
+.sideBlock {
+	display: grid;
+
+	width: 100%;
+	height: 500px;
+
+	border-radius: 30px;
+	background: rgba(35, 148, 144, 0.5);
+	grid-template-columns: 50% 50%;
+	grid-template-areas: "a b";
+}
+
+.titleText {
+	margin-bottom: 20px;
+
+	color: var(--primary);
+	justify-self: left;
+}
+
+.sideImage {
+	width: 100%;
+	height: 100%;
+	grid-area: a;
+}
+
+.rightSideImage {
+	grid-area: b;
+}
+
+.textDiv {
+	padding: 50px 70px 50px 70px;
+}
+
+.textLeft {
+	text-align: left;
+}
+
+.textRight {
+	text-align: right;
+}

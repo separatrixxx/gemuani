@@ -1,0 +1,32 @@
+.learnMore {
+	display: grid;
+	align-items: center;
+
+	width: fit-content;
+	margin-top: 60px;
+
+	cursor: pointer;
+	transition-duration: 300ms;
+	grid-template-columns: 1fr auto;
+	gap: 5px;
+}
+
+.learnMore:active {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	filter: brightness(0.9);
+}
+
+.learnMoreText {
+	color: var(--accent);
+
+	font-weight: 700;
+}
+
+@media (min-width: 1024px) {
+	.learnMore:hover {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		filter: brightness(0.9);
+	}
+}
