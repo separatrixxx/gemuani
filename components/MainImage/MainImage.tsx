@@ -16,4 +16,4 @@ export const MainImage = (): JSX.Element => {
 			priority={true}
 		/>
 	);
-}
+};
