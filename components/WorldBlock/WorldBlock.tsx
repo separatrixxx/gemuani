@@ -11,7 +11,7 @@ export const WorldBlock = ({ text, title }: WorldBlockProps): JSX.Element => {
 				<Htag tag='xxl' className={styles.worldBlockTitle}>{title}</Htag>
 				<Htag tag='xl' className={styles.text}>{text}</Htag>
 			</div>
-			<ImageBlock image='/WorldImage.png' />
+			<ImageBlock image='/WorldImage.png' ticker={false} />
 		</>
 	);
 };

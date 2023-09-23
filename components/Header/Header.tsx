@@ -8,14 +8,18 @@ import { useResizeW } from 'hooks/useResize';
 import { motion } from 'framer-motion';
 import { BurgerMenu } from 'components/BurgerMenu/BurgenMenu';
 import { Links } from 'interfaces/components.interface';
+import { useRouter } from 'next/router';
+import { setLocale } from 'helpers/locale.helper';
 
 
 export const Header = (): JSX.Element => {
+	const router = useRouter();
+
 	const links: Links[] = [
-		{ title: 'ABOUT', link: 'about' },
-		{ title: 'BLOG', link: 'blog' },
-		{ title: 'CONTACTS', link: 'contacts' },
-		{ title: 'SHOP', link: 'shop' },
+		{ title: setLocale(router.locale).about.toUpperCase(), link: 'about' },
+		{ title: setLocale(router.locale).blog.toUpperCase(), link: 'blog' },
+		{ title: setLocale(router.locale).contacts.toUpperCase(), link: 'contacts' },
+		{ title: setLocale(router.locale).shop.toUpperCase(), link: 'shop' },
 	];
 
 	const [open, setOpen] = useState<boolean>(false);

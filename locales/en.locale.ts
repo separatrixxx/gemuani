@@ -20,6 +20,10 @@ export const en = {
 	world_text: "We welcome everyone in Georgia! I think you live in the UAE? Then look at the mosque in Tbilisi, our capital.",
 	blog_text: "Check our blog to stay updated",
 	kwt: "kWt",
+	about: "about",
+	blog: "blog",
+	contacts: "contacts",
 	shop: "shop",
+	our_mission: "our mission is the safety of nature",
 	all_rights_reserved: "All rights reserved.",
 };

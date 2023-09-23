@@ -24,10 +24,10 @@ export const HomePage = (): JSX.Element => {
                 title={setLocale(router.locale).about_title} />
             <SideBlock side='left' text={setLocale(router.locale).kiwi_text} link='kiwi_farm' image='/KiwiImage.png'
                 title={setLocale(router.locale).kiwi_title} />
-            <ImageBlock text={setLocale(router.locale).mountains_text} image='/MountainsImage.png' />
+            <ImageBlock text={setLocale(router.locale).mountains_text} image='/MountainsImage.png' ticker={true} />
             <ShopBlock text={setLocale(router.locale).shop_text} link='shop' image='/ShopImage.png'
                 title={setLocale(router.locale).shop_title} />
-            <ImageBlock text={setLocale(router.locale).production_text} image='/ProductionImage.png' />
+            <ImageBlock text={setLocale(router.locale).production_text} image='/ProductionImage.png' ticker={false} />
             <SideBlock side='right' text={setLocale(router.locale).energy_text} image='/EnergyImage.png'
                 title={setLocale(router.locale).energy_title}>
                 <EnergyCounter energyNumber={413} />
