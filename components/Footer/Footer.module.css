@@ -40,6 +40,16 @@
 	.footerBottom {
 		padding: 20px 70px 20px 70px;
 	}
+
+	 .mountain {
+		height: 190px;
+	}
+}
+
+@media (max-width: 650px) {
+	.mountain {
+		height: 150px;
+	}
 }
 
 @media (max-width: 580px) {
@@ -50,11 +60,25 @@
 	.footerBottom {
 		padding: 20px 30px 20px 30px;
 	}
+
+	.mountain {
+		height: 100px;
+	}
 }
 
 @media (max-width: 350px) {
 	.footerBottom {
 		grid-template-columns: auto;
 		gap: 20px;
+	}
+
+	.mountain {
+		height: 70px;
+	}
+}
+
+@media (max-width: 230px) {
+	.mountain {
+		height: 50px;
 	}
 }

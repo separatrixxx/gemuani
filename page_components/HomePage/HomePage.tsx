@@ -9,6 +9,8 @@ import { TextBlock } from 'components/TextBlock/TextBlock';
 import { ShopBlock } from 'components/ShopBlock/ShopBlock';
 import { EnergyCounter } from 'components/EnergyCounter/EnergyCounter';
 import { Footer } from 'components/Footer/Footer';
+import { WorldBlock } from 'components/WorldBlock/WorldBlock';
+import { BlogBlock } from 'components/BlogBlock/BlogBlock';
 
 
 export const HomePage = (): JSX.Element => {
@@ -34,6 +36,8 @@ export const HomePage = (): JSX.Element => {
                 title={setLocale(router.locale).history_title} />
             <SideBlock side='left' text={setLocale(router.locale).climate_text} image='/ClimateImage.png'
                 title={setLocale(router.locale).climate_title} />
+            <WorldBlock text={setLocale(router.locale).world_text} title={setLocale(router.locale).world_title} />
+            <BlogBlock text={setLocale(router.locale).blog_text} link='blog' />
             <Footer />
         </div>
     );

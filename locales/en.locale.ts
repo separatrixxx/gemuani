@@ -16,6 +16,10 @@ export const en = {
 	climate_text: "There are 8 climatic zones in Georgia, which is why our fruits and berries are unique. From mild subtropical climate in the west to dry continental in the center, to temperate in the east. Try the incredible taste of Georgia today.",
 	mountains_text: "All our products are 100% made from natural products of Georgia with care for it’s unique nature and culture",
 	production_text: "The excellent quality of our products is achieved through manual control, the use of natural fruits and care for nature",
+	world_title: "AROUND THE WORLD WITH GEMUANI",
+	world_text: "We welcome everyone in Georgia! I think you live in the UAE? Then look at the mosque in Tbilisi, our capital.",
+	blog_text: "Check our blog to stay updated",
 	kwt: "kWt",
+	shop: "shop",
 	all_rights_reserved: "All rights reserved.",
 };
