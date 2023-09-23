@@ -33,9 +33,10 @@
 }
 
 .shop {
-	color: var(--accent);
-	transition-duration: 300ms;
 	cursor: pointer;
+	transition-duration: 300ms;
+
+	color: var(--accent);
 }
 
 .shop:active {
