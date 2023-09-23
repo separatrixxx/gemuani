@@ -81,7 +81,7 @@ export const Header = (): JSX.Element => {
 				{links.map(l => (
 					<Link href={"/" + l.link} key={l.link}
 						style={hidden ? { display: 'none' } : { display: 'block' }}>
-						<Htag tag='s' className={styles.text}>{l.title}</Htag>
+						<Htag tag='m' className={styles.text}>{l.title}</Htag>
 					</Link>
 				))}
 			</motion.div>

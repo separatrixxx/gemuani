@@ -1,0 +1,33 @@
+.shopBlock {
+	display: grid;
+	align-items: center;
+
+	width: 100%;
+	height: 700px;
+
+	background: url('/ShopBg.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	grid-template-columns: 35% 65%;
+	gap: 30px;
+}
+
+.shopTextBlock {
+	display: grid;
+
+	width: 70%;
+	height: fit-content;
+	margin-top: 50px;
+	gap: 35px;
+	justify-self: right;
+}
+
+.shopTitle {
+	color: var(--accent) !important;
+}
+
+.shopImage {
+	width: 90%;
+	height: 70%;
+}

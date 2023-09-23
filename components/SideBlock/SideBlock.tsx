@@ -6,7 +6,7 @@ import cn from 'classnames';
 import { LearnMore } from 'components/LearnMore/LearnMore';
 
 
-export const SideBlock = ({ side, text, link, image, title }: SideBlockProps): JSX.Element => {
+export const SideBlock = ({ side, text, link, image, title, children }: SideBlockProps): JSX.Element => {
 	return (
 		<div className={styles.wrapper}>
 			<Htag tag='xxl' className={styles.titleText}>{title}</Htag>
@@ -27,6 +27,7 @@ export const SideBlock = ({ side, text, link, image, title }: SideBlockProps): J
 						[styles.textLeft]: side === 'left',
 						[styles.textRight]: side === 'right',
 					})}>{text}</Htag>
+					{children ? children : <></>}
 					{link ? <LearnMore link={link} /> : <></>}
 				</div>
 			</div>

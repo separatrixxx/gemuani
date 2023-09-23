@@ -3,9 +3,12 @@ import { useRouter } from 'next/router';
 import { setLocale } from 'helpers/locale.helper';
 import { Header } from 'components/Header/Header';
 import { MainImage } from 'components/MainImage/MainImage';
-import { AboutBlock } from 'components/AboutBlock/AboutBlock';
 import { SideBlock } from 'components/SideBlock/SideBlock';
 import { ImageBlock } from 'components/ImageBlock/ImageBlock';
+import { TextBlock } from 'components/TextBlock/TextBlock';
+import { ShopBlock } from 'components/ShopBlock/ShopBlock';
+import { EnergyCounter } from 'components/EnergyCounter/EnergyCounter';
+import { Footer } from 'components/Footer/Footer';
 
 
 export const HomePage = (): JSX.Element => {
@@ -15,11 +18,23 @@ export const HomePage = (): JSX.Element => {
         <div className={styles.wrapper}>
             <Header />
             <MainImage />
-            <AboutBlock text={setLocale(router.locale).about_text} link='about' />
-            <SideBlock side='left' text={setLocale(router.locale).kiwi_text} link='kiwi_farm' image='/KiwiImage.png' title={setLocale(router.locale).kiwi_farms} />
+            <TextBlock text={setLocale(router.locale).about_text} link='about'
+                title={setLocale(router.locale).about_title} />
+            <SideBlock side='left' text={setLocale(router.locale).kiwi_text} link='kiwi_farm' image='/KiwiImage.png'
+                title={setLocale(router.locale).kiwi_title} />
             <ImageBlock text={setLocale(router.locale).mountains_text} image='/MountainsImage.png' />
+            <ShopBlock text={setLocale(router.locale).shop_text} link='shop' image='/ShopImage.png'
+                title={setLocale(router.locale).shop_title} />
             <ImageBlock text={setLocale(router.locale).production_text} image='/ProductionImage.png' />
-            <SideBlock side='right' text={setLocale(router.locale).kiwi_text} image='/KiwiImage.png' title={setLocale(router.locale).kiwi_farms} />
+            <SideBlock side='right' text={setLocale(router.locale).energy_text} image='/EnergyImage.png'
+                title={setLocale(router.locale).energy_title}>
+                <EnergyCounter energyNumber={413} />
+            </SideBlock>
+            <TextBlock text={setLocale(router.locale).history_text} link='culture'
+                title={setLocale(router.locale).history_title} />
+            <SideBlock side='left' text={setLocale(router.locale).climate_text} image='/ClimateImage.png'
+                title={setLocale(router.locale).climate_title} />
+            <Footer />
         </div>
     );
 };

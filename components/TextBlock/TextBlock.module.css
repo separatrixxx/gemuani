@@ -1,0 +1,45 @@
+.textBlock {
+	display: grid;
+	align-items: center;
+
+	width: 70%;
+	justify-items: center;
+}
+
+.textBlockTitle {
+	color: var(--primary) !important;
+}
+
+.text {
+	margin-top: 20px !important;
+
+	text-align: center;
+}
+
+.divider {
+	width: 100%;
+	height: 0.5px;
+	margin-top: 60px;
+
+	background: rgba(31, 31, 31, 0.2);
+}
+
+@media (max-width: 1024px) {
+	.textBlock {
+		width: 75%;
+	}
+
+	.divider {
+		margin-top: 40px;
+	}
+}
+
+@media (max-width: 580px) {
+	.textBlock {
+		width: 85%;
+	}
+
+	.divider {
+		margin-top: 30px;
+	}
+}

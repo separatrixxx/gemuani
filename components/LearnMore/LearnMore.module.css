@@ -1,6 +1,6 @@
 .learnMore {
 	display: grid;
-	align-items: center;
+	align-items: end;
 
 	width: fit-content;
 	margin-top: 60px;
@@ -8,7 +8,7 @@
 	cursor: pointer;
 	transition-duration: 300ms;
 	grid-template-columns: 1fr auto;
-	gap: 5px;
+	gap: 7px;
 }
 
 .learnMore:active {
@@ -18,9 +18,16 @@
 }
 
 .learnMoreText {
-	color: var(--accent);
+	color: var(--accent) !important;
 
-	font-weight: 700;
+	font-weight: 700 !important;
+}
+
+.arrow > svg {
+	width: 16px;
+	fill: var(--accent);
+
+	margin-bottom: 2px;
 }
 
 @media (min-width: 1024px) {
@@ -28,5 +35,29 @@
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 		filter: brightness(0.9);
+	}
+}
+
+@media (max-width: 1024px) {
+	.learnMore {
+		gap: 5px;
+
+		margin-top: 40px;
+	}
+
+	.arrow > svg {
+		width: 14px;
+		margin-bottom: 1px;
+	}
+}
+
+@media (max-width: 580px) {
+	.learnMore {
+		margin-top: 30px;
+	}
+
+	.arrow > svg {
+		width: 9.5px;
+		margin-bottom: 0;
 	}
 }
