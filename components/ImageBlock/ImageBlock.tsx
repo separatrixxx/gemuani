@@ -9,12 +9,20 @@ import { useRouter } from 'next/router';
 export const ImageBlock = ({ text, image, ticker }: ImageBlockProps): JSX.Element => {
 	const router = useRouter();
 
-	return (
-		<div>
-			{ticker ? <Ticker text={setLocale(router.locale).our_mission} /> : <></>}
+	if (ticker) {
+		return (
+			<div>
+				<Ticker text={setLocale(router.locale).our_mission} />
+				<div className={styles.imageBlock} style={{ backgroundImage: `url(${image})` }}>
+					<Htag tag='xxl' className={styles.text}>{text}</Htag>
+				</div>
+			</div>
+		);
+	} else {
+		return (
 			<div className={styles.imageBlock} style={{ backgroundImage: `url(${image})` }}>
 				<Htag tag='xxl' className={styles.text}>{text}</Htag>
 			</div>
-		</div>
-	);
+		);
+	}
 };
