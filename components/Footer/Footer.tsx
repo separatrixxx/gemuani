@@ -4,7 +4,7 @@ import { setLocale } from 'helpers/locale.helper';
 import { useRouter } from 'next/router';
 import { format } from 'date-fns';
 import Mountain from './mountain.svg';
-import { LocaleChange } from 'components/LocaleChange/LocaleChange';
+import { LocaleChange } from 'components/MainPageComponents/LocaleChange/LocaleChange';
 
 
 export const Footer = (): JSX.Element => {

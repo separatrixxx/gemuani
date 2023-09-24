@@ -1,14 +1,18 @@
+import { setLocale } from 'helpers/locale.helper';
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import React from 'react';
 
 
 export default function App({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+
   return (
     <>
       <Head>
-        <title>Gemuani - Authentic Georgian Freeze-Dried Delights</title>
+        <title>{'Gemuani - ' + setLocale(router.locale).titles.main_title}</title>
         <meta name='description' content='Authentic Georgian Freeze-Dried Delights.' />
         <meta property='og:title' content='Gemuani' />
         <meta property='og:description' content='Authentic Georgian Freeze-Dried Delights.' />

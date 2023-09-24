@@ -1,0 +1,86 @@
+.errorPage {
+	display: grid;
+
+	width: 100%;
+	height: 100vh;
+
+	transition-duration: 300ms;
+
+	background: var(--background);
+}
+
+.textBlock {
+	display: grid;
+	align-self: center;
+
+	width: 300px;
+	height: fit-content;
+	justify-items: center;
+	gap: 30px;
+	justify-self: center;
+}
+
+.textBlock:active > h1 {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	color: var(--primary);
+}
+
+.errorText {
+	cursor: pointer;
+	transition-duration: 300ms;
+}
+
+.mountain {
+	align-self: end;
+
+	height: 270px;
+	justify-self: end;
+	fill: rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 1024px) {
+	.textBlock:hover > h1 {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		color: var(--primary);
+	}
+}
+
+@media (max-width: 1024px) {
+	.mountain {
+		height: 190px;
+	}
+}
+
+@media (max-width: 650px) {
+	.mountain {
+		height: 150px;
+	}
+}
+
+@media (max-width: 580px) {
+	.textBlock {
+		width: 200px;
+	}
+
+	.mountain {
+		height: 100px;
+	}
+}
+
+@media (max-width: 350px) {
+	.mountain {
+		height: 70px;
+	}
+}
+
+@media (max-width: 230px) {
+	.textBlock {
+		width: 150px;
+	}
+
+	.mountain {
+		height: 50px;
+	}
+}

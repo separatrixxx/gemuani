@@ -1,0 +1,134 @@
+.wrapper {
+	width: 80%;
+}
+
+.sideBlock {
+	display: grid;
+
+	width: 100%;
+	height: fit-content;
+	margin-top: 20px;
+
+	border-radius: 30px;
+	background: rgba(35, 148, 144, 0.5);
+	grid-template-columns: 50% 50%;
+	grid-template-areas: "a b";
+}
+
+.titleText {
+	color: var(--primary) !important;
+	justify-self: left;
+}
+
+.imageBlock {
+	display: grid;
+	overflow: hidden;
+
+	width: 100%;
+	height: fit-content;
+
+	border-radius: 30px;
+	background: var(--primary);
+	grid-area: a;
+}
+
+.rightImageBlock {
+	grid-area: b;
+}
+
+.sideImage {
+	width: 100%;
+	height: 100%;
+}
+
+.textDiv {
+	display: grid;
+
+	padding: 50px 70px 50px 70px;
+}
+
+.textLeft {
+	text-align: left;
+}
+
+.textRight {
+	text-align: right;
+}
+
+@media (max-width: 1400px) {
+	.textDiv {
+		padding: 30px 50px 30px 50px;
+	}
+}
+
+@media (max-width: 1250px) {
+	.wrapper {
+		width: 85%;
+	}
+
+	.textDiv {
+		padding: 20px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.wrapper {
+		width: 90%;
+	}
+
+	.sideBlock,
+	.imageBlock {
+		border-radius: 20px;
+	}
+
+	.textDiv {
+		padding: 20px 30px 20px 30px;
+	}
+}
+
+@media (max-width: 845px) {
+	.sideBlock {
+		grid-template-columns: 100%;
+		grid-template-areas:
+			"a"
+			"b";
+	}
+
+	.imageBlock,
+	.rightImageBlock {
+		grid-area: a;
+	}
+}
+
+@media (max-width: 580px) {
+	.sideBlock,
+	.imageBlock {
+		border-radius: 15px;
+	}
+
+	.textDiv {
+		padding: 20px 50px 20px 50px;
+		justify-items: center;
+	}
+
+	.textLeft,
+	.textRight {
+		text-align: center;
+	}
+}
+
+@media (max-width: 400px) {
+	.wrapper {
+		width: 95%;
+	}
+
+	.textDiv {
+		padding: 10px 30px 10px 30px;
+	}
+}
+
+@media (max-width: 200px) {
+	.textDiv {
+		padding: 10px;
+	}
+}

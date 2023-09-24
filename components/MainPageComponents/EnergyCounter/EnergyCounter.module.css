@@ -1,0 +1,49 @@
+.energyCounter {
+	margin: 20px 0 -50px 0;
+
+	font-weight: 700;
+	line-height: 120px;
+	justify-self: right;
+}
+
+.energyNumber {
+	color: var(--accent);
+
+	font-size: 128px;
+}
+
+@media (max-width: 1024px) {
+	.energyNumber {
+		font-size: 96px;
+	}
+}
+
+@media (max-width: 700px) {
+	.energyNumber {
+		font-size: 72px;
+	}
+}
+
+@media (max-width: 580px) {
+	.energyCounter {
+		justify-self: center;
+
+		margin: 10px 0 -40px 0;
+	}
+
+	.energyNumber {
+		font-size: 72px;
+	}
+}
+
+@media (max-width: 400px) {
+	.energyCounter {
+		justify-self: center;
+
+		margin: 0 0 -30px 0;
+	}
+
+	.energyNumber {
+		font-size: 56px;
+	}
+}

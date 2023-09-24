@@ -6,10 +6,10 @@ import Logo from './logo_icon.svg';
 import { useScrollY } from 'hooks/useScrollY';
 import { useResizeW } from 'hooks/useResize';
 import { motion } from 'framer-motion';
-import { BurgerMenu } from 'components/BurgerMenu/BurgenMenu';
 import { Links } from 'interfaces/components.interface';
 import { useRouter } from 'next/router';
 import { setLocale } from 'helpers/locale.helper';
+import { BurgerMenu } from 'components/MainPageComponents/BurgerMenu/BurgenMenu';
 
 
 export const Header = (): JSX.Element => {
