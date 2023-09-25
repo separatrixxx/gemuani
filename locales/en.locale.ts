@@ -84,6 +84,17 @@ export const en = {
 		text16: "Overall, Rezo Gabriadze's work is a shining example of Georgian culture and art, and his works remain popular and in demand to this day.",
 		text17: "Georgia, having deep roots and history, is actively developing and moving forward in the direction of European integration and friendship. And GEMUANI, as part of this process, introduces advanced technologies to Georgia.",
 	},
+	contacts_page: {
+		title1: "CONTACT US",
+		title2: "OUR LOCATION",
+		title3: "CONTACTS",
+		name: "NAME",
+		email: "EMAIL",
+		message: "MESSAGE",
+		send: "SEND",
+		address: "89 Abashidze str., 1, Tbilisi, Georgia, 0162",
+		view_on_map: "view on Google Map",
+	},
 	shop_page: {
 		title1: "YOU CAN BUY OUR PRODUCTS ON POPULAR MARKETPLACES",
 	},

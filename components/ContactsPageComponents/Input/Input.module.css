@@ -1,0 +1,28 @@
+.input {
+    width: 80%;
+    height: 40px;
+    border-radius: 10px;
+    border: 3px solid var(--primary);
+    background: rgba(38, 189, 187, 0.50);
+    padding-left: 10px;
+    color: var(--primary);
+    font-size: 18px;
+}
+
+.input:focus {
+    outline: 1px solid var(--second);
+}
+
+.error_input {
+    border-color: var(--error);
+}
+
+.error_input:focus {
+    outline-color: var(--error);
+}
+
+@media (max-width: 580px) {
+	.input {
+		width: 90%;
+	}
+}

@@ -54,5 +54,6 @@ a {
 	--dark: #1F1F1F;
 	--light: #DDD;
 	--lighter: #F0F0F0;
+	--error: #FF1500;
 	--font-family: 'Helvetica', sans-serif;
 }

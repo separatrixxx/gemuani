@@ -26,5 +26,6 @@
 @media (max-width: 580px) {
 	.worldBlock {
 		width: 85%;
+		margin-bottom: 30px;
 	}
 }
