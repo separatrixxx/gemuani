@@ -31,7 +31,7 @@ export const Footer = (): JSX.Element => {
                     <div>
                         <Htag tag='m' className={styles.link}>Partners</Htag>
                         <Htag tag='m' className={styles.link}>Delivery Information</Htag>
-                        <Htag tag='m' className={styles.link}>Georgia's Bounty</Htag>
+                        <Htag tag='m' className={styles.link}>{"Georgia's Bounty"}</Htag>
                         <Htag tag='m' className={styles.link}>Privacy Policy</Htag>
                         <Htag tag='m' className={styles.link}>Terms & Conditions</Htag>
                     </div>

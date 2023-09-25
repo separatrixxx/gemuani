@@ -3,6 +3,7 @@ import { Htag } from 'components/Htag/Htag';
 import Link from 'next/link';
 import { useState } from 'react';
 import Logo from './logo_icon.svg';
+import Arrow from './arrow.svg';
 import { useScrollY } from 'hooks/useScrollY';
 import { useResizeW } from 'hooks/useResize';
 import { motion } from 'framer-motion';
@@ -10,13 +11,14 @@ import { Links } from 'interfaces/components.interface';
 import { useRouter } from 'next/router';
 import { setLocale } from 'helpers/locale.helper';
 import { BurgerMenu } from 'components/MainPageComponents/BurgerMenu/BurgenMenu';
+import cn from 'classnames';
 
 
 export const Header = (): JSX.Element => {
 	const router = useRouter();
 
 	const links: Links[] = [
-		{ title: setLocale(router.locale).about.toUpperCase(), link: 'about' },
+		{ title: setLocale(router.locale).about.toUpperCase(), link: 'about', more: true },
 		{ title: setLocale(router.locale).blog.toUpperCase(), link: 'blog' },
 		{ title: setLocale(router.locale).contacts.toUpperCase(), link: 'contacts' },
 		{ title: setLocale(router.locale).shop.toUpperCase(), link: 'shop' },
@@ -85,7 +87,11 @@ export const Header = (): JSX.Element => {
 				{links.map(l => (
 					<Link href={"/" + l.link} key={l.link}
 						style={hidden ? { display: 'none' } : { display: 'block' }}>
-						<Htag tag='m' className={styles.text}>{l.title}</Htag>
+						<Htag tag='m' className={cn(styles.text, {
+							[styles.textArrow]: l.more,
+						})}>{l.title}{
+							l.more ? <span className={styles.arrow}>< Arrow /></span> : <></>
+						}</Htag>
 					</Link>
 				))}
 			</motion.div>

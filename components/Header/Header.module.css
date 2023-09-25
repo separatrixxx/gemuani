@@ -51,11 +51,39 @@
 	color: var(--light) !important;
 }
 
+.textArrow {
+	gap: 7px;
+	align-items: center;
+}
+
+.textArrow:active > span > svg {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	fill: var(--light) !important;
+}
+
+.arrow {
+	display: grid;
+	margin-bottom: 1px;
+}
+
+.arrow > svg {
+	height: 8px;
+	transition-duration: 300ms;
+	fill: var(--white);
+}
+
 @media (min-width: 1024px) {
 	.text:hover {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 		color: var(--light) !important;
+	}
+
+	.textArrow:hover > span > svg {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	
+		fill: var(--light) !important;
 	}
 }
 
@@ -92,5 +120,9 @@
 		justify-self: left;
 
 		margin-left: 20px;
+	}
+
+	.arrow > svg {
+		height: 6px;
 	}
 }

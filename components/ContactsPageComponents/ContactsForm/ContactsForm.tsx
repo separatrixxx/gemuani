@@ -4,6 +4,7 @@ import { setLocale } from 'helpers/locale.helper';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { Input } from '../Input/Input';
+import { contactHelper } from 'helpers/contacts.helper';
 
 
 export const ContactsForm = (): JSX.Element => {
@@ -28,7 +29,11 @@ export const ContactsForm = (): JSX.Element => {
                 <Input type='message' text={setLocale(router.locale).contacts_page.message} value={message}
                     error={errorMessage} onChange={(e) => setMEssage(e.target.value)} />
             </div>
-            <button className={styles.button}>{setLocale(router.locale).contacts_page.send}</button>
+            <button className={styles.button} onClick={() => contactHelper(
+                name, email, message, setErrorName, setErrorEmail, setErrorMessage
+            )}>
+                {setLocale(router.locale).contacts_page.send}
+            </button>
         </div>
     );
 };

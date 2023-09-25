@@ -5,7 +5,8 @@
     border: 3px solid var(--primary);
     background: rgba(38, 189, 187, 0.50);
     padding-left: 10px;
-    color: var(--primary);
+    color: var(--accent);
+    font-weight: 700;
     font-size: 18px;
 }
 
