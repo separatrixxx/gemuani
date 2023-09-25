@@ -11,6 +11,7 @@ import { ShopBlock } from 'components/MainPageComponents/ShopBlock/ShopBlock';
 import { EnergyCounter } from 'components/MainPageComponents/EnergyCounter/EnergyCounter';
 import { WorldBlock } from 'components/MainPageComponents/WorldBlock/WorldBlock';
 import { Footer } from 'components/Footer/Footer';
+import { Slider } from 'components/MainPageComponents/Slider/Slider';
 
 
 export const HomePage = (): JSX.Element => {
@@ -34,6 +35,7 @@ export const HomePage = (): JSX.Element => {
                 title={setLocale(router.locale).energy_title}>
                 <EnergyCounter energyNumber={413} />
             </SideBlock>
+            <Slider />
             <TextBlock text={setLocale(router.locale).history_text} link='culture'
                 title={setLocale(router.locale).history_title} />
             <SideBlock side='left' text={setLocale(router.locale).climate_text} image='/ClimateImage.png'
