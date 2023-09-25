@@ -52,6 +52,8 @@
 }
 
 .textArrow {
+	display: grid;
+	grid-template-columns: 1fr auto;
 	gap: 7px;
 	align-items: center;
 }
