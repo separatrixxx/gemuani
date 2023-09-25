@@ -6,6 +6,7 @@
 
 	border-radius: 30px;
 	background: var(--primary);
+	position: relative;
 }
 
 .footerBottom {
@@ -25,11 +26,51 @@
 }
 
 .mountain {
+	position: absolute;
 	align-self: end;
 
 	height: 270px;
-	margin-top: 60px;
+	margin-bottom: 56.8px;
 	justify-self: end;
+}
+
+.footerLinks {
+	width: fit-content;
+	display: grid;
+	grid-template-columns: auto auto auto;
+	gap: 50px;
+	margin: 30px 100px 100px 100px;
+}
+
+.linksBlock {
+	width: fit-content;
+	display: grid;
+	gap: 10px;
+}
+
+.title {
+	color: var(--accent);
+	font-weight: 700;
+}
+
+.link {
+	cursor: pointer;
+	color: var(--white);
+	transition-duration: 300ms;
+}
+
+.link:active {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	color: var(--light) !important;
+}
+
+@media (min-width: 1024px) {
+	.link:hover {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		color: var(--light) !important;
+	}
 }
 
 @media (max-width: 1024px) {
@@ -43,6 +84,7 @@
 
 	.mountain {
 		height: 190px;
+		margin-bottom: 53.6px;
 	}
 }
 
@@ -63,6 +105,7 @@
 
 	.mountain {
 		height: 100px;
+		margin-bottom: 51.2px;
 	}
 }
 
@@ -74,6 +117,7 @@
 
 	.mountain {
 		height: 70px;
+		margin-bottom: 82.4px
 	}
 }
 

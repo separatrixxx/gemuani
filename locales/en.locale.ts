@@ -100,4 +100,9 @@ export const en = {
 	},
 	error404: "Page not found, 404 error",
 	error500: "Server failure, error 500",
+	footer: {
+		title1: "FOLLOW US",
+		title2: "CUSTOMER SERVICE",
+		title3: "INFORMATION",
+	},
 };
