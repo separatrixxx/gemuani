@@ -1,25 +1,27 @@
 .input {
-    width: 80%;
-    height: 40px;
-    border-radius: 10px;
-    border: 3px solid var(--primary);
-    background: rgba(38, 189, 187, 0.50);
-    padding-left: 10px;
-    color: var(--accent);
-    font-weight: 700;
-    font-size: 18px;
+	width: 80%;
+	height: 40px;
+	padding-left: 10px;
+
+	color: var(--accent);
+	border: 3px solid var(--primary);
+	border-radius: 10px;
+	background: rgba(38, 189, 187, 0.5);
+
+	font-size: 18px;
+	font-weight: 700;
 }
 
 .input:focus {
-    outline: 1px solid var(--second);
+	outline: 1px solid var(--second);
 }
 
 .error_input {
-    border-color: var(--error);
+	border-color: var(--error);
 }
 
 .error_input:focus {
-    outline-color: var(--error);
+	outline-color: var(--error);
 }
 
 @media (max-width: 580px) {

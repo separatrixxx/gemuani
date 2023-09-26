@@ -1,5 +1,5 @@
 export interface Links {
 	title: string,
-	link: string,
+	link?: string,
 	more?: boolean,
 }

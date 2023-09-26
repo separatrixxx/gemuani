@@ -1,8 +1,21 @@
 .slider {
-    width: 1000px;
-    height: 300px;
+	height: fit-content;
+
+	border-radius: 30px;
 }
 
 .text {
-    color: var(--accent) !important;
+	color: var(--accent) !important;
+}
+
+@media (max-width: 1024px) {
+	.slider {
+		border-radius: 20px;
+	}
+}
+
+@media (max-width: 580px) {
+	.slider {
+		border-radius: 15px;
+	}
 }

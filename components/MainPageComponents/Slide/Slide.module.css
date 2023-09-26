@@ -1,0 +1,69 @@
+.slideBlock {
+	display: grid;
+	overflow: hidden;
+	align-items: center;
+
+	width: 100%;
+	height: fit-content;
+
+	background: var(--primary);
+	justify-items: center;
+}
+
+.textDiv {
+	position: absolute;
+
+	display: grid;
+	align-self: end;
+
+	width: 40%;
+	margin: 0 0 70px 90px;
+
+	color: var(--white);
+	gap: 30px;
+	justify-self: start;
+}
+
+.title {
+	color: var(--accent);
+}
+
+.text {
+	color: var(--white);
+}
+
+.imageDiv {
+	display: grid;
+	overflow: hidden;
+
+	width: 100%;
+	height: fit-content;
+
+	background: var(--primary);
+	filter: brightness(0.8);
+}
+
+.image {
+	width: 100%;
+	height: 100%;
+}
+
+@media (max-width: 1024px) {
+	.textDiv {
+		margin: 0 0 30px 50px;
+		gap: 20px;
+	}
+}
+
+@media (max-width: 580px) {
+	.textDiv {
+		width: 60%;
+		margin: 0 0 50px 50px;
+		gap: 20px;
+	}
+
+	.text {
+		font-size: 16px;
+		line-height: 20px;
+	}
+}

@@ -22,21 +22,24 @@
 
 .infoBody {
 	display: grid;
+
+	width: 100%;
 	height: fit-content;
-    gap: 30px;
-    width: 100%;
+	gap: 30px;
 }
 
 .infoBlock {
-	height: fit-content;
 	display: grid;
-    gap: 20px;
+
+	height: fit-content;
+	gap: 20px;
 }
 
 .view {
 	cursor: pointer;
-	color: var(--accent) !important;
 	transition-duration: 300ms;
+
+	color: var(--accent) !important;
 }
 
 .view:active {
@@ -47,6 +50,7 @@
 
 .wa {
 	color: var(--accent);
+
 	font-weight: 700;
 }
 
@@ -100,7 +104,7 @@
 
 	.contactsBody {
 		grid-template-columns: 100%;
-	
+
 		width: 90%;
 		gap: 40px;
 	}
@@ -108,7 +112,7 @@
 	.infoBody {
 		gap: 20px;
 	}
-	
+
 	.infoBlock {
 		gap: 10px;
 	}

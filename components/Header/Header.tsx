@@ -17,8 +17,10 @@ import cn from 'classnames';
 export const Header = (): JSX.Element => {
 	const router = useRouter();
 
+	const [hiddenLinks, setHiddenLinks] = useState<boolean>(true);
+
 	const links: Links[] = [
-		{ title: setLocale(router.locale).about.toUpperCase(), link: 'about', more: true },
+		{ title: setLocale(router.locale).about.toUpperCase(), more: true },
 		{ title: setLocale(router.locale).blog.toUpperCase(), link: 'blog' },
 		{ title: setLocale(router.locale).contacts.toUpperCase(), link: 'contacts' },
 		{ title: setLocale(router.locale).shop.toUpperCase(), link: 'shop' },
@@ -67,6 +69,24 @@ export const Header = (): JSX.Element => {
 		}
 	};
 
+	const variantsHiddenArrow = {
+		active: {
+			transform: 'rotate(180deg)',
+		},
+		passive: {
+			transform: 'rotate(0deg)',
+		}
+	};
+
+	const variantsHiddenDiv = {
+		active: {
+			display: 'none',
+		},
+		passive: {
+			display: 'grid',
+		}
+	};
+
 	if (width > 1024) {
 		variantsBlock.visible.transition.duration = 0;
 		variantsBlock.hidden.transition.duration = 0;
@@ -85,14 +105,48 @@ export const Header = (): JSX.Element => {
 				animate={open || width > 1024 ? 'visible' : 'hidden'}
 				style={width > 1024 ? { gridTemplateColumns: `repeat(${links.length}, auto)` } : { gridTemplateRows: `repeat(${links.length}, auto)` }}>
 				{links.map(l => (
-					<Link href={"/" + l.link} key={l.link}
-						style={hidden ? { display: 'none' } : { display: 'block' }}>
-						<Htag tag='m' className={cn(styles.text, {
-							[styles.textArrow]: l.more,
-						})}>{l.title}{
-							l.more ? <span className={styles.arrow}>< Arrow /></span> : <></>
-						}</Htag>
-					</Link>
+					!l.more ?
+						<Link href={"/" + l.link} key={l.link} style={hidden ? { display: 'none' } : { display: 'block' }}>
+							<Htag tag='m' className={styles.text}>{l.title}</Htag>
+						</Link>
+						:
+						<div key={l.link} className={styles.moreDiv}
+							onMouseOver={() => {
+								if (width >= 1024) {
+									setHiddenLinks(false);
+								}
+							}} onMouseOut={() => {
+								if (width >= 1024) {
+									setHiddenLinks(true);
+								}
+							}}>
+							<Htag tag='m' className={cn(styles.text, styles.textArrow)}
+								style={hidden ? { display: 'none' } : { display: 'block' }}>{l.title}
+
+								<motion.span className={styles.arrow}
+									variants={variantsHiddenArrow}
+									initial={!hiddenLinks ? 'active' : 'passive'}
+									transition={{ duration: 0.3 }}
+									animate={!hiddenLinks ? 'active' : 'passive'}>
+									< Arrow />
+								</motion.span>
+								<motion.div className={styles.hiddenLinks}
+									variants={variantsHiddenDiv}
+									initial={hiddenLinks ? 'active' : 'passive'}
+									transition={{ duration: 0.3 }}
+									animate={hiddenLinks ? 'active' : 'passive'}>
+									<Link href='/about'>
+										<Htag tag='m' className={styles.hiddenText}>{setLocale(router.locale).titles.about_title + ' Gemuani'}</Htag>
+									</Link>
+									<Link href='/kiwi_farm'>
+										<Htag tag='m' className={styles.hiddenText}>{setLocale(router.locale).titles.kiwi_farm_title}</Htag>
+									</Link>
+									<Link href='/culture'>
+										<Htag tag='m' className={styles.hiddenText}>{setLocale(router.locale).titles.culture_history_title}</Htag>
+									</Link>
+								</motion.div>
+							</Htag>
+						</div>
 				))}
 			</motion.div>
 			<BurgerMenu open={open} setOpen={setOpen} setHidden={setHidden} />

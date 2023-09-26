@@ -1,4 +1,6 @@
 .footer {
+	position: relative;
+
 	display: grid;
 
 	width: 100%;
@@ -6,7 +8,6 @@
 
 	border-radius: 30px;
 	background: var(--primary);
-	position: relative;
 }
 
 .footerBottom {
@@ -27,6 +28,7 @@
 
 .mountain {
 	position: absolute;
+
 	align-self: end;
 
 	height: 270px;
@@ -35,28 +37,32 @@
 }
 
 .footerLinks {
-	width: fit-content;
 	display: grid;
+
+	width: fit-content;
+	margin: 30px 100px 100px 100px;
 	grid-template-columns: auto auto auto;
 	gap: 50px;
-	margin: 30px 100px 100px 100px;
 }
 
 .linksBlock {
-	width: fit-content;
 	display: grid;
+
+	width: fit-content;
 	gap: 10px;
 }
 
 .title {
 	color: var(--accent);
+
 	font-weight: 700;
 }
 
 .link {
 	cursor: pointer;
-	color: var(--white);
 	transition-duration: 300ms;
+
+	color: var(--white);
 }
 
 .link:active {
@@ -117,7 +123,7 @@
 
 	.mountain {
 		height: 70px;
-		margin-bottom: 82.4px
+		margin-bottom: 82.4px;
 	}
 }
 

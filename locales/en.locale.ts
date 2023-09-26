@@ -105,4 +105,16 @@ export const en = {
 		title2: "CUSTOMER SERVICE",
 		title3: "INFORMATION",
 	},
+	slider: {
+		title1: "FORTRESS ANANURI",
+		text1: "The Ananuri fortress was built on the banks of the Aragvi River. The exact date of its construction is unknown - the construction of one of its towers dates back to the 13th century. The first detailed descriptions of the castle itself date back to the beginning of the 18th century.",
+		title2: "MARTVILI CANYON",
+		text2: "According to official data, traces of the habitation of primitive man and prehistoric animals that lived on earth 73 million years ago were found here, as well as preserved traces of dinosaurs and their fossilized skeletons.",
+		title3: "BRIDGE OF PEACE",
+		text3: "In the middle of Tbilisi in 2010, a unique structure appeared - a modern bridge across the Kura River, connecting the two banks as two historical eras. The Peace Bridge has become one of the most modern attractions of Georgia, which is loved by both local residents and guests of the city.",
+		title4: "UPLISTSIKHE",
+		text4: "“Fortress of God” - this is how the name of a unique landmark of Georgia, an ancient architectural monument - the cave city of Uplistsikhe, can be literally translated. It is located 75 km from Tbilisi and 12 km from Gori.",
+		title5: "BETANIA MONASTERY",
+		text5: "Not far from the village of Samadlo, 16 kilometers from Tbilisi, there is an ancient monument of religious culture - the Betania Monastery. The shrine was erected in the name of the Nativity of the Mother of God.",
+	},
 };
