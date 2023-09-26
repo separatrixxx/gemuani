@@ -3,8 +3,14 @@ import { Htag } from 'components/Htag/Htag';
 import { setLocale } from 'helpers/locale.helper';
 import { useRouter } from 'next/router';
 import { format } from 'date-fns';
-import Mountain from './mountain.svg';
+import Logo from './logo_icon.svg';
+import Facebook from './fb.svg';
+import Instagram from './ig.svg';
+import Linkedin from './li.svg';
+import YouTube from './yt.svg';
 import { LocaleChange } from 'components/MainPageComponents/LocaleChange/LocaleChange';
+import { FooterLinks } from 'components/FooterLinks/FooterLinks';
+import Link from 'next/link';
 
 
 export const Footer = (): JSX.Element => {
@@ -13,31 +19,41 @@ export const Footer = (): JSX.Element => {
     return (
         <div className={styles.footer}>
             <div className={styles.footerLinks}>
-                <div className={styles.linksBlock}>
-                    <Htag tag='l' className={styles.title}>{setLocale(router.locale).footer.title1}</Htag>
-                </div>
-                <div className={styles.linksBlock}>
-                    <Htag tag='l' className={styles.title}>{setLocale(router.locale).footer.title2}</Htag>
-                    <div>
-                        <Htag tag='m' className={styles.link}>Contact us</Htag>
+                <FooterLinks title={setLocale(router.locale).footer.title1}>
+                    <div className={styles.socialMediaBlock}>
+                        <a target='_blank' rel="noreferrer" href='https://www.facebook.com/gemuani'><Facebook /></a>
+                        <a target='_blank' rel="noreferrer" href='https://www.instagram.com/gemuani_ltd'><Instagram /></a>
+                        <a target='_blank' rel="noreferrer" href='https://www.linkedin.com/company/gemuani-healthy-food'><Linkedin /></a>
+                        <a target='_blank' rel="noreferrer" href='https://www.youtube.com/@gemuani'><YouTube /></a>
+
+                    </div>
+                </FooterLinks>
+                <FooterLinks title={setLocale(router.locale).footer.title2}>
+                    <div className={styles.linksDiv}>
+                        <Link href='contacts'>
+                            <Htag tag='m' className={styles.link}>{setLocale(router.locale).titles.contacts_title}</Htag>
+                        </Link>
                         <Htag tag='m' className={styles.link}>Returns</Htag>
                         <Htag tag='m' className={styles.link}>Site Map</Htag>
                         <Htag tag='m' className={styles.link}>Brands</Htag>
-                        <Htag tag='m' className={styles.link}>Special Offers</Htag>
+                        <Htag tag='m' className={styles.link}>Specials</Htag>
                     </div>
-                </div>
-                <div className={styles.linksBlock}>
-                    <Htag tag='l' className={styles.title}>{setLocale(router.locale).footer.title3}</Htag>
-                    <div>
-                        <Htag tag='m' className={styles.link}>Partners</Htag>
-                        <Htag tag='m' className={styles.link}>Delivery Information</Htag>
-                        <Htag tag='m' className={styles.link}>{"Georgia's Bounty"}</Htag>
-                        <Htag tag='m' className={styles.link}>Privacy Policy</Htag>
+                </FooterLinks>
+                <FooterLinks title={setLocale(router.locale).footer.title3}>
+                    <div className={styles.linksDiv}>
+                        <Link href='about'>
+                            <Htag tag='m' className={styles.link}>{setLocale(router.locale).titles.about_title + ' Gemuani'}</Htag>
+                        </Link>
+                        <Link href='kiwi_farm'>
+                            <Htag tag='m' className={styles.link}>{setLocale(router.locale).titles.kiwi_farm_title}</Htag>
+                        </Link>
                         <Htag tag='m' className={styles.link}>Terms & Conditions</Htag>
+                        <Htag tag='m' className={styles.link}>Privacy Policy</Htag>
+                        <Htag tag='m' className={styles.link}>Partners</Htag>
                     </div>
-                </div>
+                </FooterLinks>
+                <Logo className={styles.logo} />
             </div>
-            <Mountain className={styles.mountain} />
             <div className={styles.footerBottom}>
                 <Htag tag='s' className={styles.footerBottomText}>
                     {'© 2011 - ' + format(new Date(), 'yyyy') + ' GEMUANI Ltd. ' + setLocale(router.locale).all_rights_reserved}

@@ -2,6 +2,7 @@ import { HtagProps } from './Htag.props';
 import styles from './Htag.module.css';
 import cn from 'classnames';
 
+
 export const Htag = ({ tag, children, className, onClick }: HtagProps): JSX.Element => {
 	switch (tag) {
 		case 'xxxl':

@@ -1,0 +1,26 @@
+.linksBlock {
+	display: grid;
+
+	width: fit-content;
+	height: fit-content;
+}
+
+.title {
+	height: fit-content;
+
+	color: var(--accent);
+
+	font-weight: 700 !important;
+}
+
+@media (max-width: 1024px) {
+	.linksBlock {
+		margin: 0;
+	}
+}
+
+@media (max-width: 580px) {
+	.title {
+		font-size: 22px;
+	}
+}

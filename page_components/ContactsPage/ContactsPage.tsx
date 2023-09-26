@@ -20,7 +20,7 @@ export const ContactsPage = (): JSX.Element => {
 					<Htag tag='xxl' className={styles.contactsTitle}>{setLocale(router.locale).contacts_page.title2}</Htag>
 					<div className={styles.infoBlock}>
 						<Htag tag='l'>{setLocale(router.locale).contacts_page.address}</Htag>
-						<a target='_blank' href="https://www.google.com/maps/place/+89+Irakli+Abashidze+Street,+T'bilisi,+%D0%93%D1%80%D1%83%D0%B7%D0%B8%D1%8F/@41.709055,44.7531785,19z/data=!3m1!4b1!4m5!3m4!1s0x40447337db44d409:0x3c789f7363075fc7!8m2!3d41.709054!4d44.7538222?entry=ttu">
+						<a target='_blank' rel="noreferrer" href="https://www.google.com/maps/place/+89+Irakli+Abashidze+Street,+T'bilisi,+%D0%93%D1%80%D1%83%D0%B7%D0%B8%D1%8F/@41.709055,44.7531785,19z/data=!3m1!4b1!4m5!3m4!1s0x40447337db44d409:0x3c789f7363075fc7!8m2!3d41.709054!4d44.7538222?entry=ttu">
 							<Htag tag='l' className={styles.view}>
 								{setLocale(router.locale).contacts_page.view_on_map}
 								<span className={styles.arrow}><Arrow /></span>

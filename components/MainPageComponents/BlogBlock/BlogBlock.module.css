@@ -47,6 +47,20 @@
 	}
 }
 
+@media (max-width: 965px) {
+	.blogBody {
+		padding-right: 50px;
+		padding-left: 50px;
+	}
+}
+
+@media (max-width: 800px) {
+	.blogBody {
+		padding-right: 0;
+		padding-left: 0;
+	}
+}
+
 @media (max-width: 580px) {
 	.blogBody {
 		padding: 30px 0 30px 0;
