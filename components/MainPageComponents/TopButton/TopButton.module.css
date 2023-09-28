@@ -1,0 +1,42 @@
+.topButton {
+	position: fixed;
+	z-index: 11000;
+	right: 0;
+	bottom: 0;
+
+	display: grid;
+	align-items: center;
+
+	width: 50px;
+	height: 50px;
+	margin: 20px;
+
+	cursor: pointer;
+	transition-duration: 300ms;
+
+	border-radius: 9999px;
+	background: var(--second);
+	box-shadow: 0 29px 29px rgba(0, 0, 0, 0.09), 0 7px 16px rgba(0, 0, 0, 0.1);
+	justify-items: center;
+}
+
+.topButton > svg {
+	width: 20px;
+	fill: var(--white);
+
+	transform: rotate(180deg);
+}
+
+.topButton:active {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	filter: brightness(0.9);
+}
+
+@media (min-width: 1024px) {
+	.topButton:hover {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		filter: brightness(0.9);
+	}
+}

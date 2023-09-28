@@ -8,8 +8,7 @@
 	width: 100%;
 	padding: 10px 0 10px 0;
 
-	background: rgba(31, 31, 31, 0.5);
-	backdrop-filter: blur(5px);
+	background: var(--second);
 	grid-template-columns: 200px auto 200px;
 	justify-items: center;
 	grid-template-areas: ". headerBlock .";
@@ -94,7 +93,7 @@
 
 	display: grid;
 
-	width: 130px !important;
+	width: 180px !important;
 	margin-top: 180px;
 	padding: 10px 15px 10px 15px;
 

@@ -12,6 +12,8 @@ import { EnergyCounter } from 'components/MainPageComponents/EnergyCounter/Energ
 import { WorldBlock } from 'components/MainPageComponents/WorldBlock/WorldBlock';
 import { Footer } from 'components/Footer/Footer';
 import { Slider } from 'components/MainPageComponents/Slider/Slider';
+import { TopButton } from 'components/MainPageComponents/TopButton/TopButton';
+import { TopElem } from 'components/TopElem/TopElem';
 
 
 export const HomePage = (): JSX.Element => {
@@ -20,6 +22,8 @@ export const HomePage = (): JSX.Element => {
     return (
         <>
             <Header />
+            <TopElem />
+            <TopButton />
             <div className={styles.wrapper}>
                 <MainImage />
                 <TextBlock text={setLocale(router.locale).about_text} link='about'
