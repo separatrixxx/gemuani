@@ -11,7 +11,7 @@ export const en = {
 	history_title: "I BET YOU DIDN'T KNOW?",
 	history_text: "What is Georgia famous for? Mountains? Resorts? Have you heard about the centenarians of the Georgian mountains? About Medea, the mother of medicine? Did you know that Georgia is the birthplace of wine? The history and culture of Georgia are incredibly rich. And you can find out more about them.",
 	energy_title: "ENERGY SAVING",
-	energy_text: "We use solar panels in production. Thus, we have already saved:",
+	energy_text: "In the future, we plan to use solar energy in production. Thus, we will save:",
 	climate_title: "UNIQUE CLIMATE",
 	climate_text: "There are 8 climatic zones in Georgia, which is why our fruits and berries are unique. From mild subtropical climate in the west to dry continental in the center, to temperate in the east. Try the incredible taste of Georgia today.",
 	mountains_text: "All our products are 100% made from natural products of Georgia with care for it’s unique nature and culture",
