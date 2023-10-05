@@ -4,4 +4,5 @@ export interface TextBlockProps extends DetailedHTMLProps<HTMLAttributes<HTMLDiv
 	text: string,
 	link: string,
 	title: string,
+	span?: string,
 }

@@ -30,12 +30,38 @@
 	font-weight: 700;
 }
 
+.map {
+	position: relative;
+
+	width: 70%;
+	margin-top: 60px;
+}
+
+.dotText {
+	position: absolute;
+
+	display: grid;
+	align-items: center;
+
+	margin-left: 20px;
+	padding: 10px 20px 20px 20px;
+
+	border-radius: 20px;
+	background: var(--white);
+	filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+}
+
 @media (max-width: 1024px) {
 	.textBlock {
 		width: 75%;
 	}
 
 	.divider {
+		margin-top: 40px;
+	}
+
+	.map {
+		width: 80%;
 		margin-top: 40px;
 	}
 }
@@ -46,6 +72,11 @@
 	}
 
 	.divider {
+		margin-top: 30px;
+	}
+
+	.map {
+		width: 90%;
 		margin-top: 30px;
 	}
 }

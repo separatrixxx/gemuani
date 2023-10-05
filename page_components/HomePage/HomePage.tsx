@@ -14,6 +14,7 @@ import { Footer } from 'components/Footer/Footer';
 import { Slider } from 'components/MainPageComponents/Slider/Slider';
 import { TopButton } from 'components/MainPageComponents/TopButton/TopButton';
 import { TopElem } from 'components/TopElem/TopElem';
+import { MapBlock } from 'components/MainPageComponents/MapBlock/MapBlock';
 
 
 export const HomePage = (): JSX.Element => {
@@ -27,7 +28,7 @@ export const HomePage = (): JSX.Element => {
             <div className={styles.wrapper}>
                 <MainImage />
                 <TextBlock text={setLocale(router.locale).about_text} link='about'
-                    title={setLocale(router.locale).about_title} />
+                    title={setLocale(router.locale).about_title} span='GEMUANI' />
                 <SideBlock side='left' text={setLocale(router.locale).kiwi_text} link='kiwi_farm' image='/KiwiImage.png'
                     title={setLocale(router.locale).kiwi_title} />
                 <ImageBlock text={setLocale(router.locale).mountains_text} image='/MountainsImage.png' imageMobile='/MountainsImageMobile.png'
@@ -40,6 +41,8 @@ export const HomePage = (): JSX.Element => {
                     title={setLocale(router.locale).energy_title}>
                     <EnergyCounter energyNumber={413} />
                 </SideBlock>
+                <MapBlock text={setLocale(router.locale).map_text}
+                    title={setLocale(router.locale).map_title} span='GEMUANI' />
                 <Slider />
                 <TextBlock text={setLocale(router.locale).history_text} link='culture'
                     title={setLocale(router.locale).history_title} />

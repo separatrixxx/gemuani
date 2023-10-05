@@ -1,0 +1,33 @@
+.dot {
+	position: absolute;
+
+	width: 10px;
+	height: 10px;
+
+	cursor: pointer;
+	transition-duration: 300ms;
+
+	border-radius: 9999px;
+	background: var(--accent);
+}
+
+.dot:active {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	transform: scale(1.1);
+}
+
+@media (min-width: 1024px) {
+	.dot:hover {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		transform: scale(1.1);
+	}
+}
+
+@media (max-width: 580px) {
+	.dot {
+		width: 7px;
+		height: 7px;
+	}
+}
