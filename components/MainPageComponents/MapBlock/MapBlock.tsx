@@ -5,9 +5,13 @@ import Map from './map.svg';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Dot } from '../Dot/Dot';
+import { setLocale } from 'helpers/locale.helper';
+import { useRouter } from 'next/router';
 
 
 export const MapBlock = ({ text, title, span }: MapBlockProps): JSX.Element => {
+    const router = useRouter();
+
     const [hidden, setHidden] = useState<boolean>(true);
     const [titleDot, setTitleDot] = useState<string>('');
     const [textDot, setTextDot] = useState<string>('');
@@ -16,39 +20,33 @@ export const MapBlock = ({ text, title, span }: MapBlockProps): JSX.Element => {
 
     const dots = [
         {
-            top: '35%',
-            left: '27%',
-            title: 'Cool place!',
-            text: 'Very-very cool place, wow!',
+            top: '73%',
+            left: '71.5%',
+            title: setLocale(router.locale).map.title1,
+            text: setLocale(router.locale).map.text1,
         },
-        {
-            top: '55%',
-            left: '47%',
-            title: 'Another cool place!',
-            text: 'Some cool place, but another!',
-        }
     ];
-    
-    const variants = {
-		visible: {
-			display: 'grid',
-		},
-		hidden: {
-			display: 'none',
-		}
-	};
 
-	return (
-		<div className={styles.textBlock}>
-			<Htag tag='xxl' className={styles.textBlockTitle}>{title}</Htag>
-			<Htag tag='xl' className={styles.text}>
-				{span ? <span className={styles.span}>{span + ' '}</span> : <></>}{text}</Htag>
+    const variants = {
+        visible: {
+            display: 'grid',
+        },
+        hidden: {
+            display: 'none',
+        }
+    };
+
+    return (
+        <div className={styles.textBlock}>
+            <Htag tag='xxl' className={styles.textBlockTitle}>{title}</Htag>
+            <Htag tag='xl' className={styles.text}>
+                {span ? <span className={styles.span}>{span + ' '}</span> : <></>}{text}</Htag>
             <div className={styles.map}>
                 {dots.map(d => (
                     <Dot key={d.title} top={d.top} left={d.left} hidden={hidden} setHidden={setHidden}
-                        title={d.title}  setTitle={setTitleDot} text={d.text} setText={setTextDot}
+                        title={d.title} setTitle={setTitleDot} text={d.text} setText={setTextDot}
                         setTopBlock={setTopBlock} setLeftBlock={setLeftBlock} />
-				))}
+                ))}
                 <motion.div className={styles.dotText} style={{ top: topBlock, left: leftBlock }}
                     variants={variants}
                     initial={hidden ? 'hidden' : 'visible'}
@@ -60,6 +58,6 @@ export const MapBlock = ({ text, title, span }: MapBlockProps): JSX.Element => {
                 <Map />
             </div>
             <span className={styles.divider} />
-		</div>
-	);
+        </div>
+    );
 };
