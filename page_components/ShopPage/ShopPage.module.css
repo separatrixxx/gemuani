@@ -21,9 +21,10 @@
 }
 
 .shopLink {
-	color: var(--accent) !important;
 	cursor: pointer;
 	transition-duration: 300ms;
+
+	color: var(--accent) !important;
 }
 
 .shopLink:active {
@@ -66,6 +67,7 @@
 
 	.shopBody {
 		gap: 10px;
+
 		margin-bottom: 200px;
 	}
 }
