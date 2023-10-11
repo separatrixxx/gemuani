@@ -35,6 +35,11 @@
 	height: fit-content;
 }
 
+.shopImage {
+	width: 100%;
+	height: 100%;
+}
+
 .shop {
 	cursor: pointer;
 	transition-duration: 300ms;

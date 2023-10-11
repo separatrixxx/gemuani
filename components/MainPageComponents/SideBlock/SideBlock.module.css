@@ -36,6 +36,11 @@
 	grid-area: b;
 }
 
+.sideImage {
+	width: 100%;
+	height: 100%;
+}
+
 .textDiv {
 	display: grid;
 

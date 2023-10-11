@@ -16,17 +16,12 @@ export const MainImage = (): JSX.Element => {
 
 	return (
 		<div className={styles.imageBlock}>
-			<Image draggable='false'
+			<Image className={styles.mainImage} draggable='false'
 				loader={() => image}
 				src={image}
 				alt='main image'
 				width={1}
 				height={1}
-				sizes="100vw"
-				style={{
-					width: '100%',
-					height: '100%',
-				}}
 				unoptimized={true}
 				priority={true}
 			/>

@@ -19,17 +19,12 @@ export const ImageBlock = ({ text, image, imageMobile, ticker }: ImageBlockProps
 				<Ticker text={setLocale(router.locale).our_mission} />
 				<div className={styles.imageBlock}>
 					<div className={styles.imageDiv}>
-						<Image draggable='false'
+						<Image className={styles.image} draggable='false'
 							loader={() => width > 1024 ? image : imageMobile}
 							src={width > 1024 ? image : imageMobile}
 							alt='image'
 							width={1}
 							height={1}
-							sizes="100vw"
-							style={{
-								width: '100%',
-								height: '100%',
-							}}
 							unoptimized={true}
 						/>
 					</div>
