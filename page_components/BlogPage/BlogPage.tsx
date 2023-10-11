@@ -1,4 +1,4 @@
-import styles from './blogPage.module.css';
+import styles from './BlogPage.module.css';
 import { useRouter } from 'next/router';
 import { Htag } from 'components/Htag/Htag';
 import { Header } from 'components/Header/Header';
