@@ -100,7 +100,7 @@ export const Header = (): JSX.Element => {
 			initial={flag ? 'hidden' : 'visible'}
 			transition={{ duration: 0.3 }}
 			animate={flag ? 'hidden' : 'visible'}>
-			<Link href='/' className={styles.logo}><Logo /></Link>
+			<Link href='/' className={styles.logo} aria-label="Go Home"><Logo /></Link>
 			<motion.div className={styles.headerBlock}
 				variants={variantsBlock}
 				initial={open || width > 1024 ? 'visible' : 'hidden'}

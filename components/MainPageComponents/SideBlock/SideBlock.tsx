@@ -21,7 +21,6 @@ export const SideBlock = ({ side, text, link, image, title, children }: SideBloc
 						width={1}
 						height={1}
 						unoptimized={true}
-						priority={true}
 					/>
 				</div>
 				<div className={styles.textDiv}>

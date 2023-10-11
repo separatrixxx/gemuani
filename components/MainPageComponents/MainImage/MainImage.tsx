@@ -4,14 +4,14 @@ import Image from 'next/image';
 
 
 export const MainImage = (): JSX.Element => {
-	let image = '/MainImage.jpg';
+	let image = '/MainImage.webp';
 
 	const width = useResizeW();
 
 	if (width > 1024) {
-		image = '/MainImage.jpg';
+		image = '/MainImage.webp';
 	} else {
-		image = '/MainImageMobile.jpg';
+		image = '/MainImageMobile.webp';
 	}
 
 	return (

@@ -6,14 +6,19 @@ export function contactHelper(name: string, email: string, message: string,
     setErrorName(false);
     setErrorEmail(false);
     setErrorMessage(false);
-    
+
     if (+name !== 0 && EMAIL_REGEXP.test(email) && +message !== 0) {
-        alert('gg');
+        if (name !== null && email !== null && message !== null) {
+            window.location.href = "mailto:Ajj@gemuaji.com"
+                + "?cc=Ajj@gemuaji.com"
+                + "&subject=Вопрос от пользователя " + encodeURIComponent(name)
+                + "&body=" + encodeURIComponent(message);
+        }
     } else {
         if (+name === 0) {
             setErrorName(true);
         }
-        
+
         if (!EMAIL_REGEXP.test(email)) {
             setErrorEmail(true);
         }

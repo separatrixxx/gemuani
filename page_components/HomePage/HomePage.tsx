@@ -29,15 +29,15 @@ export const HomePage = (): JSX.Element => {
                 <MainImage />
                 <TextBlock text={setLocale(router.locale).about_text} link='about'
                     title={setLocale(router.locale).about_title} span='GEMUANI' />
-                <SideBlock side='left' text={setLocale(router.locale).kiwi_text} link='kiwi_farm' image='/KiwiImage.png'
+                <SideBlock side='left' text={setLocale(router.locale).kiwi_text} link='kiwi_farm' image='/KiwiImage.webp'
                     title={setLocale(router.locale).kiwi_title} />
-                <ImageBlock text={setLocale(router.locale).mountains_text} image='/MountainsImage.png' imageMobile='/MountainsImageMobile.png'
+                <ImageBlock text={setLocale(router.locale).mountains_text} image='/MountainsImage.webp' imageMobile='/MountainsImageMobile.webp'
                     ticker={true} />
-                <ShopBlock text={setLocale(router.locale).shop_text} link='shop' image='/ShopImage.png'
+                <ShopBlock text={setLocale(router.locale).shop_text} link='shop' image='/ShopImage.webp'
                     title={setLocale(router.locale).shop_title} />
-                <ImageBlock text={setLocale(router.locale).production_text} image='/ProductionImage.png' imageMobile='/ProductionImageMobile.png'
+                <ImageBlock text={setLocale(router.locale).production_text} image='/ProductionImage.webp' imageMobile='/ProductionImageMobile.webp'
                     ticker={false} />
-                <SideBlock side='right' text={setLocale(router.locale).energy_text} image='/EnergyImage.png'
+                <SideBlock side='right' text={setLocale(router.locale).energy_text} image='/EnergyImage.webp'
                     title={setLocale(router.locale).energy_title}>
                     <EnergyCounter energyNumber={413} />
                 </SideBlock>
@@ -46,7 +46,7 @@ export const HomePage = (): JSX.Element => {
                 <Slider />
                 <TextBlock text={setLocale(router.locale).history_text} link='culture'
                     title={setLocale(router.locale).history_title} />
-                <SideBlock side='left' text={setLocale(router.locale).climate_text} image='/ClimateImage.png'
+                <SideBlock side='left' text={setLocale(router.locale).climate_text} image='/ClimateImage.webp'
                     title={setLocale(router.locale).climate_title} />
                 <WorldBlock text={setLocale(router.locale).world_text} title={setLocale(router.locale).world_title} />
                 <BlogBlock text={setLocale(router.locale).blog_text} link='blog' />

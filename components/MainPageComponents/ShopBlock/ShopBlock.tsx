@@ -29,7 +29,6 @@ export const ShopBlock = ({ text, link, image, title }: ShopBlockProps): JSX.Ele
                     width={1}
                     height={1}
                     unoptimized={true}
-                    priority={true}
                 />
             </div>
         </div>

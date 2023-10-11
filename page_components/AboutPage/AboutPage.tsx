@@ -27,14 +27,14 @@ export const AboutPage = (): JSX.Element => {
 					</div>
 					<Htag tag='xl' className={styles.title}>{setLocale(router.locale).about_page.title1}</Htag>
 					<Htag tag='l'>{setLocale(router.locale).about_page.text2}</Htag>
-					<AboutImageBlock image='/AboutImg1.png' alt='about image 1' />
+					<AboutImageBlock image='/AboutImg1.webp' alt='about image 1' />
 					<Htag tag='l'>{setLocale(router.locale).about_page.text3}</Htag>
-					<AboutImageBlock image='/AboutImg2.png' alt='about image 2' />
+					<AboutImageBlock image='/AboutImg2.webp' alt='about image 2' />
 					<Htag tag='l'>{setLocale(router.locale).about_page.text4}</Htag>
 					<Htag tag='l'>{setLocale(router.locale).about_page.text5}</Htag>
 					<Htag tag='xl' className={styles.title}>{setLocale(router.locale).about_page.title2}</Htag>
 					<Htag tag='l'>{setLocale(router.locale).about_page.text6}</Htag>
-					<AboutImageBlock image='/AboutImg3.png' alt='about image 3' />
+					<AboutImageBlock image='/AboutImg3.webp' alt='about image 3' />
 					<Htag tag='l'>{setLocale(router.locale).about_page.text7}</Htag>
 					<Htag tag='l'>{setLocale(router.locale).about_page.text8}</Htag>
 					<Htag tag='l'>{setLocale(router.locale).about_page.text9}</Htag>

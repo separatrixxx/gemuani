@@ -33,15 +33,15 @@ export const CulturePage = (): JSX.Element => {
 					<Htag tag='l'>{setLocale(router.locale).culture_page.text9}</Htag>
 					<Htag tag='l'>{setLocale(router.locale).culture_page.text10}</Htag>
 					<Htag tag='l'>{setLocale(router.locale).culture_page.text11}</Htag>
-					<AboutImageBlock image='/CultureImg1.png' alt='culture image 1' />
+					<AboutImageBlock image='/CultureImg1.webp' alt='culture image 1' />
 					<Htag tag='xl' className={styles.title}>{setLocale(router.locale).culture_page.title4}</Htag>
 					<Htag tag='l'>{setLocale(router.locale).culture_page.text12}</Htag>
 					<Htag tag='l'>{setLocale(router.locale).culture_page.text13}</Htag>
 					<Htag tag='l'>{setLocale(router.locale).culture_page.text14}</Htag>
 					<Htag tag='l'>{setLocale(router.locale).culture_page.text15}</Htag>
 					<Htag tag='l'>{setLocale(router.locale).culture_page.text16}</Htag>
-					<AboutImageBlock image='/CultureImg2.png' alt='culture image 2' />
-					<AboutImageBlock image='/CultureImg3.png' alt='culture image 3' />
+					<AboutImageBlock image='/CultureImg2.webp' alt='culture image 2' />
+					<AboutImageBlock image='/CultureImg3.webp' alt='culture image 3' />
 					<Htag tag='l'>{setLocale(router.locale).culture_page.text17}</Htag>
 				</div>
 				<Footer />

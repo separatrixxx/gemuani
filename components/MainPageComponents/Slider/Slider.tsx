@@ -30,23 +30,23 @@ export const Slider = (): JSX.Element => {
         >
             <SwiperSlide>
                 <Slide title={setLocale(router.locale).slider.title1} text={setLocale(router.locale).slider.text1}
-                    image='/SlideImage1.png' imageMobile='/SlideImage1 Mobile.png' />
+                    image='/SlideImage1.webp' imageMobile='/SlideImage1 Mobile.webp' />
             </SwiperSlide>
             <SwiperSlide>
                 <Slide title={setLocale(router.locale).slider.title2} text={setLocale(router.locale).slider.text2}
-                    image='/SlideImage2.png' imageMobile='/SlideImage2 Mobile.png' />
+                    image='/SlideImage2.webp' imageMobile='/SlideImage2 Mobile.webp' />
             </SwiperSlide>
             <SwiperSlide>
                 <Slide title={setLocale(router.locale).slider.title3} text={setLocale(router.locale).slider.text3}
-                    image='/SlideImage3.png' imageMobile='/SlideImage3 Mobile.png' />
+                    image='/SlideImage3.webp' imageMobile='/SlideImage3 Mobile.webp' />
             </SwiperSlide>
             <SwiperSlide>
                 <Slide title={setLocale(router.locale).slider.title4} text={setLocale(router.locale).slider.text4}
-                    image='/SlideImage4.png' imageMobile='/SlideImage4 Mobile.png' />
+                    image='/SlideImage4.webp' imageMobile='/SlideImage4 Mobile.webp' />
             </SwiperSlide>
             <SwiperSlide>
                 <Slide title={setLocale(router.locale).slider.title5} text={setLocale(router.locale).slider.text5}
-                    image='/SlideImage5.png' imageMobile='/SlideImage5 Mobile.png' />
+                    image='/SlideImage5.webp' imageMobile='/SlideImage5 Mobile.webp' />
             </SwiperSlide>
         </Swiper>
     );

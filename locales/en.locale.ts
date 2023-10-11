@@ -123,4 +123,5 @@ export const en = {
 		title1: "Our headquarters",
 		text1: "In Tbilisi, Georgia",
 	},
+	sorry: "Sorry, this page is currently under construction",
 };

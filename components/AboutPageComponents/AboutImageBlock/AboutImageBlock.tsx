@@ -13,7 +13,6 @@ export const AboutImageBlock = ({ image, alt }: AboutImageBlockProps): JSX.Eleme
 				width={1}
 				height={1}
 				unoptimized={true}
-				priority={true}
 			/>
 		</div>
 	);

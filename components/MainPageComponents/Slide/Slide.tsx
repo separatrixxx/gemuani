@@ -19,7 +19,6 @@ export const Slide = ({ title, text, image, imageMobile }: SlideProps): JSX.Elem
 						width={1}
 						height={1}
 						unoptimized={true}
-						priority={true}
 					/>
 				</div>
 				<div className={styles.textDiv}>
