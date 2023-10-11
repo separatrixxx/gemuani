@@ -14,12 +14,17 @@ export const SideBlock = ({ side, text, link, image, title, children }: SideBloc
 				<div className={cn(styles.imageBlock, {
 					[styles.rightImageBlock]: side === 'right',
 				})}>
-					<Image className={styles.sideImage} draggable='false'
+					<Image draggable='false'
 						loader={() => image}
 						src={image}
 						alt='side image'
 						width={1}
 						height={1}
+						sizes="100vw"
+						style={{
+							width: '100%',
+							height: '100%',
+						}}
 						unoptimized={true}
 					/>
 				</div>

@@ -6,12 +6,17 @@ import Image from 'next/image';
 export const AboutImageBlock = ({ image, alt }: AboutImageBlockProps): JSX.Element => {
 	return (
 		<div className={styles.imageBlock}>
-			<Image className={styles.img} draggable='false'
+			<Image draggable='false'
 				loader={() => image}
 				src={image}
 				alt={alt}
 				width={1}
 				height={1}
+				sizes="100vw"
+				style={{
+					width: '100%',
+					height: '100%',
+				}}
 				unoptimized={true}
 			/>
 		</div>

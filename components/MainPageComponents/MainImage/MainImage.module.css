@@ -9,11 +9,6 @@
 	background: var(--primary);
 }
 
-.mainImage {
-	width: 100%;
-	height: 100%;
-}
-
 @media (max-width: 1024px) {
 	.imageBlock {
 		margin-top: 50px;

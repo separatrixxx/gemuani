@@ -28,6 +28,11 @@ export const ShopBlock = ({ text, link, image, title }: ShopBlockProps): JSX.Ele
                     alt='shop image'
                     width={1}
                     height={1}
+                    sizes="100vw"
+                    style={{
+                        width: '100%',
+                        height: '100%',
+                    }}
                     unoptimized={true}
                 />
             </div>
