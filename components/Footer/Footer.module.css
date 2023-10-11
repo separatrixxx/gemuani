@@ -186,7 +186,7 @@
 	}
 }
 
-@media (max-width: 350px) {
+@media (max-width: 450px) {
 	.footerBottom {
 		grid-template-columns: auto;
 		gap: 20px;
@@ -197,5 +197,16 @@
 
 		margin-top: 10px;
 		grid-template-columns: repeat(2, auto);
+	}
+}
+
+@media (max-width: 300px) {
+	.footerBottom {
+		grid-template-columns: auto;
+		gap: 10px;
+	}
+
+	.linksDiv {
+		grid-template-columns: repeat(1, auto);
 	}
 }
