@@ -12,6 +12,7 @@ import { useRouter } from 'next/router';
 import { setLocale } from 'helpers/locale.helper';
 import { BurgerMenu } from 'components/MainPageComponents/BurgerMenu/BurgenMenu';
 import cn from 'classnames';
+import { HeaderLocaleChange } from 'components/HeaderLocaleChange/HeaderLocaleChange';
 
 
 export const Header = (): JSX.Element => {
@@ -151,7 +152,10 @@ export const Header = (): JSX.Element => {
 						</div>
 				))}
 			</motion.div>
-			<BurgerMenu open={open} setOpen={setOpen} setHidden={setHidden} />
+			<div className={styles.openOrLang}>
+				<HeaderLocaleChange />
+				<BurgerMenu open={open} setOpen={setOpen} setHidden={setHidden} />
+			</div>
 		</motion.header>
 	);
 };

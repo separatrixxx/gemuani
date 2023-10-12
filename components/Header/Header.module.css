@@ -118,6 +118,17 @@
 	color: var(--light) !important;
 }
 
+.openOrLang {
+	display: grid;
+	grid-template-columns: 1fr auto;
+
+	align-items: center !important;
+	gap: 30px;
+
+	width: 100%;
+	justify-items: end;
+}
+
 @media (min-width: 1024px) {
 	.text:hover {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

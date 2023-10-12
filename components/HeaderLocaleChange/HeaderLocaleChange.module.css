@@ -1,0 +1,47 @@
+.blockLanguages {
+	display: grid;
+	gap: 10px;
+}
+
+.langLink {
+	margin: 5px 20px 5px 20px;
+
+	cursor: pointer;
+	transition-duration: 300ms;
+}
+
+.lang {
+	display: grid;
+	align-items: center;
+
+	cursor: pointer;
+	transition-duration: 300ms;
+
+	color: var(--white);
+}
+
+.lang:active,
+.langLink:active {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	filter: brightness(0.9);
+}
+
+.lang > svg {
+	width: 25px;
+}
+
+@media (min-width: 1024px) {
+	.lang:hover,
+	.langLink:hover {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		filter: brightness(0.9);
+	}
+}
+
+@media (max-width: 1024px) {
+	.lang > svg {
+		width: 20px;
+	}
+}
