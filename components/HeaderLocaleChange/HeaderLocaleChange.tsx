@@ -29,7 +29,7 @@ export const HeaderLocaleChange = (): JSX.Element => {
 
     if (router.locale === 'ru') {
         Icon = Ru;
-    } else if (router.locale === 'ge') {
+    } else if (router.locale === 'ka') {
         Icon = Ge;
     } else {
         Icon = En;
