@@ -2,7 +2,7 @@ import styles from './LocaleChange.module.css';
 import { useRouter } from 'next/router';
 import { en } from 'locales/en.locale';
 import { ru } from 'locales/ru.locale';
-import { ge } from 'locales/ge.locale';
+import { ka } from 'locales/ka.locale';
 import Link from 'next/link';
 import { useState } from 'react';
 import { setLocale } from 'helpers/locale.helper';
@@ -15,7 +15,7 @@ export const LocaleChange = (): JSX.Element => {
 
     const [active, setActive] = useState<boolean>(false);
 
-    const languages = [en, ru, ge];
+    const languages = [en, ru, ka];
     const langIndex = languages.indexOf(setLocale(router.locale));
 
     if (langIndex !== -1) {

@@ -1,15 +1,15 @@
 import { en } from "locales/en.locale";
 import { ru } from "locales/ru.locale";
-import { ge } from "locales/ge.locale";
+import { ka } from "locales/ka.locale";
 
-type localeType = typeof en | typeof ru | typeof ge;
+type localeType = typeof en | typeof ru | typeof ka;
 
 export function setLocale(locale: string | undefined): localeType {
 	switch (locale) {
 		case 'ru':
 			return ru;
-		case 'ge':
-			return ge;
+		case 'ka':
+			return ka;
 		default:
 			return en;
 	}

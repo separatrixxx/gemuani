@@ -11,8 +11,9 @@ import { Links } from 'interfaces/components.interface';
 import { useRouter } from 'next/router';
 import { setLocale } from 'helpers/locale.helper';
 import { BurgerMenu } from 'components/MainPageComponents/BurgerMenu/BurgenMenu';
-import cn from 'classnames';
 import { HeaderLocaleChange } from 'components/HeaderLocaleChange/HeaderLocaleChange';
+import cn from 'classnames';
+
 
 
 export const Header = (): JSX.Element => {

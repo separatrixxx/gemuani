@@ -6,6 +6,9 @@ import { Footer } from 'components/Footer/Footer';
 import { setLocale } from 'helpers/locale.helper';
 import { TopElem } from 'components/TopElem/TopElem';
 import { TopButton } from 'components/MainPageComponents/TopButton/TopButton';
+import Amazon from './amazon.svg';
+import Glovo from './glovo.svg';
+import Wolt from './wolt.svg';
 
 
 export const ShopPage = (): JSX.Element => {
@@ -19,10 +22,21 @@ export const ShopPage = (): JSX.Element => {
 				<Header />
 				<div className={styles.shopBody}>
 					<Htag tag='xxl' className={styles.shopTitle}>{setLocale(router.locale).shop_page.title1}</Htag>
-					<a rel='noreferrer' target='_blank' href='https://tradewithgeorgia.com/products/gemuani-fruit-crisps'><Htag tag='xl' className={styles.shopLink}>Trade With Georgia</Htag></a>
-					<a rel='noreferrer' target='_blank' href='https://sasmely.ge/en/product-category/accessories/'><Htag tag='xl' className={styles.shopLink}>SASMELY</Htag></a>
-					<a rel='noreferrer' target='_blank' href='https://www.amazon.com/GEMUANI-Freeze-Dried-Kiwi-Crisps/dp/B0C3RNFTM8'><Htag tag='xl' className={styles.shopLink}>Amazon (USA)</Htag></a>
-					<a rel='noreferrer' target='_blank' href='https://vitaland.ge/en/company-gemuani/'><Htag tag='xl' className={styles.shopLink}>Vitaland</Htag></a>
+					<a rel='noreferrer' target='_blank' href='https://www.amazon.com/s?k=GEMUANI&ref=bl_dp_s_web_0'>
+						<Htag tag='xl' className={styles.shopLink}>
+							<Amazon />
+						</Htag>
+					</a>
+					<a rel='noreferrer' target='_blank' href='https://ufv9.adj.st/?adjust_deeplink=glovoapp%3A%2F%2Fopen%3Flink_type%3Dstore%26store_id%3D398663&adjust_t=s321jkn'>
+						<Htag tag='xl' className={styles.shopLink}>
+							<Glovo />
+						</Htag>
+					</a>
+					<a rel='noreferrer' target='_blank' href='https://wolt.com/geo/tbilisi/venue/wolt-market-marijani?search=%E1%83%92%E1%83%94%E1%83%9B%E1%83%A3%E1%83%90%E1%83%9C%E1%83%98'>
+						<Htag tag='xl' className={styles.shopLink}>
+							<Wolt />
+						</Htag>
+					</a>
 				</div>
 				<Footer />
 			</div>

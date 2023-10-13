@@ -13,18 +13,26 @@
 	margin-top: 110px;
 	justify-items: left;
 	gap: 30px;
-	margin-bottom: 220px;
+	margin-bottom: 30px;
 }
 
 .shopTitle {
+	margin-bottom: 30px !important;
+
 	color: var(--primary) !important;
 }
 
 .shopLink {
+	margin-bottom: 20px !important;
+
 	cursor: pointer;
 	transition-duration: 300ms;
 
 	color: var(--accent) !important;
+}
+
+.shopLink > svg {
+	height: 55px;
 }
 
 .shopLink:active {
@@ -56,7 +64,15 @@
 		width: 90%;
 		margin-top: 80px;
 		gap: 20px;
-		margin-bottom: 440px;
+		margin-bottom: 120px;
+	}
+
+	.shopLink {
+		margin-bottom: 20px;
+	}
+
+	.shopLink > svg {
+		height: 40px;
 	}
 }
 
@@ -68,7 +84,15 @@
 	.shopBody {
 		gap: 10px;
 
-		margin-bottom: 200px;
+		margin-bottom: 0;
+	}
+
+	.shopLink {
+		margin-bottom: 25px;
+	}
+
+	.shopLink > svg {
+		height: 30px;
 	}
 }
 
