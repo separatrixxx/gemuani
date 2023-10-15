@@ -14,6 +14,11 @@ export default function About() {
 				<meta name='description' content='About Gemuani' />
 				<meta property='og:title' content='About Gemuani' />
 				<meta property='og:description' content='About Gemuani' />
+				<meta name='robots' content='index, nosnippet' />
+				<meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
+				<meta property='og:url' content='https://www.gemuani.com/about' />
+				<meta property='og:type' content='website' />
+				<meta property='og:site_name' content='Gemuani' />
 				<meta charSet="utf-8" />
 				<link rel="icon" href="/logo.svg" type='image/svg+xml' />
 			</Head>
