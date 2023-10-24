@@ -97,6 +97,7 @@ export const en = {
 	},
 	shop_page: {
 		title1: "YOU CAN BUY OUR PRODUCTS ON POPULAR MARKETPLACES",
+		title2: "OUR PRODUCTION",
 	},
 	error404: "Page not found, 404 error",
 	error500: "Server failure, error 500",
@@ -124,4 +125,5 @@ export const en = {
 		text1: "In Tbilisi, Georgia",
 	},
 	sorry: "Sorry, this page is currently under construction",
+	buy: 'BUY',
 };
