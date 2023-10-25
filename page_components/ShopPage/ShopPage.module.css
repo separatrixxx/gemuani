@@ -88,6 +88,10 @@
 	color: var(--primary);
 }
 
+.link {
+	width: fit-content;
+}
+
 @media (min-width: 1024px) {
 	.shopLink:hover {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

@@ -133,11 +133,12 @@ export const ShopPage = (): JSX.Element => {
 										width={1}
 										height={1}
 										unoptimized={true}
+										priority={true}
 									/>
 								</div>
 								<Htag tag='l' className={styles.productTitle}>{p.title}</Htag>
 								<Htag tag='m'>{p.description}</Htag>
-								<a rel='noreferrer' target='_blank' href={p.link}>
+								<a className={styles.link} rel='noreferrer' target='_blank' href={p.link}>
 									<Htag tag='xl' className={styles.buy}>{setLocale(router.locale).buy}</Htag>
 								</a>
 							</div>
