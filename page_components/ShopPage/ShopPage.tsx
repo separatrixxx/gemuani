@@ -135,10 +135,10 @@ export const ShopPage = (): JSX.Element => {
 										unoptimized={true}
 									/>
 								</div>
-								<Htag tag='l' className={styles.productTitle}>{p.title}</Htag>
-								<Htag tag='m'>{p.description}</Htag>
+								<Htag tag='m' className={styles.productTitle}>{p.title}</Htag>
+								{/* <Htag tag='m'>{p.description}</Htag> */}
 								<a className={styles.link} rel='noreferrer' target='_blank' href={p.link}>
-									<Htag tag='xl' className={styles.buy}>{setLocale(router.locale).buy}</Htag>
+									<Htag tag='l' className={styles.buy}>{setLocale(router.locale).buy}</Htag>
 								</a>
 							</div>
 						))}
