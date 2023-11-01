@@ -71,7 +71,7 @@ export const en = {
 		text6: "In addition to its rich history and culture, Georgia is also known for its unique cuisine. Georgian food is a blend of different flavors and spices and is famous for its hearty dishes like khinkali (dumplings) and khachapuri (cheese bread).",
 		text7: "Overall, Georgia is a country with a unique story to tell. From Medea to its long-living inhabitants, from its wine-making tradition to its vibrant culture, Georgia is a place that is full of surprises and wonder.",
 		title2: "GOOD NOT ONLY IN WINE, BUT ALSO IN ART, SPORT AND SCIENCE",
-		title3: "BALLET",
+		title3: "GEORGIAN NATIONAL SUKHISHVILI'S BALLET",
 		text8: "The Sukhishvili Ballet is a Georgian dance company that was founded in 1945 by Iliko Sukhishvili and Nino Ramishvili. The company has gained worldwide recognition for their unique blend of traditional Georgian folk dances with classical ballet techniques.",
 		text9: "The Sukhishvili Ballet has performed in over 100 countries, showcasing their vibrant costumes, impressive choreography, and dynamic energy. Their performances often include intricate footwork, acrobatics, and lifts that leave audiences in awe.",
 		text10: "In addition to their stage performances, the company has also been featured in films, television shows, and documentaries. They have won numerous awards and accolades for their contributions to the world of dance.",
@@ -140,4 +140,5 @@ export const en = {
 		title11: "Raspberry Crisps",
 		title12: "Strawberry Crisps",
 	},
+	partners: "Our Partners",
 };

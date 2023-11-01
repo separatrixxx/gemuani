@@ -28,6 +28,32 @@
 	margin-top: 20px;
 }
 
+.list {
+	display: grid;
+
+	margin-bottom: 20px;
+	gap: 10px;
+}
+
+.list > h1 {
+	cursor: pointer;
+	transition-duration: 300ms;
+}
+
+.list > h1:active {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	color: var(--primary);
+}
+
+@media (min-width: 1024px) {
+	.list > h1:hover {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		color: var(--primary);
+	}
+}
+
 @media (max-width: 1220px) {
 	.cultureBody {
 		width: 85%;

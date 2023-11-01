@@ -1,17 +1,20 @@
 .product {
 	display: grid;
-    justify-items: center;
-	gap: 20px;
-    transition-duration: 300ms;
-    padding: 10px;
-    border-radius: 15px;
+
+	padding: 10px;
+
 	cursor: pointer;
+	transition-duration: 300ms;
+
+	border-radius: 15px;
+	justify-items: center;
+	gap: 20px;
 }
 
 .product:active {
-	background: var(--lighter);
-
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	background: var(--lighter);
 }
 
 .imageBlock {
@@ -31,21 +34,22 @@
 }
 
 .title {
-    font-weight: 600;
+	font-weight: 600;
 }
 
 @media (min-width: 1024px) {
-    .product:hover {
-        background: var(--lighter);
-    
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    }
+	.product:hover {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		background: var(--lighter);
+	}
 }
 
 @media (max-width: 1024px) {
-    .product {
+	.product {
 		gap: 15px;
-        border-radius: 10px;
+
+		border-radius: 10px;
 	}
 
 	.imageBlock {
@@ -54,8 +58,9 @@
 }
 
 @media (max-width: 580px) {
-    .product {
+	.product {
 		gap: 10px;
-        padding: 7px;
+
+		padding: 7px;
 	}
 }

@@ -58,6 +58,10 @@
 	margin-top: 25px;
 }
 
+.socialMediaBlock > a {
+	width: fit-content;
+}
+
 .socialMediaBlock > a > svg {
 	width: 30px;
 	fill: var(--white);

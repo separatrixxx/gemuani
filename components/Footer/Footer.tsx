@@ -8,6 +8,8 @@ import Facebook from './fb.svg';
 import Instagram from './ig.svg';
 import Linkedin from './li.svg';
 import YouTube from './yt.svg';
+import Telegram from './tg.svg';
+import TikTok from './tt.svg';
 import { LocaleChange } from 'components/MainPageComponents/LocaleChange/LocaleChange';
 import { FooterLinks } from 'components/FooterLinks/FooterLinks';
 import Link from 'next/link';
@@ -25,7 +27,8 @@ export const Footer = (): JSX.Element => {
                         <a target='_blank' rel="noreferrer" href='https://www.instagram.com/gemuani_ltd' aria-label="Instagram"><Instagram /></a>
                         <a target='_blank' rel="noreferrer" href='https://www.linkedin.com/company/gemuani-healthy-food' aria-label="Linkedin"><Linkedin /></a>
                         <a target='_blank' rel="noreferrer" href='https://www.youtube.com/@gemuani' aria-label="YouTube"><YouTube /></a>
-
+                        <a target='_blank' rel="noreferrer" href='https://t.me/gemuani' aria-label="Telegram"><Telegram /></a>
+                        <a target='_blank' rel="noreferrer" href='https://www.tiktok.com/@_gemuani_?_t=8h0NaOEWItO' aria-label="TikTok"><TikTok /></a>
                     </div>
                 </FooterLinks>
                 <FooterLinks title={setLocale(router.locale).footer.title2}>
@@ -49,7 +52,9 @@ export const Footer = (): JSX.Element => {
                         </Link>
                         <Htag tag='m' className={styles.link}>Terms & Conditions</Htag>
                         <Htag tag='m' className={styles.link}>Privacy Policy</Htag>
-                        <Htag tag='m' className={styles.link}>Partners</Htag>
+                        <Htag tag='m' className={styles.link} onClick={() => router.push('/partners')}>
+                            {setLocale(router.locale).partners}
+                        </Htag>
                     </div>
                 </FooterLinks>
                 <Logo className={styles.logo} />

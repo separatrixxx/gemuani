@@ -9,7 +9,6 @@ import { SideBlock } from 'components/MainPageComponents/SideBlock/SideBlock';
 import { ImageBlock } from 'components/MainPageComponents/ImageBlock/ImageBlock';
 import { ShopBlock } from 'components/MainPageComponents/ShopBlock/ShopBlock';
 import { EnergyCounter } from 'components/MainPageComponents/EnergyCounter/EnergyCounter';
-import { WorldBlock } from 'components/MainPageComponents/WorldBlock/WorldBlock';
 import { Footer } from 'components/Footer/Footer';
 import { Slider } from 'components/MainPageComponents/Slider/Slider';
 import { TopButton } from 'components/MainPageComponents/TopButton/TopButton';
@@ -48,7 +47,7 @@ export const HomePage = (): JSX.Element => {
                     title={setLocale(router.locale).history_title} />
                 <SideBlock side='left' text={setLocale(router.locale).climate_text} image='/ClimateImage.webp'
                     title={setLocale(router.locale).climate_title} />
-                <WorldBlock text={setLocale(router.locale).world_text} title={setLocale(router.locale).world_title} />
+                {/* <WorldBlock text={setLocale(router.locale).world_text} title={setLocale(router.locale).world_title} /> */}
                 <BlogBlock text={setLocale(router.locale).blog_text} link='blog' />
                 <Footer />
             </div>
