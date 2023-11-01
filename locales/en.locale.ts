@@ -126,4 +126,18 @@ export const en = {
 	},
 	sorry: "Sorry, this page is currently under construction",
 	buy: 'BUY',
+	products: {
+		title1: "Apple Cubes",
+		title2: "Beetroot Crisps",
+		title3: "Black Currant Crisps",
+		title4: "Blueberry Crisps",
+		title5: "Cherry Crisps",
+		title6: "Feijoa Crisps",
+		title7: "Grape Crisps",
+		title8: "Kiwi Crisps",
+		title9: "Mandarin Crisps",
+		title10: "Peach Cubes",
+		title11: "Raspberry Crisps",
+		title12: "Strawberry Crisps",
+	},
 };
