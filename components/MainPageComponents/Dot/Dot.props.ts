@@ -9,6 +9,7 @@ export interface DotProps extends DetailedHTMLProps<HTMLAttributes<HTMLSpanEleme
     setTitle: (e: any) => void,
     text: string,
     setText: (e: any) => void,
+    link: string,
     setTopBlock: (e: any) => void,
     setLeftBlock: (e: any) => void,
 }

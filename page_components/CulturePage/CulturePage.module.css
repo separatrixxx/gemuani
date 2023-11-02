@@ -32,12 +32,16 @@
 	display: grid;
 
 	margin-bottom: 20px;
-	gap: 10px;
+	gap: 5px !important;
 }
 
 .list > h1 {
 	cursor: pointer;
 	transition-duration: 300ms;
+
+	color: var(--second);
+
+	font-weight: 600 !important;
 }
 
 .list > h1:active {

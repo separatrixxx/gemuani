@@ -26,6 +26,7 @@ export const Header = (): JSX.Element => {
 		{ title: setLocale(router.locale).blog.toUpperCase(), link: 'blog' },
 		{ title: setLocale(router.locale).contacts.toUpperCase(), link: 'contacts' },
 		{ title: setLocale(router.locale).shop.toUpperCase(), link: 'shop' },
+		{ title: setLocale(router.locale).partners.toUpperCase(), link: 'partners' },
 	];
 
 	const [open, setOpen] = useState<boolean>(false);

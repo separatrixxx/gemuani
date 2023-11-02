@@ -36,10 +36,9 @@ export const Footer = (): JSX.Element => {
                         <Link href='contacts'>
                             <Htag tag='m' className={styles.link}>{setLocale(router.locale).titles.contacts_title}</Htag>
                         </Link>
-                        <Htag tag='m' className={styles.link}>Returns</Htag>
-                        <Htag tag='m' className={styles.link}>Site Map</Htag>
-                        <Htag tag='m' className={styles.link}>Brands</Htag>
-                        <Htag tag='m' className={styles.link}>Specials</Htag>
+                        <Link href='sitemap.xml'>
+                            <Htag tag='m' className={styles.link}>{setLocale(router.locale).site_map}</Htag>
+                        </Link>
                     </div>
                 </FooterLinks>
                 <FooterLinks title={setLocale(router.locale).footer.title3}>
@@ -50,11 +49,9 @@ export const Footer = (): JSX.Element => {
                         <Link href='kiwi_farm'>
                             <Htag tag='m' className={styles.link}>{setLocale(router.locale).titles.kiwi_farm_title}</Htag>
                         </Link>
-                        <Htag tag='m' className={styles.link}>Terms & Conditions</Htag>
-                        <Htag tag='m' className={styles.link}>Privacy Policy</Htag>
-                        <Htag tag='m' className={styles.link} onClick={() => router.push('/partners')}>
-                            {setLocale(router.locale).partners}
-                        </Htag>
+                        <Link href='partners'>
+                            <Htag tag='m' className={styles.link}>{setLocale(router.locale).partners}</Htag>
+                        </Link>
                     </div>
                 </FooterLinks>
                 <Logo className={styles.logo} />
