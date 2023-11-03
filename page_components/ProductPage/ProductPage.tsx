@@ -9,9 +9,10 @@ import { ContactsForm } from 'components/ContactsPageComponents/ContactsForm/Con
 import Arrow from './arrow.svg';
 import { TopElem } from 'components/TopElem/TopElem';
 import { TopButton } from 'components/MainPageComponents/TopButton/TopButton';
+import { ProductInfo } from 'components/ProductPageComponents/ProductInfo/ProductInfo';
 
 
-export const ProductPage = ({ title }: ProductPageProps): JSX.Element => {
+export const ProductPage = ({ image, title, titleFull, description }: ProductPageProps): JSX.Element => {
 	const router = useRouter();
 
 	return (
@@ -22,6 +23,7 @@ export const ProductPage = ({ title }: ProductPageProps): JSX.Element => {
 				<Header />
 				<div className={styles.productBody}>
                     <h1>{title}</h1>
+					<ProductInfo image={image} title={title} titleFull={titleFull} description={description} />
 				</div>
 				<Footer />
 			</div>

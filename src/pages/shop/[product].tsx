@@ -22,7 +22,7 @@ export default function Product({ product }: ProductProps) {
 				<meta charSet="utf-8" />
 				<link rel="icon" href="/logo.svg" type='image/svg+xml' />
 			</Head>
-			<ProductPage title={product.title} />
+			<ProductPage image={product.image} title={product.title} titleFull={product.titleFull} description={product.description} />
 		</>
 	);
 }

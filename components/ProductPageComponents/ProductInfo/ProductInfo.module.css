@@ -1,0 +1,43 @@
+.productInfoDiv {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 30px;
+}
+
+.imageBlock {
+	display: grid;
+	overflow: hidden;
+
+	width: 100%;
+	height: fit-content;
+
+	border-radius: 15px;
+	background: var(--primary);
+}
+
+.img {
+	width: 100%;
+	height: 100%;
+}
+
+.textDiv {
+    display: grid;
+    gap: 20px;
+    height: fit-content;
+}
+
+.titleFull {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.description {
+    font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+	.imageBlock {
+		border-radius: 10px;
+	}
+}
+

@@ -25,20 +25,20 @@ export const HeaderLocaleChange = (): JSX.Element => {
         languages.splice(langIndex, 1);
     }
 
-    let Icon;
+    let locale: string;
 
     if (router.locale === 'ru') {
-        Icon = Ru;
+        locale = 'Rus';
     } else if (router.locale === 'ka') {
-        Icon = Ge;
+        locale = 'Geo';
     } else {
-        Icon = En;
+        locale = 'Eng';
     }
 
     return (
         <>
             <Htag tag='s' className={styles.lang} onClick={() => setActive(true)}>
-                <Icon />
+                {locale}
             </Htag>
             <Modal active={active} setActive={setActive}>
                 <div className={styles.blockLanguages}>
