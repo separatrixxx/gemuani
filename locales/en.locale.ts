@@ -152,4 +152,7 @@ export const en = {
 	},
 	partners: "Our Partners",
 	site_map: "Site Map",
+	cart: "Cart",
+	add_to_cart: "Add to Cart",
+	in_the_cart: "In the Cart",
 };

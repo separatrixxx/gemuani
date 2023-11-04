@@ -13,6 +13,7 @@ import { setLocale } from 'helpers/locale.helper';
 import { BurgerMenu } from 'components/MainPageComponents/BurgerMenu/BurgenMenu';
 import { HeaderLocaleChange } from 'components/HeaderLocaleChange/HeaderLocaleChange';
 import cn from 'classnames';
+import { HeaderCart } from 'components/HeaderCart/HeaderCart';
 
 
 
@@ -155,6 +156,7 @@ export const Header = (): JSX.Element => {
 				))}
 			</motion.div>
 			<div className={styles.openOrLang}>
+				<HeaderCart />
 				<HeaderLocaleChange />
 				<BurgerMenu open={open} setOpen={setOpen} setHidden={setHidden} />
 			</div>

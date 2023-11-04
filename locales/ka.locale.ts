@@ -152,4 +152,7 @@ export const ka = {
 	},
 	partners: "Ჩვენი პარტნიორები",
 	site_map: "საიტის რუკა",
+	cart: "კალათა",
+	add_to_cart: "Კალათაში დამატება",
+	in_the_cart: "ეტლში",
 };

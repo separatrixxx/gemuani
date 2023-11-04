@@ -152,4 +152,7 @@ export const ru = {
 	},
 	partners: "Наши партнёры",
 	site_map: "Карта сайта",
+	cart: "Корзина",
+	add_to_cart: "Добавить в корзину",
+	in_the_cart: "В корзине",
 };

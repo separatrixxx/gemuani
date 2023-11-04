@@ -1,0 +1,43 @@
+.buyButton {
+	width: fit-content;
+	padding: 10px 20px;
+
+	cursor: pointer;
+	transition-duration: 300ms;
+
+	color: var(--white);
+	border: none;
+	border-radius: 10px;
+	background: var(--primary);
+}
+
+.buyButton:active {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	background: var(--second);
+}
+
+.isAdded {
+	color: var(--primary);
+	background: var(--white);
+}
+
+.isAdded:active {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	background: var(--light);
+}
+
+@media (min-width: 1024px) {
+	.buyButton:hover {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		background: var(--second);
+	}
+
+	.isAdded:hover {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		background: var(--light);
+	}
+}

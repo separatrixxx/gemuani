@@ -120,10 +120,10 @@
 
 .openOrLang {
 	display: grid;
-	grid-template-columns: 1fr auto;
+	grid-template-columns: 1fr auto auto;
 
 	align-items: center !important;
-	gap: 20px;
+	gap: 30px;
 
 	width: 100%;
 	justify-items: end;

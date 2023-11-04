@@ -1,0 +1,24 @@
+.cart {
+	width: 22px;
+}
+
+.cart > svg {
+	fill: var(--white);
+
+	cursor: pointer;
+	transition-duration: 300ms;
+}
+
+.cart > svg:active {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	filter: brightness(0.9);
+}
+
+@media (min-width: 1024px) {
+	.cart > svg:hover {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		filter: brightness(0.9);
+	}
+}

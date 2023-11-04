@@ -1,7 +1,7 @@
 .productInfoDiv {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 30px;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 30px;
 }
 
 .imageBlock {
@@ -21,18 +21,20 @@
 }
 
 .textDiv {
-    display: grid;
-    gap: 20px;
-    height: fit-content;
+	display: grid;
+	gap: 20px;
+
+	height: fit-content;
 }
 
 .titleFull {
-    font-weight: 600;
-    color: var(--primary);
+	color: var(--primary);
+
+	font-weight: 600;
 }
 
 .description {
-    font-weight: 500;
+	font-weight: 500;
 }
 
 @media (max-width: 1024px) {
@@ -40,4 +42,3 @@
 		border-radius: 10px;
 	}
 }
-

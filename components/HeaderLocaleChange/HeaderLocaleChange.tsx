@@ -8,9 +8,6 @@ import { useState } from 'react';
 import { setLocale } from 'helpers/locale.helper';
 import { Modal } from 'components/MainPageComponents/Modal/Modal';
 import { Htag } from 'components/Htag/Htag';
-import Ru from './ru.svg';
-import Ge from './ge.svg';
-import En from './en.svg';
 
 
 export const HeaderLocaleChange = (): JSX.Element => {
