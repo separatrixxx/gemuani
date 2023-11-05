@@ -38,7 +38,17 @@
 }
 
 @media (max-width: 1024px) {
+	.productInfoDiv {
+		grid-template-columns: 30% 1fr;
+	}
+
 	.imageBlock {
 		border-radius: 10px;
+	}
+}
+
+@media (max-width: 580px) {
+	.productInfoDiv {
+		grid-template-columns: auto;
 	}
 }

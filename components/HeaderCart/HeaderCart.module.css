@@ -1,22 +1,49 @@
-.cart {
-	width: 22px;
-}
-
-.cart > svg {
-	fill: var(--white);
+.wrapper {
+	position: relative;
 
 	cursor: pointer;
 	transition-duration: 300ms;
 }
 
-.cart > svg:active {
+.cart {
+	display: grid;
+
+	width: 22px;
+}
+
+.cart > svg {
+	fill: var(--white);
+}
+
+.wrapper:active {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 	filter: brightness(0.9);
 }
 
+.counter {
+	position: absolute;
+	right: -7px;
+	bottom: -7px;
+
+	display: grid;
+	align-items: center;
+
+	width: 15px;
+	height: 15px;
+
+	user-select: none;
+
+	color: var(--white);
+	border-radius: 9999px;
+	background: var(--error);
+
+	font-size: 10px;
+	justify-items: center;
+}
+
 @media (min-width: 1024px) {
-	.cart > svg:hover {
+	.wrapper:hover {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 		filter: brightness(0.9);

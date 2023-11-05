@@ -3,22 +3,19 @@ import styles from './BuyButton.module.css';
 import { useRouter } from 'next/router';
 import { setLocale } from 'helpers/locale.helper';
 import { Htag } from 'components/Htag/Htag';
-import { useState } from 'react';
+import { addToCart, removeFromCart, plusMinusCart } from 'helpers/cart.helper';
 import cn from 'classnames';
-import { addToCart } from 'helpers/cart.helper';
 
 
-export const BuyButton = ({ isAdded, setIsAdded, id, image, title }: BuyButtonProps): JSX.Element => {
+export const BuyButton = ({ isAdded, setIsAdded, id, image, title, count, setCount, setAllCount }: BuyButtonProps): JSX.Element => {
 	const router = useRouter();
-
-	const [count, setCount] = useState<number>(1);
 
 	const maxCount = 10;
 	
 	if (!isAdded) {
 		return (
 			<button className={styles.buyButton} onClick={() => {
-				addToCart(id, image, title, count);
+				addToCart(id, image, title, setCount, setAllCount);
 				setIsAdded(!isAdded);
 			}}>
 				{setLocale(router.locale).add_to_cart}
@@ -28,8 +25,7 @@ export const BuyButton = ({ isAdded, setIsAdded, id, image, title }: BuyButtonPr
 		return (
 			<div className={styles.buyDiv}>
 				<button className={cn(styles.buyButton, styles.isAdded)} onClick={() => {
-					addToCart(id, image, title, count);
-					setCount(1);
+					removeFromCart(id, setCount, setAllCount);
 					setIsAdded(!isAdded);
 				}}>
 					{setLocale(router.locale).in_the_cart}
@@ -37,11 +33,9 @@ export const BuyButton = ({ isAdded, setIsAdded, id, image, title }: BuyButtonPr
 				<div className={styles.counterDiv}>
 					<button className={styles.minusPlus} onClick={() => {
 						if (count > 1) {
-							addToCart(id, image, title, count);
-							setCount(count - 1);
+							plusMinusCart(id, setCount, false);
 						} else {
-							addToCart(id, image, title, count);
-							setCount(1);
+							removeFromCart(id, setCount, setAllCount);
 							setIsAdded(false);
 						}
 					}}>
@@ -52,8 +46,7 @@ export const BuyButton = ({ isAdded, setIsAdded, id, image, title }: BuyButtonPr
 						[styles.disable]: count === maxCount,
 					})} onClick={() => {
 						if (count < maxCount) {
-							addToCart(id, image, title, count);
-							setCount(count + 1);
+							plusMinusCart(id, setCount, true);
 						}
 					}}>
 						+

@@ -1,7 +1,8 @@
+import { HeaderProps } from './Header.props';
 import styles from './Header.module.css';
 import { Htag } from 'components/Htag/Htag';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Logo from './logo_icon.svg';
 import Arrow from './arrow.svg';
 import { useScrollY } from 'hooks/useScrollY';
@@ -12,12 +13,12 @@ import { useRouter } from 'next/router';
 import { setLocale } from 'helpers/locale.helper';
 import { BurgerMenu } from 'components/MainPageComponents/BurgerMenu/BurgenMenu';
 import { HeaderLocaleChange } from 'components/HeaderLocaleChange/HeaderLocaleChange';
-import cn from 'classnames';
 import { HeaderCart } from 'components/HeaderCart/HeaderCart';
+import cn from 'classnames';
+import { getCartCount } from 'helpers/cart.helper';
 
 
-
-export const Header = (): JSX.Element => {
+export const Header = ({ count }: HeaderProps): JSX.Element => {
 	const router = useRouter();
 
 	const [hiddenLinks, setHiddenLinks] = useState<boolean>(true);
@@ -98,6 +99,12 @@ export const Header = (): JSX.Element => {
 		variantsBlock.hidden.transition.duration = 0;
 	}
 
+	const [countNew, setCountNew] = useState<number>(0);
+
+	useEffect(() => {
+		setCountNew(getCartCount());
+	}, []);
+
 	return (
 		<motion.header className={styles.header}
 			variants={variants}
@@ -156,7 +163,7 @@ export const Header = (): JSX.Element => {
 				))}
 			</motion.div>
 			<div className={styles.openOrLang}>
-				<HeaderCart />
+				<HeaderCart count={count ? count : countNew} />
 				<HeaderLocaleChange />
 				<BurgerMenu open={open} setOpen={setOpen} setHidden={setHidden} />
 			</div>
