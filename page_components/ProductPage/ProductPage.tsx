@@ -9,7 +9,7 @@ import { ProductInfo } from 'components/ProductPageComponents/ProductInfo/Produc
 import { Htag } from 'components/Htag/Htag';
 
 
-export const ProductPage = ({ image, title, titleFull, description }: ProductPageProps): JSX.Element => {
+export const ProductPage = ({ id, image, title, titleFull, description }: ProductPageProps): JSX.Element => {
 	const router = useRouter();
 
 	return (
@@ -20,7 +20,7 @@ export const ProductPage = ({ image, title, titleFull, description }: ProductPag
 				<Header />
 				<div className={styles.productBody}>
                     <Htag tag='xl' className={styles.title}>{title}</Htag>
-					<ProductInfo image={image} title={title} titleFull={titleFull} description={description} />
+					<ProductInfo id={id} image={image} title={title} titleFull={titleFull} description={description} />
 				</div>
 				<Footer />
 			</div>

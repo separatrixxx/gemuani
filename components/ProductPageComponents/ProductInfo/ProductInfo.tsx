@@ -6,7 +6,7 @@ import { BuyButton } from '../BuyButton/BuyButton';
 import { useState } from 'react';
 
 
-export const ProductInfo = ({ image, title, titleFull, description }: ProductInfoProps): JSX.Element => {
+export const ProductInfo = ({ id, image, title, titleFull, description }: ProductInfoProps): JSX.Element => {
 	const [isAdded, setIsAdded] = useState<boolean>(false);
 	
 	return (
@@ -24,7 +24,8 @@ export const ProductInfo = ({ image, title, titleFull, description }: ProductInf
             <div className={styles.textDiv}>
                 <Htag tag='l' className={styles.titleFull}>{titleFull}</Htag>
                 <Htag tag='m' className={styles.description}>{description}</Htag>
-				<BuyButton isAdded={isAdded} setIsAdded={setIsAdded} />
+				<BuyButton isAdded={isAdded} setIsAdded={setIsAdded} id={id}
+					image={image} title={title} />
             </div>
 		</div>
 	);
