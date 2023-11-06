@@ -155,4 +155,6 @@ export const en = {
 	cart: "Cart",
 	add_to_cart: "Add to Cart",
 	in_the_cart: "In the Cart",
+	cart_is_empty: "Cart is empty",
+	cart_info: "Check the products in your cart, fill out the form and wait for us to contact you. With love and care, your Gemuani.",
 };

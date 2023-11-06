@@ -13,11 +13,14 @@
 	margin-top: 110px;
 	justify-items: left;
 	gap: 30px;
-	margin-bottom: 200px;
 }
 
 .title {
-	font-weight: 600;
+	font-weight: 600 !important;
+}
+
+.empty {
+	margin-bottom: 200px !important;
 }
 
 @media (max-width: 1220px) {
@@ -35,7 +38,10 @@
 		width: 90%;
 		margin-top: 80px;
 		gap: 20px;
-		margin-bottom: 400px;
+	}
+
+	.empty {
+		margin-bottom: 320px;
 	}
 }
 
@@ -49,6 +55,9 @@
 
 		width: 90%;
 		gap: 40px;
+	}
+
+	.empty {
 		margin-bottom: 0;
 	}
 }

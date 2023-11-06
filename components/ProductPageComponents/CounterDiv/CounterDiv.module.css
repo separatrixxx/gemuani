@@ -1,50 +1,61 @@
-.buyButton {
+.counterDiv {
+	display: grid;
+	align-items: center;
+
 	width: fit-content;
-	padding: 10px 20px;
+	grid-template-columns: auto auto;
+	grid-template-columns: auto auto auto;
+	gap: 10px;
+}
+
+.minusPlus {
+	width: 30px;
+	height: 30px;
 
 	cursor: pointer;
+	user-select: none;
 	transition-duration: 300ms;
 
 	color: var(--white);
 	border: none;
 	border-radius: 10px;
 	background: var(--primary);
+
+	font-size: 14px;
+	font-weight: 600;
 }
 
-.isAdded {
-	color: var(--primary) !important;
-	background: var(--white) !important;
-}
-
-.buyDiv {
-	display: grid;
-	align-items: center;
-
-	width: fit-content;
-	grid-template-columns: auto auto;
-	gap: 20px;
-}
-
-.buyButton:active {
+.minusPlus:active {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 	background: var(--second);
 }
 
-.isAdded:active {
+.disable {
+	color: var(--primary) !important;
+	background: var(--white) !important;
+}
+
+.disable:active {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 	background: var(--light);
 }
 
+.count {
+	color: var(--primary);
+
+	font-weight: 600;
+}
+
 @media (min-width: 1024px) {
-	.buyButton:hover {
+	.minusPlus:hover {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 		background: var(--second);
 	}
 
-	.isAdded:hover {
+	.disable:hover {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 		background: var(--light);

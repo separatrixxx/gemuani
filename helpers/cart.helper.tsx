@@ -1,6 +1,18 @@
 import { Cart } from "interfaces/cart.interface";
 
 
+export function getCartAll(): Cart[] {
+    let currentCart = localStorage.getItem('cart');
+
+    if (currentCart) {
+        let newCart: Cart[] = JSON.parse(currentCart);
+
+        return newCart;
+    } else {
+        return [];
+    }
+}
+
 export function getCartCount(): number {
     let currentCart = localStorage.getItem('cart');
 
