@@ -27,7 +27,7 @@ export const PartnersPage = (): JSX.Element => {
 				<div className={styles.partnersBody}>
 					<Htag tag='xxl' className={styles.partnersTitle}>{setLocale(router.locale).partners}</Htag>
 					<div className={styles.partnersDiv}>
-						<span className={styles.partnerLogo} style={{ cursor: 'pointer' }} onClick={() => router.push('https://www.enterprisegeorgia.gov.ge/en/home')}>
+						<span className={styles.partnerLogo} style={{ cursor: 'pointer' }} onClick={() => router.push('https://tradewithgeorgia.com/companies/gemuani-ltd-1')}>
 							<Partner1 />
 						</span>
 						<span className={styles.partnerLogo} style={{ cursor: 'pointer' }} onClick={() => router.push('https://rda.gov.ge/')}>
