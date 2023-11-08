@@ -12,7 +12,7 @@ export const ContactsForm = (): JSX.Element => {
 
     const [name, setName] = useState<string>('');
     const [email, setEmail] = useState<string>('');
-    const [message, setMEssage] = useState<string>('');
+    const [message, setMessage] = useState<string>('');
 
     const [errorName, setErrorName] = useState<boolean>(false);
     const [errorEmail, setErrorEmail] = useState<boolean>(false);
@@ -27,7 +27,7 @@ export const ContactsForm = (): JSX.Element => {
                 <Input type='email' text={setLocale(router.locale).contacts_page.email} value={email}
                     error={errorEmail} onChange={(e) => setEmail(e.target.value)} />
                 <Input type='message' text={setLocale(router.locale).contacts_page.message} value={message}
-                    error={errorMessage} onChange={(e) => setMEssage(e.target.value)} />
+                    error={errorMessage} onChange={(e) => setMessage(e.target.value)} />
             </div>
             <button className={styles.button} onClick={() => contactHelper(
                 name, email, message, setErrorName, setErrorEmail, setErrorMessage
