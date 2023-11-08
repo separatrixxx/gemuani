@@ -14,8 +14,8 @@ import { setLocale } from 'helpers/locale.helper';
 import { BurgerMenu } from 'components/MainPageComponents/BurgerMenu/BurgenMenu';
 import { HeaderLocaleChange } from 'components/HeaderLocaleChange/HeaderLocaleChange';
 import { HeaderCart } from 'components/HeaderCart/HeaderCart';
-import cn from 'classnames';
 import { getCartCount } from 'helpers/cart.helper';
+import cn from 'classnames';
 
 
 export const Header = ({ count }: HeaderProps): JSX.Element => {

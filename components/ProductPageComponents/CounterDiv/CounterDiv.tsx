@@ -2,6 +2,7 @@ import {CounterDivProps } from './CounterDiv.props';
 import styles from './CounterDiv.module.css';
 import { Htag } from 'components/Htag/Htag';
 import { removeFromCart, plusMinusCart } from 'helpers/cart.helper';
+import Delete from './delete.svg';
 import cn from 'classnames';
 
 
@@ -10,6 +11,15 @@ export const CounterDiv = ({ setIsAdded, id, count, setCount, setAllCount }: Cou
 	
 	return (
         <div className={styles.counterDiv}>
+                <button className={cn(styles.minusPlus, styles.delete)} onClick={() => {
+                    removeFromCart(id, setCount, setAllCount);
+                        
+                    if (setIsAdded) {
+                        setIsAdded(false);
+                    }
+                }}>
+                    <Delete />
+                </button>
                 <button className={styles.minusPlus} onClick={() => {
                     if (count > 1) {
                         plusMinusCart(id, setCount, false);

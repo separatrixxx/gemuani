@@ -3,8 +3,7 @@
 	align-items: center;
 
 	width: fit-content;
-	grid-template-columns: auto auto;
-	grid-template-columns: auto auto auto;
+	grid-template-columns: repeat(4, auto);
 	gap: 10px;
 }
 
@@ -25,10 +24,24 @@
 	font-weight: 600;
 }
 
+.delete {
+	display: grid;
+	align-items: center;
+
+	background: var(--error);
+	justify-items: center;
+}
+
+.delete > svg {
+	fill: var(--white);
+
+	height: 14px !important;
+}
+
 .minusPlus:active {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-	background: var(--second);
+	filter: brightness(0.9);
 }
 
 .disable {
@@ -52,7 +65,7 @@
 	.minusPlus:hover {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-		background: var(--second);
+		filter: brightness(0.9);
 	}
 
 	.disable:hover {
