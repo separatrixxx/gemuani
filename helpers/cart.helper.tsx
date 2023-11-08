@@ -25,6 +25,16 @@ export function getCartCount(): number {
     }
 }
 
+export function getTotalPrice(cart: Cart[]): number {
+    let totalPrice: number = 0;
+
+    for (let c of cart) {
+        totalPrice += c.price * c.count;
+    }
+
+    return totalPrice;
+}
+
 export function getCart(id: string): Cart {
     let currentCart = localStorage.getItem('cart');
 
@@ -33,6 +43,7 @@ export function getCart(id: string): Cart {
         image: '',
         title: '',
         count: 0,
+        price: 0,
     };
 
     if (currentCart) {
@@ -50,7 +61,8 @@ export function getCart(id: string): Cart {
     return cart;
 }
 
-export function addToCart(id: string, image: string, title: string, setCount: (e: any) => void, setAllCount: (e: any) => void) {
+export function addToCart(id: string, image: string, title: string, price: number, setCount: (e: any) => void,
+    setAllCount: (e: any) => void) {
     let currentCart = localStorage.getItem('cart');
 
 	let product: Cart = {
@@ -58,6 +70,7 @@ export function addToCart(id: string, image: string, title: string, setCount: (e
         image: image,
         title: title,
         count: 1,
+        price: price,
     };
 
     if (currentCart) {

@@ -1,0 +1,39 @@
+.formBody {
+	display: grid;
+	gap: 30px;
+
+	width: 100%;
+	height: fit-content;
+}
+
+.inputsDiv {
+	display: grid;
+	gap: 20px;
+}
+
+.button {
+	width: 150px;
+	height: 40px;
+
+	cursor: pointer;
+	transition-duration: 300ms;
+
+	color: var(--white);
+	border: none;
+	border-radius: 10px;
+	background: var(--primary);
+
+	font-size: 18px;
+}
+
+.button:active {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	background: var(--second);
+}
+
+@media (min-width: 1024px) {
+	.button:hover {
+		background: var(--second);
+	}
+}

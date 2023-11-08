@@ -5,7 +5,7 @@ import { Htag } from 'components/Htag/Htag';
 import { useRouter } from 'next/router';
 
 
-export const ProductItem = ({ id, image, title }: ProductItemProps): JSX.Element => {
+export const ProductItem = ({ id, image, title, price }: ProductItemProps): JSX.Element => {
     const router = useRouter();
     
 	return (
@@ -20,7 +20,10 @@ export const ProductItem = ({ id, image, title }: ProductItemProps): JSX.Element
 					unoptimized={true}
 				/>
 			</div>
-			<Htag tag='m' className={styles.title}>{title}</Htag>
+			<div className={styles.productInfo}>
+				<Htag tag='m' className={styles.title}>{title}</Htag>
+				<Htag tag='s' className={styles.title}>{price + '₾'}</Htag>
+			</div>
 		</div>
 	);
 };

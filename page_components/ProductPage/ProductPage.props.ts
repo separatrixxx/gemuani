@@ -4,4 +4,5 @@ export interface ProductPageProps {
 	title: string,
 	titleFull: string,
 	description: string,
+	price: number,
 }

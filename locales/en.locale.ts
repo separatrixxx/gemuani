@@ -154,7 +154,8 @@ export const en = {
 	site_map: "Site Map",
 	cart: "Cart",
 	add_to_cart: "Add to Cart",
-	in_the_cart: "In the Cart",
+	go_to_cart: "Go to Cart",
 	cart_is_empty: "Cart is empty",
 	cart_info: "Check the products in your cart, fill out the form and wait for us to contact you. With love and care, your Gemuani.",
+	total_cart_cost: "Total cart cost:",
 };

@@ -4,4 +4,5 @@ export interface ProductItemProps extends DetailedHTMLProps<HTMLAttributes<HTMLD
     id: string,
     image: string,
 	title: string,
+    price: number,
 }

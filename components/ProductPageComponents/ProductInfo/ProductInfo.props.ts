@@ -6,5 +6,6 @@ export interface ProductInfoProps extends DetailedHTMLProps<HTMLAttributes<HTMLD
     title: string,
     titleFull: string,
     description: string,
+    price: number,
     setAllCount: (e: any) => void,
 }

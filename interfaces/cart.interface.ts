@@ -3,4 +3,5 @@ export interface Cart {
 	image: string,
 	title: string,
 	count: number,
+	price: number,
 }

@@ -2,3 +2,9 @@
 	display: grid;
 	gap: 30px;
 }
+
+.title {
+	color: var(--primary);
+
+	font-weight: 600 !important;
+}

@@ -22,7 +22,8 @@ export default function Product({ product }: ProductProps) {
 				<meta charSet="utf-8" />
 				<link rel="icon" href="/logo.svg" type='image/svg+xml' />
 			</Head>
-			<ProductPage id={product.id} image={product.image} title={product.title} titleFull={product.titleFull} description={product.description} />
+			<ProductPage id={product.id} image={product.image} title={product.title} titleFull={product.titleFull}
+				description={product.description} price={product.price} />
 		</>
 	);
 }

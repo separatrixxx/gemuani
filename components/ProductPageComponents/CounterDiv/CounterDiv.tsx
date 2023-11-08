@@ -6,13 +6,18 @@ import Delete from './delete.svg';
 import cn from 'classnames';
 
 
-export const CounterDiv = ({ setIsAdded, id, count, setCount, setAllCount }: CounterDivProps): JSX.Element => {
+export const CounterDiv = ({ setIsAdded, id, count, setCount, setAllCount, price, totalPrice,
+    setTotalPrice }: CounterDivProps): JSX.Element => {
 	const maxCount = 10;
 	
 	return (
         <div className={styles.counterDiv}>
                 <button className={cn(styles.minusPlus, styles.delete)} onClick={() => {
                     removeFromCart(id, setCount, setAllCount);
+
+                    if (price && totalPrice && setTotalPrice) {
+                        setTotalPrice(totalPrice - price * count);
+                    }
                         
                     if (setIsAdded) {
                         setIsAdded(false);
@@ -23,8 +28,16 @@ export const CounterDiv = ({ setIsAdded, id, count, setCount, setAllCount }: Cou
                 <button className={styles.minusPlus} onClick={() => {
                     if (count > 1) {
                         plusMinusCart(id, setCount, false);
+                        
+                        if (price && totalPrice && setTotalPrice) {
+                            setTotalPrice(totalPrice - price);
+                        }
                     } else {
                         removeFromCart(id, setCount, setAllCount);
+
+                        if (price && totalPrice && setTotalPrice) {
+                            setTotalPrice(totalPrice - price * count);
+                        }
                         
                         if (setIsAdded) {
                             setIsAdded(false);
@@ -39,6 +52,10 @@ export const CounterDiv = ({ setIsAdded, id, count, setCount, setAllCount }: Cou
                 })} onClick={() => {
                     if (count < maxCount) {
                         plusMinusCart(id, setCount, true);
+                        
+                        if (price && totalPrice && setTotalPrice) {
+                            setTotalPrice(totalPrice + price);
+                        }
                     }
                 }}>
                     +

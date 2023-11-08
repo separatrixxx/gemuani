@@ -4,5 +4,8 @@ export interface CartItemProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivE
     id: string,
     image: string,
 	title: string,
+    price: number,
     setAllCount: (e: any) => void,
+    totalPrice: number,
+    setTotalPrice: (e: any) => void,
 }

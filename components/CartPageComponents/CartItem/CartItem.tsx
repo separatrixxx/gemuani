@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 import { getCart } from 'helpers/cart.helper';
 
 
-export const CartItem = ({ id, image, title, setAllCount }: CartItemProps): JSX.Element => {
+export const CartItem = ({ id, image, title, price, setAllCount, totalPrice, setTotalPrice }: CartItemProps): JSX.Element => {
     const router = useRouter();
 	const [count, setCount] = useState<number>(0);
 
@@ -31,7 +31,9 @@ export const CartItem = ({ id, image, title, setAllCount }: CartItemProps): JSX.
 				</div>
 				<div className={styles.infoDiv}>
 					<Htag tag='l' className={styles.title}>{title}</Htag>
-					<CounterDiv id={id} count={count} setCount={setCount} setAllCount={setAllCount} />
+					<Htag tag='s' className={styles.title}>{price + '₾'}</Htag>
+					<CounterDiv id={id} count={count} setCount={setCount} setAllCount={setAllCount}
+						price={price} totalPrice={totalPrice} setTotalPrice={setTotalPrice} />
 				</div>
 			</div>
 		);

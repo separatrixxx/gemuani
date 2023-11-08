@@ -7,9 +7,10 @@ import { setLocale } from 'helpers/locale.helper';
 import { TopElem } from 'components/TopElem/TopElem';
 import { TopButton } from 'components/MainPageComponents/TopButton/TopButton';
 import { useEffect, useState } from 'react';
-import { getCartAll, getCartCount } from 'helpers/cart.helper';
+import { getCartAll, getCartCount, getTotalPrice } from 'helpers/cart.helper';
 import { Cart } from 'interfaces/cart.interface';
 import { CartList } from 'components/CartPageComponents/CartList/CartList';
+import { BuyForm } from 'components/CartPageComponents/BuyForm/BuyForm';
 
 
 export const CartPage = (): JSX.Element => {
@@ -31,13 +32,16 @@ export const CartPage = (): JSX.Element => {
 				<Header count={count} />
 				<div className={styles.cartBody}>
 					<Htag tag='xl' className={styles.title}>{setLocale(router.locale).cart}</Htag>
-					<Htag tag='m' className={styles.title}>{setLocale(router.locale).cart_info}</Htag>
-					{
-						count > 0 ? 
-							<CartList cart={cart} setAllCount={setCount} />
-						:
-							<Htag tag='l' className={styles.empty}>{setLocale(router.locale).cart_is_empty}</Htag>
-					}
+					<Htag tag='m'>{setLocale(router.locale).cart_info}</Htag>
+					<div className={styles.cartList}>
+						{
+							count > 0 ? 
+								<CartList cart={cart} setAllCount={setCount} />
+							:
+								<Htag tag='l' className={styles.empty}>{setLocale(router.locale).cart_is_empty}</Htag>
+						}
+						<BuyForm />
+					</div>
 				</div>
 				<Footer />
 			</div>

@@ -34,7 +34,7 @@
 .isAdded:active {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-	background: var(--light);
+	background: var(--light) !important;
 }
 
 @media (min-width: 1024px) {
@@ -47,6 +47,6 @@
 	.isAdded:hover {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-		background: var(--light);
+		background: var(--light) !important;
 	}
 }

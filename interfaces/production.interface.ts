@@ -6,4 +6,5 @@ export interface Production {
 	titleFull: string,
 	description: string,
 	link: string,
+	price: number,
 }

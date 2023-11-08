@@ -10,7 +10,7 @@ import { useEffect, useState } from 'react';
 import { getCartCount } from 'helpers/cart.helper';
 
 
-export const ProductPage = ({ id, image, title, titleFull, description }: ProductPageProps): JSX.Element => {
+export const ProductPage = ({ id, image, title, titleFull, description, price }: ProductPageProps): JSX.Element => {
 	const [count, setCount] = useState<number>(0);
 
 	useEffect(() => {
@@ -26,7 +26,7 @@ export const ProductPage = ({ id, image, title, titleFull, description }: Produc
 				<div className={styles.productBody}>
                     <Htag tag='xl' className={styles.title}>{title}</Htag>
 					<ProductInfo id={id} image={image} title={title} titleFull={titleFull} description={description}
-						setAllCount={setCount} />
+						price={price} setAllCount={setCount} />
 				</div>
 				<Footer />
 			</div>

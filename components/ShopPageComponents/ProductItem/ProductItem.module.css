@@ -33,6 +33,11 @@
 	height: 100%;
 }
 
+.productInfo {
+	display: grid;
+	justify-items: center;
+}
+
 .title {
 	font-weight: 600 !important;
 }

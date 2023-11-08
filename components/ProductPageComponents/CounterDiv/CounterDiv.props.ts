@@ -6,4 +6,7 @@ export interface CounterDivProps extends DetailedHTMLProps<HTMLAttributes<HTMLBu
     count: number,
     setCount: (e: any) => void,
     setAllCount: (e: any) => void,
+    price?: number,
+    totalPrice?: number,
+    setTotalPrice?: (e: any) => void,
 }

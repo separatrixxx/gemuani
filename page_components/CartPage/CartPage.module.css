@@ -19,6 +19,14 @@
 	font-weight: 600 !important;
 }
 
+.cartList {
+	display: grid;
+
+	width: 100%;
+	grid-template-columns: 1fr 1fr;
+	gap: 40px;
+}
+
 .empty {
 	margin-bottom: 200px !important;
 }
