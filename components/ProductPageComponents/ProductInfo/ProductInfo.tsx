@@ -7,7 +7,8 @@ import { useEffect, useState } from 'react';
 import { getCart } from 'helpers/cart.helper';
 
 
-export const ProductInfo = ({ id, image, title, titleFull, description, price, setAllCount }: ProductInfoProps): JSX.Element => {
+export const ProductInfo = ({ id, image, title, titleFull, description, price, setAllCount,
+	setCart }: ProductInfoProps): JSX.Element => {
 	const [isAdded, setIsAdded] = useState<boolean>(false);
 	const [count, setCount] = useState<number>(0);
 
@@ -34,7 +35,7 @@ export const ProductInfo = ({ id, image, title, titleFull, description, price, s
                 <Htag tag='m' className={styles.description}>{description}</Htag>
 				<Htag tag='l' className={styles.titleFull}>{price + '₾'}</Htag>
 				<BuyButton isAdded={isAdded} setIsAdded={setIsAdded} id={id} image={image} title={title}
-					count={count} price={price} setCount={setCount} setAllCount={setAllCount} />
+					count={count} price={price} setCount={setCount} setAllCount={setAllCount} setCart={setCart} />
             </div>
 		</div>
 	);

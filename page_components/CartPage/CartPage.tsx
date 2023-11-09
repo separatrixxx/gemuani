@@ -36,11 +36,11 @@ export const CartPage = (): JSX.Element => {
 					<div className={styles.cartList}>
 						{
 							count > 0 ? 
-								<CartList cart={cart} setAllCount={setCount} />
+								<CartList cart={cart.reverse()} setCart={setCart} setAllCount={setCount} />
 							:
 								<Htag tag='l' className={styles.empty}>{setLocale(router.locale).cart_is_empty}</Htag>
 						}
-						<BuyForm />
+						<BuyForm cart={cart} />
 					</div>
 				</div>
 				<Footer />

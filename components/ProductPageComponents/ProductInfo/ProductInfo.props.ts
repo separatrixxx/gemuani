@@ -8,4 +8,5 @@ export interface ProductInfoProps extends DetailedHTMLProps<HTMLAttributes<HTMLD
     description: string,
     price: number,
     setAllCount: (e: any) => void,
+    setCart: (e: any) => void,
 }

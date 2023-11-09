@@ -8,7 +8,7 @@ import { useState } from 'react';
 import { getTotalPrice } from 'helpers/cart.helper';
 
 
-export const CartList = ({ cart, setAllCount }: CartListProps): JSX.Element => {
+export const CartList = ({ cart, setCart, setAllCount }: CartListProps): JSX.Element => {
 	const router = useRouter();
 
 	const [totalPrice, setTotalPrice] = useState<number>(getTotalPrice(cart));
@@ -18,7 +18,7 @@ export const CartList = ({ cart, setAllCount }: CartListProps): JSX.Element => {
 			<Htag tag='l' className={styles.title}>{setLocale(router.locale).total_cart_cost + ' ' + totalPrice + '₾'}</Htag>
 			{cart.map(c => (
 				<CartItem key={c.id} id={c.id} image={c.image} title={c.title} price={c.price} setAllCount={setAllCount}
-					totalPrice={totalPrice} setTotalPrice={setTotalPrice} />
+					totalPrice={totalPrice} setTotalPrice={setTotalPrice} setCart={setCart} />
 			))}
 		</div>
 	);

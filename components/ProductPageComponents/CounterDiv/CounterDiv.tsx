@@ -7,13 +7,13 @@ import cn from 'classnames';
 
 
 export const CounterDiv = ({ setIsAdded, id, count, setCount, setAllCount, price, totalPrice,
-    setTotalPrice }: CounterDivProps): JSX.Element => {
+    setTotalPrice, setCart }: CounterDivProps): JSX.Element => {
 	const maxCount = 10;
 	
 	return (
         <div className={styles.counterDiv}>
                 <button className={cn(styles.minusPlus, styles.delete)} onClick={() => {
-                    removeFromCart(id, setCount, setAllCount);
+                    removeFromCart(id, setCount, setAllCount, setCart);
 
                     if (price && totalPrice && setTotalPrice) {
                         setTotalPrice(totalPrice - price * count);
@@ -27,13 +27,13 @@ export const CounterDiv = ({ setIsAdded, id, count, setCount, setAllCount, price
                 </button>
                 <button className={styles.minusPlus} onClick={() => {
                     if (count > 1) {
-                        plusMinusCart(id, setCount, false);
+                        plusMinusCart(id, setCount, setCart, false);
                         
                         if (price && totalPrice && setTotalPrice) {
                             setTotalPrice(totalPrice - price);
                         }
                     } else {
-                        removeFromCart(id, setCount, setAllCount);
+                        removeFromCart(id, setCount, setAllCount, setCart);
 
                         if (price && totalPrice && setTotalPrice) {
                             setTotalPrice(totalPrice - price * count);
@@ -51,7 +51,7 @@ export const CounterDiv = ({ setIsAdded, id, count, setCount, setAllCount, price
                     [styles.disable]: count === maxCount,
                 })} onClick={() => {
                     if (count < maxCount) {
-                        plusMinusCart(id, setCount, true);
+                        plusMinusCart(id, setCount, setCart, true);
                         
                         if (price && totalPrice && setTotalPrice) {
                             setTotalPrice(totalPrice + price);

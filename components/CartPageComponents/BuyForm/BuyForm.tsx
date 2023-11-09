@@ -1,3 +1,4 @@
+import { BuyFormProps } from './BuyForm.props';
 import styles from './BuyForm.module.css';
 import { setLocale } from 'helpers/locale.helper';
 import { useRouter } from 'next/router';
@@ -6,7 +7,7 @@ import { Input } from 'components/ContactsPageComponents/Input/Input';
 import { buyHelper } from 'helpers/buy.helper';
 
 
-export const BuyForm = (): JSX.Element => {
+export const BuyForm = ({ cart }: BuyFormProps): JSX.Element => {
     const router = useRouter();
 
     const [name, setName] = useState<string>('');
@@ -24,7 +25,7 @@ export const BuyForm = (): JSX.Element => {
                     error={errorEmail} onChange={(e) => setEmail(e.target.value)} />
             </div>
             <button className={styles.button} onClick={() => buyHelper(
-                name, email, setErrorName, setErrorEmail)}>
+                cart, name, email, setErrorName, setErrorEmail)}>
                 {setLocale(router.locale).buy}
             </button>
         </div>

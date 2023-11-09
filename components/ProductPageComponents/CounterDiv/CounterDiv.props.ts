@@ -1,4 +1,6 @@
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
+import { Cart } from 'interfaces/cart.interface';
+
 
 export interface CounterDivProps extends DetailedHTMLProps<HTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
     setIsAdded?: (e: any) => void,
@@ -9,4 +11,5 @@ export interface CounterDivProps extends DetailedHTMLProps<HTMLAttributes<HTMLBu
     price?: number,
     totalPrice?: number,
     setTotalPrice?: (e: any) => void,
+    setCart: (e: any) => void,
 }

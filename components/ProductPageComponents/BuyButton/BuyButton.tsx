@@ -7,7 +7,8 @@ import { CounterDiv } from '../CounterDiv/CounterDiv';
 import cn from 'classnames';
 
 
-export const BuyButton = ({ isAdded, setIsAdded, id, image, title, count, price, setCount, setAllCount }: BuyButtonProps): JSX.Element => {
+export const BuyButton = ({ isAdded, setIsAdded, id, image, title, count, price, setCount, setAllCount,
+	setCart }: BuyButtonProps): JSX.Element => {
 	const router = useRouter();
 	
 	if (!isAdded) {
@@ -25,7 +26,8 @@ export const BuyButton = ({ isAdded, setIsAdded, id, image, title, count, price,
 				<button className={cn(styles.buyButton, styles.isAdded)} onClick={() => router.push('/cart')}>
 					{setLocale(router.locale).go_to_cart}
 				</button>
-				<CounterDiv setIsAdded={setIsAdded} id={id} count={count} setCount={setCount} setAllCount={setAllCount} />
+				<CounterDiv setIsAdded={setIsAdded} id={id} count={count} setCount={setCount} setAllCount={setAllCount}
+					setCart={setCart} />
 			</div>
 		);
 	}

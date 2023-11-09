@@ -53,6 +53,12 @@
 	}
 }
 
+@media (max-width: 700px) {
+	.cartList {
+		grid-template-columns: auto;
+	}
+}
+
 @media (max-width: 580px) {
 	.wrapper {
 		gap: 30px;

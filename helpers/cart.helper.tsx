@@ -89,7 +89,8 @@ export function addToCart(id: string, image: string, title: string, price: numbe
     setCount(1);
 }
 
-export function removeFromCart(id: string, setCount: (e: any) => void, setAllCount: (e: any) => void) {
+export function removeFromCart(id: string, setCount: (e: any) => void, setAllCount: (e: any) => void,
+    setCart: (e: any) => void) {
 	let currentCart = localStorage.getItem('cart');
 
     if (currentCart) {
@@ -107,10 +108,11 @@ export function removeFromCart(id: string, setCount: (e: any) => void, setAllCou
         localStorage.setItem('cart', JSON.stringify(newCart));
         setCount(0);
         setAllCount(newCart.length);
+        setCart(newCart);
     }
 }
 
-export function plusMinusCart(id: string, setCount: (e: any) => void, isPlus: boolean) {
+export function plusMinusCart(id: string, setCount: (e: any) => void, setCart: (e: any) => void, isPlus: boolean) {
 	let currentCart = localStorage.getItem('cart');
 
     if (currentCart) {
@@ -127,5 +129,6 @@ export function plusMinusCart(id: string, setCount: (e: any) => void, isPlus: bo
 
         localStorage.clear();
         localStorage.setItem('cart', JSON.stringify(newCart));
+        setCart(newCart);
     }
 }
