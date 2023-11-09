@@ -50,3 +50,9 @@
 		background: var(--light) !important;
 	}
 }
+
+@media (max-width: 350px) {
+	.buyDiv {
+		grid-template-columns: auto;
+	}
+}

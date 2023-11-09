@@ -1,9 +1,10 @@
 .cart {
 	display: grid;
+	align-items: center;
 
 	width: fit-content;
 	padding: 10px;
-	grid-template-columns: 200px auto;
+	grid-template-columns: 100px auto;
 	gap: 30px;
 }
 
@@ -17,7 +18,7 @@
 	cursor: pointer;
 	transition-duration: 300ms;
 
-	border-radius: 15px;
+	border-radius: 10px;
 	background: var(--primary);
 }
 
@@ -41,7 +42,6 @@
 	gap: 20px;
 
 	height: fit-content;
-	margin-top: 20px;
 }
 
 @media (min-width: 1024px) {
@@ -56,10 +56,6 @@
 	.cart {
 		gap: 15px;
 
-		border-radius: 10px;
-	}
-
-	.imageBlock {
 		border-radius: 10px;
 	}
 }

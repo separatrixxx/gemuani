@@ -9,9 +9,13 @@ import { Htag } from 'components/Htag/Htag';
 import { useEffect, useState } from 'react';
 import { getCartAll, getCartCount } from 'helpers/cart.helper';
 import { Cart } from 'interfaces/cart.interface';
+import Arrow from './arrow.svg';
+import { useRouter } from 'next/router';
 
 
 export const ProductPage = ({ id, image, title, titleFull, description, price }: ProductPageProps): JSX.Element => {
+	const router = useRouter();
+	
 	const [cart, setCart] = useState<Cart[]>([]);
 	const [count, setCount] = useState<number>(0);
 
@@ -27,7 +31,12 @@ export const ProductPage = ({ id, image, title, titleFull, description, price }:
 			<div className={styles.wrapper}>
 				<Header count={count} />
 				<div className={styles.productBody}>
-                    <Htag tag='xl' className={styles.title}>{title}</Htag>
+                    <div className={styles.backDiv}>
+						<span className={styles.arrow} onClick={() => router.push('/shop')}>
+							<Arrow />
+						</span>
+						<Htag tag='xl' className={styles.title}>{title}</Htag>
+					</div>
 					<ProductInfo id={id} image={image} title={title} titleFull={titleFull} description={description}
 						price={price} setAllCount={setCount} setCart={setCart} />
 				</div>

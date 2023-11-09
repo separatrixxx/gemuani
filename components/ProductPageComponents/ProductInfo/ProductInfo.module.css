@@ -1,6 +1,6 @@
 .productInfoDiv {
 	display: grid;
-	grid-template-columns: auto 1fr;
+	grid-template-columns: auto auto;
 	gap: 30px;
 }
 

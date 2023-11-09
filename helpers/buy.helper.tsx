@@ -20,6 +20,8 @@ export function buyHelper(cart: Cart[], name: string, email: string, setErrorNam
                     + ', totalPrice = ' + c.price * c.count + '\n';
             }
 
+            buyText += 'Customer: ' + name + ', email: ' + email;
+
             console.log(buyText);
         }
     } else {
