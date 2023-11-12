@@ -23,7 +23,8 @@ export const ShopPage = (): JSX.Element => {
 			<div className={styles.wrapper}>
 				<Header />
 				<div className={styles.shopBody}>
-					<Htag tag='xxl' className={styles.shopTitle}>{setLocale(router.locale).shop_page.title1}</Htag>
+					<ProductsList production={setProduction(router.locale)} />
+					<Htag tag='xxl' className={cn(styles.shopTitle, styles.marginTop)}>{setLocale(router.locale).shop_page.title1}</Htag>
 					<a rel='noreferrer' target='_blank' href='https://www.amazon.com/s?k=GEMUANI&ref=bl_dp_s_web_0'>
 						<Htag tag='xl' className={styles.shopLink}>
 							<Amazon />
@@ -34,8 +35,6 @@ export const ShopPage = (): JSX.Element => {
 							<Wolt />
 						</Htag>
 					</a>
-					<Htag tag='xxl' className={cn(styles.shopTitle, styles.marginTop)}>{setLocale(router.locale).shop_page.title2}</Htag>
-					<ProductsList production={setProduction(router.locale)} />
 				</div>
 				<Footer />
 			</div>

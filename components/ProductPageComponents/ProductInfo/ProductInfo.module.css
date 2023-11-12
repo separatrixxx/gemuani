@@ -12,7 +12,7 @@
 	height: fit-content;
 
 	border-radius: 15px;
-	background: var(--primary);
+	background: var(--backgroundDark);
 }
 
 .img {

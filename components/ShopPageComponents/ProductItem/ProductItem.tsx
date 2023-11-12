@@ -22,7 +22,7 @@ export const ProductItem = ({ id, image, title, price }: ProductItemProps): JSX.
 			</div>
 			<div className={styles.productInfo}>
 				<Htag tag='m' className={styles.title}>{title}</Htag>
-				<Htag tag='s' className={styles.title}>{price + '₾'}</Htag>
+				<Htag tag='s' className={styles.price}>{price + '₾'}</Htag>
 			</div>
 		</div>
 	);

@@ -7,6 +7,7 @@
 	transition-duration: 300ms;
 
 	border-radius: 15px;
+	background: var(--backgroundDark);
 	justify-items: center;
 	gap: 20px;
 }
@@ -14,7 +15,7 @@
 .product:active {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-	background: var(--lighter);
+	filter: brightness(0.9);
 }
 
 .imageBlock {
@@ -25,7 +26,6 @@
 	height: fit-content;
 
 	border-radius: 15px;
-	background: var(--primary);
 }
 
 .img {
@@ -38,15 +38,20 @@
 	justify-items: center;
 }
 
-.title {
+.title,
+.price {
 	font-weight: 600 !important;
+}
+
+.title {
+	color: var(--primary);
 }
 
 @media (min-width: 1024px) {
 	.product:hover {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-		background: var(--lighter);
+		filter: brightness(0.9);
 	}
 }
 

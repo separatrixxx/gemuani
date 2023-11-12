@@ -19,7 +19,7 @@
 	transition-duration: 300ms;
 
 	border-radius: 10px;
-	background: var(--primary);
+	background: var(--backgroundDark);
 }
 
 .imageBlock:active {
