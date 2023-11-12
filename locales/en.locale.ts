@@ -158,4 +158,8 @@ export const en = {
 	cart_is_empty: "Cart is empty",
 	cart_info: "Check the products in your cart, fill out the form and wait for us to contact you. With love and care, your Gemuani.",
 	total_cart_cost: "Total cart cost:",
+	phone_number: "Phone Number",
+	first_add_items: "First add items to Cart",
+	success_purchase: "Thank you for your purchase, our manager will contact you",
+	error_purchase: "An error has occurred",
 };

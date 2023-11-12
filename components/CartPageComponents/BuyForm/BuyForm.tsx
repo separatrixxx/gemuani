@@ -5,16 +5,22 @@ import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { Input } from 'components/ContactsPageComponents/Input/Input';
 import { buyHelper } from 'helpers/buy.helper';
+import cn from 'classnames';
+import { LoadingDots } from '../LoadingDots/LoadingDots';
 
 
-export const BuyForm = ({ cart }: BuyFormProps): JSX.Element => {
+export const BuyForm = ({ cart, setCart }: BuyFormProps): JSX.Element => {
     const router = useRouter();
 
     const [name, setName] = useState<string>('');
     const [email, setEmail] = useState<string>('');
+    const [phone, setPhone] = useState<string>('');
 
     const [errorName, setErrorName] = useState<boolean>(false);
     const [errorEmail, setErrorEmail] = useState<boolean>(false);
+    const [errorPhone, setErrorPhone] = useState<boolean>(false);
+
+    const [loading, setLoading] = useState<boolean>(false);
 
     return (
         <div className={styles.formBody}>
@@ -23,11 +29,20 @@ export const BuyForm = ({ cart }: BuyFormProps): JSX.Element => {
                     error={errorName} onChange={(e) => setName(e.target.value)} />
                 <Input type='email' text={setLocale(router.locale).contacts_page.email} value={email}
                     error={errorEmail} onChange={(e) => setEmail(e.target.value)} />
+                <Input type='phone' text={setLocale(router.locale).phone_number} value={phone}
+                    error={errorPhone} onChange={(e) => setPhone(e.target.value)} />
             </div>
-            <button className={styles.button} onClick={() => buyHelper(
-                cart, name, email, setErrorName, setErrorEmail)}>
-                {setLocale(router.locale).buy}
-            </button>
+            {
+                !loading ?
+                    <button className={styles.button} onClick={() => buyHelper(
+                        cart, name, email, phone, setErrorName, setErrorEmail, setErrorPhone, setLoading, setCart, router)}>
+                        {setLocale(router.locale).buy}
+                    </button>
+                :
+                    <button className={cn(styles.button, styles.button_loading)}>
+                        <LoadingDots />
+                    </button>
+            }
         </div>
     );
 };

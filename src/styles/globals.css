@@ -51,6 +51,18 @@ a {
 	background: var(--accent) !important;
 }
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+	-moz-appearance: textfield;
+	appearance: none;
+}
+
 @media (max-width: 1024px) {
 	.swiper-pagination-bullet {
 		width: 7px !important;

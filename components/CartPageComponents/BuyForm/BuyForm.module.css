@@ -32,6 +32,14 @@
 	background: var(--second);
 }
 
+.button_loading {
+	display: grid;
+	align-items: center;
+	justify-items: center;
+
+	cursor: not-allowed;
+}
+
 @media (min-width: 1024px) {
 	.button:hover {
 		background: var(--second);

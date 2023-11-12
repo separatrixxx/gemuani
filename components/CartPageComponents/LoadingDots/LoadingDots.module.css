@@ -1,0 +1,41 @@
+.loading .spacer {
+	margin-right: 2px;
+}
+
+.loading span {
+	display: inline-block;
+
+	width: 5px;
+	height: 5px;
+	margin: 2px 1px;
+
+	animation-name: blink;
+	animation-duration: 1.4s;
+	animation-iteration-count: infinite;
+
+	border-radius: 50%;
+	background: var(--white);
+	animation-fill-mode: both;
+}
+
+.loading span:nth-of-type(2) {
+	animation-delay: 0.2s;
+}
+
+.loading span:nth-of-type(3) {
+	animation-delay: 0.4s;
+}
+
+@keyframes blink {
+	0% {
+		opacity: 0.2;
+	}
+
+	20% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0.2;
+	}
+}

@@ -11,6 +11,7 @@ import { getCartAll, getCartCount, getTotalPrice } from 'helpers/cart.helper';
 import { Cart } from 'interfaces/cart.interface';
 import { CartList } from 'components/CartPageComponents/CartList/CartList';
 import { BuyForm } from 'components/CartPageComponents/BuyForm/BuyForm';
+import { Toaster } from 'react-hot-toast';
 
 
 export const CartPage = (): JSX.Element => {
@@ -26,21 +27,28 @@ export const CartPage = (): JSX.Element => {
 
 	return (
 		<>
+			<Toaster
+                position="top-center"
+                reverseOrder={true}
+                toastOptions={{
+                    duration: 2000,
+                }}
+            />
 			<TopElem />
 			<TopButton />
 			<div className={styles.wrapper}>
-				<Header count={count} />
+				<Header count={cart.length} />
 				<div className={styles.cartBody}>
 					<Htag tag='xl' className={styles.title}>{setLocale(router.locale).cart}</Htag>
 					<Htag tag='m'>{setLocale(router.locale).cart_info}</Htag>
 					<div className={styles.cartList}>
 						{
-							count > 0 ? 
+							cart.length > 0 ? 
 								<CartList cart={cart.reverse()} setCart={setCart} setAllCount={setCount} />
 							:
 								<Htag tag='l' className={styles.empty}>{setLocale(router.locale).cart_is_empty}</Htag>
 						}
-						<BuyForm cart={cart} />
+						<BuyForm cart={cart} setCart={setCart} />
 					</div>
 				</div>
 				<Footer />

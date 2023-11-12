@@ -10,7 +10,7 @@ export const Input = ({ type, text, value, error, onChange }: InputProps): JSX.E
         placeholder={text}
         value={value}
         onChange={onChange}
-        type={type === 'email' ? 'email' : 'text'}
+        type={type === 'email' ? 'email' : type === 'phone' ? 'number' : 'text'}
         name={type}
         aria-label={type} />;
 };

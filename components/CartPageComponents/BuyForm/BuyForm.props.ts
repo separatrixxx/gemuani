@@ -4,4 +4,5 @@ import { Cart } from 'interfaces/cart.interface';
 
 export interface BuyFormProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
 	cart: Cart[],
+	setCart: (e: any) => void,
 }

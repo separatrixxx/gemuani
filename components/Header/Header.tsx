@@ -14,7 +14,8 @@ import { setLocale } from 'helpers/locale.helper';
 import { BurgerMenu } from 'components/MainPageComponents/BurgerMenu/BurgenMenu';
 import { HeaderLocaleChange } from 'components/HeaderLocaleChange/HeaderLocaleChange';
 import { HeaderCart } from 'components/HeaderCart/HeaderCart';
-import { getCartCount } from 'helpers/cart.helper';
+import { getCartAll } from 'helpers/cart.helper';
+import { Cart } from 'interfaces/cart.interface';
 import cn from 'classnames';
 
 
@@ -99,10 +100,10 @@ export const Header = ({ count }: HeaderProps): JSX.Element => {
 		variantsBlock.hidden.transition.duration = 0;
 	}
 
-	const [countNew, setCountNew] = useState<number>(0);
+	const [cart, setCart] = useState<Cart[]>([]);
 
 	useEffect(() => {
-		setCountNew(getCartCount());
+		setCart(getCartAll());
 	}, []);
 
 	return (
@@ -123,7 +124,7 @@ export const Header = ({ count }: HeaderProps): JSX.Element => {
 							<Htag tag='m' className={styles.text}>{l.title}</Htag>
 						</Link>
 						:
-						<div key={l.link} className={styles.moreDiv}
+						<div key={'u' + l.link} className={styles.moreDiv}
 							onMouseOver={() => {
 								if (width >= 1024) {
 									setHiddenLinks(false);
@@ -163,7 +164,7 @@ export const Header = ({ count }: HeaderProps): JSX.Element => {
 				))}
 			</motion.div>
 			<div className={styles.openOrLang}>
-				<HeaderCart count={count ? count : countNew} />
+				<HeaderCart count={count !== undefined ? count : cart.length} />
 				<HeaderLocaleChange />
 				<BurgerMenu open={open} setOpen={setOpen} setHidden={setHidden} />
 			</div>
