@@ -13,7 +13,7 @@ import Arrow from './arrow.svg';
 import { useRouter } from 'next/router';
 
 
-export const ProductPage = ({ id, image, title, titleFull, description, price }: ProductPageProps): JSX.Element => {
+export const ProductPage = ({ id, image, title, titleFull, description, price, country, weight }: ProductPageProps): JSX.Element => {
 	const router = useRouter();
 	
 	const [cart, setCart] = useState<Cart[]>([]);
@@ -38,7 +38,7 @@ export const ProductPage = ({ id, image, title, titleFull, description, price }:
 						<Htag tag='xl' className={styles.title}>{title}</Htag>
 					</div>
 					<ProductInfo id={id} image={image} title={title} titleFull={titleFull} description={description}
-						price={price} setAllCount={setCount} setCart={setCart} />
+						price={price} country={country} weight={weight} setAllCount={setCount} setCart={setCart} />
 				</div>
 				<Footer />
 			</div>

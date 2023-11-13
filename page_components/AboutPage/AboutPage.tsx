@@ -20,19 +20,16 @@ export const AboutPage = (): JSX.Element => {
 				<Header />
 				<div className={styles.aboutBody}>
 					<Htag tag='xxl' className={styles.aboutTitle}>{setLocale(router.locale).about_title}</Htag>
-					<div className={styles.slogan}>
-						<Htag tag='l'>{setLocale(router.locale).about_page.text1_1}</Htag>
-						<Htag tag='l'>{setLocale(router.locale).about_page.text1_2}</Htag>
-						<Htag tag='l'>{setLocale(router.locale).about_page.text1_3}</Htag>
-					</div>
-					<Htag tag='xl' className={styles.title}>{setLocale(router.locale).about_page.title1}</Htag>
+					<Htag tag='l'>{setLocale(router.locale).about_page.text1}</Htag>
 					<Htag tag='l'>{setLocale(router.locale).about_page.text2}</Htag>
 					<AboutImageBlock image='/AboutImg1.webp' alt='about image 1' />
+					<Htag tag='xl' className={styles.title}>{setLocale(router.locale).about_page.title1}</Htag>
 					<Htag tag='l'>{setLocale(router.locale).about_page.text3}</Htag>
 					<AboutImageBlock image='/AboutImg2.webp' alt='about image 2' />
-					<Htag tag='l'>{setLocale(router.locale).about_page.text4}</Htag>
-					<Htag tag='l'>{setLocale(router.locale).about_page.text5}</Htag>
 					<Htag tag='xl' className={styles.title}>{setLocale(router.locale).about_page.title2}</Htag>
+					<Htag tag='l'>{setLocale(router.locale).about_page.text4}</Htag>
+					<Htag tag='xl' className={styles.title}>{setLocale(router.locale).about_page.title3}</Htag>
+					<Htag tag='l'>{setLocale(router.locale).about_page.text5}</Htag>
 					<Htag tag='l'>{setLocale(router.locale).about_page.text6}</Htag>
 					<AboutImageBlock image='/AboutImg3.webp' alt='about image 3' />
 					<Htag tag='l'>{setLocale(router.locale).about_page.text7}</Htag>

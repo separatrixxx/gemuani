@@ -7,4 +7,6 @@ export interface Production {
 	description: string,
 	link: string,
 	price: number,
+	country: string,
+	weight: number,
 }
