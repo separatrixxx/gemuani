@@ -14,9 +14,9 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>{'Gemuani - ' + setLocale(router.locale).titles.main_title}</title>
-        <meta name='description' content='Authentic Georgian Freeze-Dried Delights. We have grown to be the only producer of freeze-dried fruits and vegetables in Georgia, and in 2017 we launched a plant entirely using European equipment. Up to 95% of the products used in production are grown in Georgia, including on our plantation.' />
+        <meta name='description' content={`Gemuani ,  since  founding in 2011, achieved significant milestones. We earned Global GAP certification in 2015, launched our freeze-drying factory in 2017, and obtained and IFS certifications and FDA registration . We were named the "N1 Golden Brand" in Georgia's market and  we export our products globally.`} />
         <meta property='og:title' content='Authentic Georgian Freeze-Dried Delights' />
-        <meta property='og:description' content='Authentic Georgian Freeze-Dried Delights. We have grown to be the only producer of freeze-dried fruits and vegetables in Georgia, and in 2017 we launched a plant entirely using European equipment. Up to 95% of the products used in production are grown in Georgia, including on our plantation.' />
+        <meta property='og:description' content={`Gemuani ,  since  founding in 2011, achieved significant milestones. We earned Global GAP certification in 2015, launched our freeze-drying factory in 2017, and obtained and IFS certifications and FDA registration . We were named the "N1 Golden Brand" in Georgia's market and  we export our products globally.`} />
         <meta name='robots' content='index, nosnippet' />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
         <meta property='og:url' content='https://www.gemuani.com/' />

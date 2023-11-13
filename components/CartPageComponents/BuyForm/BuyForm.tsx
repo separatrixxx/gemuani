@@ -5,8 +5,8 @@ import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { Input } from 'components/ContactsPageComponents/Input/Input';
 import { buyHelper } from 'helpers/buy.helper';
-import cn from 'classnames';
 import { LoadingDots } from '../LoadingDots/LoadingDots';
+import cn from 'classnames';
 
 
 export const BuyForm = ({ cart, setCart }: BuyFormProps): JSX.Element => {

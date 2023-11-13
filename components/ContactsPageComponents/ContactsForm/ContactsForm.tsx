@@ -5,6 +5,8 @@ import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { Input } from '../Input/Input';
 import { contactHelper } from 'helpers/contacts.helper';
+import { LoadingDots } from 'components/CartPageComponents/LoadingDots/LoadingDots';
+import cn from 'classnames';
 
 
 export const ContactsForm = (): JSX.Element => {
@@ -18,6 +20,8 @@ export const ContactsForm = (): JSX.Element => {
     const [errorEmail, setErrorEmail] = useState<boolean>(false);
     const [errorMessage, setErrorMessage] = useState<boolean>(false);
 
+    const [loading, setLoading] = useState<boolean>(false);
+
     return (
         <div className={styles.formBody}>
             <Htag tag='xxl' className={styles.contactsTitle}>{setLocale(router.locale).contacts_page.title1}</Htag>
@@ -29,11 +33,18 @@ export const ContactsForm = (): JSX.Element => {
                 <Input type='message' text={setLocale(router.locale).contacts_page.message} value={message}
                     error={errorMessage} onChange={(e) => setMessage(e.target.value)} />
             </div>
-            <button className={styles.button} onClick={() => contactHelper(
-                name, email, message, setErrorName, setErrorEmail, setErrorMessage
-            )}>
-                {setLocale(router.locale).contacts_page.send}
-            </button>
+            {
+                !loading ?
+                    <button className={styles.button} onClick={() => contactHelper(
+                        name, email, message, setErrorName, setErrorEmail, setErrorMessage, setLoading
+                    )}>
+                        {setLocale(router.locale).contacts_page.send}
+                    </button>
+                :
+                    <button className={cn(styles.button, styles.button_loading)}>
+                        <LoadingDots />
+                    </button>
+            }
         </div>
     );
 };

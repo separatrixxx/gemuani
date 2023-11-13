@@ -30,7 +30,7 @@ export const ShopPage = (): JSX.Element => {
 							<Amazon />
 						</Htag>
 					</a>
-					<a rel='noreferrer' target='_blank' href='https://wolt.com/geo/tbilisi/venue/wolt-market-marijani?search=%E1%83%92%E1%83%94%E1%83%9B%E1%83%A3%E1%83%90%E1%83%9C%E1%83%98'>
+					<a rel='noreferrer' target='_blank' href='https://wolt.com/ka/geo/tbilisi/venue/wolt-market-marijani/gemuani-chiri-martsqvis-krispi-10gr-itemid-647f279fbe1e2eace68ee7e0'>
 						<Htag tag='xl' className={styles.shopLink}>
 							<Wolt />
 						</Htag>

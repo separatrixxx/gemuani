@@ -8,6 +8,7 @@ import { ContactsForm } from 'components/ContactsPageComponents/ContactsForm/Con
 import Arrow from './arrow.svg';
 import { TopElem } from 'components/TopElem/TopElem';
 import { TopButton } from 'components/MainPageComponents/TopButton/TopButton';
+import { Toaster } from 'react-hot-toast';
 
 
 export const ContactsPage = (): JSX.Element => {
@@ -15,6 +16,13 @@ export const ContactsPage = (): JSX.Element => {
 
 	return (
 		<>
+			<Toaster
+                position="top-center"
+                reverseOrder={true}
+                toastOptions={{
+                    duration: 2000,
+                }}
+            />
 			<TopElem />
 			<TopButton />
 			<div className={styles.wrapper}>
