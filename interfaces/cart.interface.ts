@@ -9,7 +9,7 @@ export interface Cart {
 export interface Buy {
     name: string, 
     email: string, 
-    phone: number | null, 
+    phone: number, 
     url: string, 
     list_of_product: Cart[], 
 }

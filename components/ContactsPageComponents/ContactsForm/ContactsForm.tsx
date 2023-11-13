@@ -14,10 +14,12 @@ export const ContactsForm = (): JSX.Element => {
 
     const [name, setName] = useState<string>('');
     const [email, setEmail] = useState<string>('');
+    const [phone, setPhone] = useState<string>('');
     const [message, setMessage] = useState<string>('');
 
     const [errorName, setErrorName] = useState<boolean>(false);
     const [errorEmail, setErrorEmail] = useState<boolean>(false);
+    const [errorPhone, setErrorPhone] = useState<boolean>(false);
     const [errorMessage, setErrorMessage] = useState<boolean>(false);
 
     const [loading, setLoading] = useState<boolean>(false);
@@ -30,13 +32,15 @@ export const ContactsForm = (): JSX.Element => {
                     error={errorName} onChange={(e) => setName(e.target.value)} />
                 <Input type='email' text={setLocale(router.locale).contacts_page.email} value={email}
                     error={errorEmail} onChange={(e) => setEmail(e.target.value)} />
+                <Input type='phone' text={setLocale(router.locale).phone_number} value={phone}
+                    error={errorPhone} onChange={(e) => setPhone(e.target.value)} />
                 <Input type='message' text={setLocale(router.locale).contacts_page.message} value={message}
                     error={errorMessage} onChange={(e) => setMessage(e.target.value)} />
             </div>
             {
                 !loading ?
                     <button className={styles.button} onClick={() => contactHelper(
-                        name, email, message, setErrorName, setErrorEmail, setErrorMessage, setLoading
+                        name, email, phone, message, setErrorName, setErrorEmail, setErrorPhone, setErrorMessage, setLoading, router
                     )}>
                         {setLocale(router.locale).contacts_page.send}
                     </button>
