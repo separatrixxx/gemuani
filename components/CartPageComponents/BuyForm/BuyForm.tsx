@@ -23,7 +23,9 @@ export const BuyForm = ({ cart, setCart }: BuyFormProps): JSX.Element => {
     const [loading, setLoading] = useState<boolean>(false);
 
     return (
-        <div className={styles.formBody}>
+        <div className={cn(styles.formBody, {
+			[styles.margin1]: cart.length === 1,
+		})}>
             <div className={styles.inputsDiv}>
                 <Input type='name' text={setLocale(router.locale).contacts_page.name} value={name}
                     error={errorName} onChange={(e) => setName(e.target.value)} />

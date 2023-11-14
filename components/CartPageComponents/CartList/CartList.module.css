@@ -8,3 +8,28 @@
 
 	font-weight: 600 !important;
 }
+
+.margin1 {
+	margin-bottom: 255px;
+}
+
+.margin2 {
+	margin-bottom: 70px;
+}
+
+@media (max-width: 1024px) {
+	.margin1 {
+		margin-bottom: 395px;
+	}
+
+	.margin2 {
+		margin-bottom: 220px;
+	}
+}
+
+@media (max-width: 700px) {
+	.margin1,
+	.margin2 {
+		margin-bottom: 0;
+	}
+}

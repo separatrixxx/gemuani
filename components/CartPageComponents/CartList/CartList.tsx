@@ -6,6 +6,7 @@ import { useRouter } from 'next/router';
 import { setLocale } from 'helpers/locale.helper';
 import { useState } from 'react';
 import { getTotalPrice } from 'helpers/cart.helper';
+import cn from 'classnames';
 
 
 export const CartList = ({ cart, setCart, setAllCount }: CartListProps): JSX.Element => {
@@ -14,7 +15,10 @@ export const CartList = ({ cart, setCart, setAllCount }: CartListProps): JSX.Ele
 	const [totalPrice, setTotalPrice] = useState<number>(getTotalPrice(cart));
 	
 	return (
-		<div className={styles.cartDiv}>
+		<div className={cn(styles.cartDiv, {
+			[styles.margin1]: cart.length === 1,
+			[styles.margin2]: cart.length === 2,
+		})}>
 			<Htag tag='l' className={styles.title}>{setLocale(router.locale).total_cart_cost + ' ' + totalPrice + '₾'}</Htag>
 			{cart.map(c => (
 				<CartItem key={c.id} id={c.id} image={c.image} title={c.title} price={c.price} setAllCount={setAllCount}
