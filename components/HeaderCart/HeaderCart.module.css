@@ -8,7 +8,7 @@
 .cart {
 	display: grid;
 
-	width: 22px;
+	width: 20px;
 }
 
 .cart > svg {
@@ -29,8 +29,8 @@
 	display: grid;
 	align-items: center;
 
-	width: 15px;
-	height: 15px;
+	width: 14px;
+	height: 14px;
 
 	user-select: none;
 

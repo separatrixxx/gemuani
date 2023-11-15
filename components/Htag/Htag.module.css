@@ -9,35 +9,35 @@
 }
 
 .xxl {
-	font-size: 44px;
+	font-size: 40px;
 	font-weight: 700;
 	font-style: normal;
 	line-height: normal;
 }
 
 .xl {
-	font-size: 36px;
+	font-size: 32px;
 	font-weight: 500;
 	font-style: normal;
 	line-height: 42px;
 }
 
 .l {
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: 500;
 	font-style: normal;
 	line-height: normal;
 }
 
 .m {
-	font-size: 16px;
+	font-size: 12px;
 	font-weight: 700;
 	font-style: normal;
 	line-height: normal;
 }
 
 .s {
-	font-size: 14px;
+	font-size: 10px;
 	font-weight: 500;
 	font-style: normal;
 	line-height: normal;
@@ -45,71 +45,71 @@
 
 @media (max-width: 1550px) {
 	.xxl {
-		font-size: 40px;
-		line-height: 46px;
+		font-size: 36px;
+		line-height: 42px;
 	}
 
 	.xl {
-		font-size: 30px;
-		line-height: 36px;
+		font-size: 26px;
+		line-height: 32px;
 	}
 }
 
 @media (max-width: 1024px) {
 	.xxl {
-		font-size: 36px;
-	}
-
-	.xl {
-		font-size: 28px;
-		line-height: 34px;
-	}
-
-	.l {
-		font-size: 18px;
-	}
-
-	.m {
-		font-size: 14px;
-	}
-
-	.s {
-		font-size: 12px;
-	}
-}
-
-@media (max-width: 965px) {
-	.xxl {
-		font-size: 30px;
-		line-height: 36px;
+		font-size: 32px;
 	}
 
 	.xl {
 		font-size: 24px;
 		line-height: 30px;
 	}
-}
-
-@media (max-width: 580px) {
-	.xxl {
-		font-size: 24px;
-	}
-
-	.xl {
-		font-size: 20px;
-		line-height: 26px;
-	}
 
 	.l {
 		font-size: 14px;
 	}
 
 	.m {
-		font-size: 12px;
+		font-size: 10px;
 	}
 
 	.s {
+		font-size: 8px;
+	}
+}
+
+@media (max-width: 965px) {
+	.xxl {
+		font-size: 26px;
+		line-height: 32px;
+	}
+
+	.xl {
+		font-size: 20px;
+		line-height: 26px;
+	}
+}
+
+@media (max-width: 580px) {
+	.xxl {
+		font-size: 20px;
+	}
+
+	.xl {
+		font-size: 16px;
+		line-height: 22px;
+	}
+
+	.l {
 		font-size: 10px;
+	}
+
+	.m {
+		font-size: 8px;
+	}
+
+	.s {
+		font-size: 6px;
 	}
 }
 

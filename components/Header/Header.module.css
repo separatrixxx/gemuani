@@ -15,8 +15,7 @@
 }
 
 .logo {
-	width: 135px;
-	height: 40px;
+	width: 130px;
 
 	cursor: pointer;
 	justify-self: right;
@@ -65,7 +64,7 @@
 }
 
 .arrow > svg {
-	height: 8px;
+	height: 6px;
 
 	transition-duration: 300ms;
 	fill: var(--white);
