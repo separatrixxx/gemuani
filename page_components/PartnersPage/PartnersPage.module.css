@@ -67,6 +67,12 @@
 	}
 }
 
+@media (max-width: 800px) {
+	.partnersDiv {
+		grid-template-columns: auto auto;
+	}
+}
+
 @media (max-width: 580px) {
 	.wrapper {
 		gap: 30px;
@@ -85,8 +91,12 @@
 	}
 }
 
-@media (max-width: 400px) {
-	.partnersBody {
-		width: 95%;
+@media (max-width: 300px) {
+	.partnersDiv {
+		grid-template-columns: auto;
+	}
+
+	.partnerLogo > svg {
+		width: 150px;
 	}
 }

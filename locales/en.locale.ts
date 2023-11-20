@@ -14,7 +14,7 @@ export const en = {
 	energy_text: "We have adopted a strategy to move to more than 50% clean solar energy in production. This way we will save approximately:",
 	climate_title: "UNIQUE CLIMATE",
 	climate_text: "There are 8 climatic zones in Georgia, which is why our fruits and berries are unique. From mild subtropical climate in the west to dry continental in the center, to temperate in the east. Try the incredible taste of Georgia today.",
-	mountains_text: "All our products are made from 100% natural fruits and berries of Georgia and all over the world, with care for their unique nature and culture. Our consumers from different countries had the opportunity to try the unique taste of unique varieties of kiwi, feijoa, tangerine, strawberries, grapes and other fruits",
+	mountains_text: "All our products are made from 100% natural fruits and berries from Georgia and around the world, taking care of their unique nature and culture",
 	production_text: "The excellent quality of our products is achieved through manual control, the use of natural fruits and care for nature",
 	world_title: "AROUND THE WORLD WITH GEMUANI",
 	world_text: "We welcome everyone in Georgia! I think you live in the UAE? Then look at the mosque in Tbilisi, our capital.",
