@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>{'Gemuani - ' + setLocale(router.locale).titles.main_title}</title>
-        <meta name='description' content={`Gemuani ,  since  founding in 2011, achieved significant milestones. We earned Global GAP certification in 2015, launched our freeze-drying factory in 2017, and obtained and IFS certifications and FDA registration . We were named the "N1 Golden Brand" in Georgia's market and  we export our products globally.`} />
+        <meta name='description' content={`Gemuani, since founding in 2011, achieved significant milestones. We earned Global GAP certification in 2015, launched our freeze-drying factory in 2017, and obtained and IFS certifications and FDA registration . We were named the "N1 Golden Brand" in Georgia's market and  we export our products globally.`} />
         <meta property='og:title' content='Authentic Georgian Freeze-Dried Delights' />
         <meta property='og:description' content={`Gemuani ,  since  founding in 2011, achieved significant milestones. We earned Global GAP certification in 2015, launched our freeze-drying factory in 2017, and obtained and IFS certifications and FDA registration . We were named the "N1 Golden Brand" in Georgia's market and  we export our products globally.`} />
         <meta name='robots' content='index, nosnippet' />
