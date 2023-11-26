@@ -10,6 +10,7 @@ import Linkedin from './li.svg';
 import YouTube from './yt.svg';
 import Telegram from './tg.svg';
 import TikTok from './tt.svg';
+import X from './tw.svg';
 import { LocaleChange } from 'components/MainPageComponents/LocaleChange/LocaleChange';
 import { FooterLinks } from 'components/FooterLinks/FooterLinks';
 import Link from 'next/link';
@@ -29,6 +30,7 @@ export const Footer = (): JSX.Element => {
                         <a target='_blank' rel="noreferrer" href='https://www.youtube.com/@gemuani' aria-label="YouTube"><YouTube /></a>
                         <a target='_blank' rel="noreferrer" href='https://t.me/gemuani' aria-label="Telegram"><Telegram /></a>
                         <a target='_blank' rel="noreferrer" href='https://www.tiktok.com/@_gemuani_?_t=8h0NaOEWItO' aria-label="TikTok"><TikTok /></a>
+                        <a target='_blank' rel="noreferrer" href='https://twitter.com/GEMUANI_LTD' aria-label="X"><X /></a>
                     </div>
                 </FooterLinks>
                 <FooterLinks title={setLocale(router.locale).footer.title2}>
