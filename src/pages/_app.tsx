@@ -4,7 +4,6 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React from 'react';
-import { Analytics } from '@vercel/analytics/react';
 
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -27,7 +26,6 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/logo.svg" type='image/svg+xml' />
       </Head>
       <Component {...pageProps} />
-      <Analytics />
     </>
   );
 }

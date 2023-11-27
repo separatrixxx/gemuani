@@ -12,10 +12,20 @@ export async function buyHelper(cart: Cart[], name: string, email: string, phone
     setErrorEmail(false);
     setErrorPhone(false);
 
-    const { data: response } = await axios.get(
-        'http://apilayer.net/api/validate?access_key=df5b3be5e79fbc0ee90aee227feeb345&number=' + phone);
+    let isValid = false;
 
-    if (+name !== 0 && EMAIL_REGEXP.test(email) && response.valid) {
+    await axios.post('http://34.88.43.118:3000/valid_number', {
+        phone: phone,
+    })
+        .then(function (response) {
+            isValid = response.data.valid;
+        })
+        .catch(function (error) {
+            console.log(error)
+        });
+    
+
+    if (+name !== 0 && EMAIL_REGEXP.test(email) && isValid) {
         if (cart.length > 0) {
             if (name !== null && email !== null && phone !== null) {
                 const data: Buy = {
@@ -53,7 +63,7 @@ export async function buyHelper(cart: Cart[], name: string, email: string, phone
             setErrorEmail(true);
         }
 
-        if (!response.valid) {
+        if (!isValid) {
             setErrorPhone(true);
         }
     }

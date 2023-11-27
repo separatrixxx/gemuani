@@ -13,10 +13,19 @@ export async function contactHelper(name: string, email: string, phone: string, 
     setErrorPhone(false);
     setErrorMessage(false);
 
-    const { data: response } = await axios.get(
-        'http://apilayer.net/api/validate?access_key=df5b3be5e79fbc0ee90aee227feeb345&number=' + phone);
+    let isValid = false;
 
-    if (+name !== 0 && EMAIL_REGEXP.test(email) && response.valid && +message !== 0) {
+    await axios.post('http://34.88.43.118:3000/valid_number', {
+        phone: phone,
+    })
+        .then(function (response) {
+            isValid = response.data.valid;
+        })
+        .catch(function (error) {
+            console.log(error)
+        });
+
+    if (+name !== 0 && EMAIL_REGEXP.test(email) && isValid && +message !== 0) {
         if (name !== null && email !== null && phone !== null && message !== null) {
             const data: Buy = {
                 name: name + ', ' + message,
@@ -48,7 +57,7 @@ export async function contactHelper(name: string, email: string, phone: string, 
             setErrorEmail(true);
         }
 
-        if (!response.valid) {
+        if (!isValid) {
             setErrorPhone(true);
         }
 
