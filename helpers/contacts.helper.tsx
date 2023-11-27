@@ -7,25 +7,14 @@ export async function contactHelper(name: string, email: string, phone: string, 
     setErrorName: (e: any) => void, setErrorEmail: (e: any) => void, setErrorPhone: (e: any) => void, setErrorMessage: (e: any) => void,
     setLoading: (e: any) => void, router: any) {
     const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+    const PHONE_REGEXP = /^[\+]?[(]?[0-9]{1,4}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/iu;
 
     setErrorName(false);
     setErrorEmail(false);
     setErrorPhone(false);
     setErrorMessage(false);
 
-    let isValid = false;
-
-    await axios.post('http://34.88.43.118:3000/valid_number', {
-        phone: phone,
-    })
-        .then(function (response) {
-            isValid = response.data.valid;
-        })
-        .catch(function (error) {
-            console.log(error)
-        });
-
-    if (+name !== 0 && EMAIL_REGEXP.test(email) && isValid && +message !== 0) {
+    if (+name !== 0 && EMAIL_REGEXP.test(email) && PHONE_REGEXP.test(phone) && +message !== 0) {
         if (name !== null && email !== null && phone !== null && message !== null) {
             const data: Buy = {
                 name: name + ', ' + message,
@@ -57,7 +46,7 @@ export async function contactHelper(name: string, email: string, phone: string, 
             setErrorEmail(true);
         }
 
-        if (!isValid) {
+        if (!PHONE_REGEXP.test(phone)) {
             setErrorPhone(true);
         }
 
