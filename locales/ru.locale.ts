@@ -210,8 +210,12 @@ export const ru = {
 	blog_locales: {
 		title: "Название",
 		text: "Текст",
+		id: "Id",
 		add_post: "Добавить пост",
+		delete_post: "Удалить пост",
 		post_added_succesfully: "Пост успешно добавлен",
 		post_added_error: "Произошла ошибка при добавлении поста",
+		post_deleted_succesfully: "Пост успешно удалён",
+		post_deleted_error: "Произошла ошибка при удалении поста",
 	},
 };

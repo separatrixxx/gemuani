@@ -3,10 +3,10 @@ import { useState } from 'react';
 import { Input } from 'components/ContactsPageComponents/Input/Input';
 import { setLocale } from 'helpers/locale.helper';
 import { useRouter } from 'next/router';
-import { LoadingDots } from 'components/CartPageComponents/LoadingDots/LoadingDots';
-import { addBlog, getBlog, showFile } from 'helpers/blog.helper';
-import cn from 'classnames';
+import { addBlog, deleteBlog, showFile } from 'helpers/blog.helper';
 import { Toaster } from 'react-hot-toast';
+import { LoadingDots } from 'components/CartPageComponents/LoadingDots/LoadingDots';
+import cn from 'classnames';
 
 
 export const AdminPage = (): JSX.Element => {
@@ -20,11 +20,14 @@ export const AdminPage = (): JSX.Element => {
 
     const [title, setTitle] = useState<string>('');
     const [text, setText] = useState<string>('');
+    const [id, setId] = useState<string>('');
 
     const [titleError, setTitleError] = useState<boolean>(false);
     const [textError, setTextError] = useState<boolean>(false);
+    const [idError, setIdError] = useState<boolean>(false);
 
-    const [loading, setLoading] = useState<boolean>(false);
+    const [loadingOne, setLoadingOne] = useState<boolean>(false);
+    const [loadingTwo, setLoadingTwo] = useState<boolean>(false);
     
 	if (!isAdmin) {
         return (
@@ -66,11 +69,25 @@ export const AdminPage = (): JSX.Element => {
                         error={textError} onChange={(e) => setText(e.target.value)} />
                     <input type="file" onChange={() => showFile(event)}></input>
                     {
-                        !loading ?
+                        !loadingOne ?
                             <button className={styles.button} onClick={() => addBlog(
-                                title, text, setTitleError, setTextError, setLoading, router
+                                title, text, setTitleError, setTextError, setLoadingOne, router
                             )}>
                                 {setLocale(router.locale).blog_locales.add_post}
+                            </button>
+                        :
+                            <button className={cn(styles.button, styles.button_loading)}>
+                                <LoadingDots />
+                            </button>
+                    }
+                    <Input type='phone' text={setLocale(router.locale).blog_locales.id} value={id}
+                        error={idError} onChange={(e) => setId(e.target.value)} />
+                    {
+                        !loadingTwo ?
+                            <button className={styles.button} onClick={() => deleteBlog(
+                                id, setIdError, setLoadingTwo, router
+                            )}>
+                                {setLocale(router.locale).blog_locales.delete_post}
                             </button>
                         :
                             <button className={cn(styles.button, styles.button_loading)}>

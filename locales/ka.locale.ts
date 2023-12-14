@@ -210,8 +210,12 @@ export const ka = {
 	blog_locales: {
 		title: "სათაური",
 		text: "ტექსტი",
+		id: "Id",
 		add_post: "დაამატეთ პოსტი",
+		delete_post: "პოსტის წაშლა",
 		post_added_succesfully: "პოსტი წარმატებით დაემატა",
 		post_added_error: "პოსტის დამატებისას მოხდა შეცდომა",
+		post_deleted_succesfully: "პოსტი წარმატებით წაიშალა",
+		post_deleted_error: "პოსტის წაშლისას მოხდა შეცდომა",
 	},
 };

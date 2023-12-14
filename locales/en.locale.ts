@@ -210,8 +210,12 @@ export const en = {
 	blog_locales: {
 		title: "Title",
 		text: "Text",
+		id: "Id",
 		add_post: "Add a post",
+		delete_post: "Delete post",
 		post_added_succesfully: "Post added successfully",
 		post_added_error: "An error occurred while adding a post",
+		post_deleted_succesfully: "Post deleted successfully",
+		post_deleted_error: "An error occurred while deleting a post",
 	},
 };

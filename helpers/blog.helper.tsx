@@ -23,10 +23,10 @@ export function showFile(event: any) {
     console.log(file);
   }
 
-export async function addBlog(title: string, text: string, setErrorTitle: (e: any) => void, setErrorText: (e: any) => void,
-    setLoading: (e: any) => void, router: any) {
-    setErrorTitle(false);
-    setErrorText(false);
+export async function addBlog(title: string, text: string, setTitleError: (e: any) => void, setTextError: (e: any) => void,
+setLoading: (e: any) => void, router: any) {
+    setTitleError(false);
+    setTextError(false);
 
     if (+title !== 0 && +text !== 0) {
         setLoading(true);
@@ -39,22 +39,45 @@ export async function addBlog(title: string, text: string, setErrorTitle: (e: an
             date: now,
             image: '',
         })
-            .then(function () {
-                setLoading(false);
-                ToastSuccess(setLocale(router.locale).blog_locales.post_added_succesfully + '!');
-            })
-            .catch(function (error) {
-                setLoading(false);
-                console.log('Post adding error: ' + error);
-                ToastError(setLocale(router.locale).blog_locales.post_added_error + ': ' + error);
-            });
+        .then(function () {
+            setLoading(false);
+            ToastSuccess(setLocale(router.locale).blog_locales.post_added_succesfully + '!');
+        })
+        .catch(function (error) {
+            setLoading(false);
+            console.log('Post adding error: ' + error);
+            ToastError(setLocale(router.locale).blog_locales.post_added_error + ': ' + error);
+        });
     } else {
         if (+title === 0) {
-            setErrorTitle(true);
+            setTitleError(true);
         }
 
         if (+text === 0) {
-            setErrorText(true);
+            setTextError(true);
+        }
+    }
+}
+
+export async function deleteBlog(id: string, setIdError: (e: any) => void, setLoading: (e: any) => void, router: any) {
+    setIdError(false);
+
+    if (+id !== 0) {
+        setLoading(true);
+
+        await axios.post('https://telegram.gemuani.com/app/blog/deleteone?id=' + id)
+            .then(function () {
+                setLoading(false);
+                ToastSuccess(setLocale(router.locale).blog_locales.post_deleted_succesfully + '!');
+            })
+            .catch(function (error) {
+                setLoading(false);
+                console.log('Post deleting error: ' + error);
+                ToastError(setLocale(router.locale).blog_locales.post_deleted_error + ': ' + error);
+            });
+    } else {
+        if (+id === 0) {
+            setIdError(true);
         }
     }
 }
