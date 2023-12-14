@@ -14,7 +14,7 @@ export function setProduction(locale: string | undefined): Production[] {
         price: 14.5,
         country: setLocale(locale).georgia,
         weight: 50,
-    }
+    };
     
     const production2: Production = {
         id: '1',
@@ -27,7 +27,7 @@ export function setProduction(locale: string | undefined): Production[] {
         price: 22.4,
         country: setLocale(locale).georgia,
         weight: 50,
-    }
+    };
     
     const production3: Production = {
         id: '2',
@@ -40,7 +40,7 @@ export function setProduction(locale: string | undefined): Production[] {
         price: 22.8,
         country: setLocale(locale).georgia,
         weight: 50,
-    }
+    };
     
     const production4: Production = {
         id: '3',
@@ -53,7 +53,7 @@ export function setProduction(locale: string | undefined): Production[] {
         price: 38.6,
         country: setLocale(locale).georgia,
         weight: 50,
-    }
+    };
     
     const production5: Production = {
         id: '4',
@@ -66,7 +66,7 @@ export function setProduction(locale: string | undefined): Production[] {
         price: 25.2,
         country: setLocale(locale).georgia,
         weight: 50,
-    }
+    };
     
     const production6: Production = {
         id: '5',
@@ -79,7 +79,7 @@ export function setProduction(locale: string | undefined): Production[] {
         price: 24,
         country: setLocale(locale).georgia,
         weight: 20,
-    }
+    };
     
     const production7: Production = {
         id: '6',
@@ -92,7 +92,7 @@ export function setProduction(locale: string | undefined): Production[] {
         price: 39.2,
         country: setLocale(locale).georgia,
         weight: 100,
-    }
+    };
     
     const production8: Production = {
         id: '7',
@@ -105,7 +105,7 @@ export function setProduction(locale: string | undefined): Production[] {
         price: 36.7,
         country: setLocale(locale).georgia,
         weight: 50,
-    }
+    };
     
     const production9: Production = {
         id: '8',
@@ -118,7 +118,7 @@ export function setProduction(locale: string | undefined): Production[] {
         price: 15.8,
         country: setLocale(locale).georgia,
         weight: 30,
-    }
+    };
     
     const production10: Production = {
         id: '9',
@@ -131,7 +131,7 @@ export function setProduction(locale: string | undefined): Production[] {
         price: 62.7,
         country: setLocale(locale).georgia,
         weight: 100,
-    }
+    };
     
     const production11: Production = {
         id: '10',
@@ -144,7 +144,7 @@ export function setProduction(locale: string | undefined): Production[] {
         price: 28.5,
         country: setLocale(locale).georgia,
         weight: 30,
-    }
+    };
     
     const production12: Production = {
         id: '11',
@@ -157,7 +157,7 @@ export function setProduction(locale: string | undefined): Production[] {
         price: 10,
         country: setLocale(locale).georgia,
         weight: 20,
-    }
+    };
     
     return [production1, production2, production3, production4, production5, production6, production7, production8,
         production9, production10, production11, production12];

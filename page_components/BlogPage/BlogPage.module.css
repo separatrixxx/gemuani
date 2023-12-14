@@ -17,28 +17,13 @@
 }
 
 .blogTitle {
+	margin-bottom: 30px !important;
+
 	color: var(--primary) !important;
 }
 
-.blogLink {
-	cursor: pointer;
-	transition-duration: 300ms;
-
-	color: var(--accent) !important;
-}
-
-.blogLink:active {
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-	filter: brightness(0.9);
-}
-
-@media (min-width: 1024px) {
-	.blogLink:hover {
-		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-		filter: brightness(0.9);
-	}
+.empty {
+	font-weight: 600;
 }
 
 @media (max-width: 1220px) {

@@ -3,6 +3,7 @@ import { ToastError, ToastSuccess } from "components/Toast/Toast";
 import { Buy } from "interfaces/cart.interface";
 import { setLocale } from "./locale.helper";
 
+
 export async function contactHelper(name: string, email: string, phone: string, message: string,
     setErrorName: (e: any) => void, setErrorEmail: (e: any) => void, setErrorPhone: (e: any) => void, setErrorMessage: (e: any) => void,
     setLoading: (e: any) => void, router: any) {

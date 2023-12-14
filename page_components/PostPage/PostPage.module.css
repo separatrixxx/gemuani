@@ -1,0 +1,100 @@
+.wrapper {
+	display: grid;
+
+	width: 100%;
+	justify-items: center;
+	gap: 80px;
+}
+
+.postBody {
+	display: grid;
+
+	width: 80%;
+	margin-top: 110px;
+	justify-items: left;
+	gap: 30px;
+}
+
+.backDiv {
+	display: grid;
+	grid-template-columns: auto 1fr;
+
+	align-items: center;
+	gap: 20px;
+}
+
+.arrow {
+	cursor: pointer;
+	transform: rotate(90deg);
+}
+
+.arrow > svg {
+	fill: var(--dark);
+
+	height: 12px;
+
+	transition-duration: 300ms;
+}
+
+.arrow > svg:active {
+	fill: var(--darkLight);
+
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.title {
+	font-weight: 600 !important;
+}
+
+@media (min-width: 1024px) {
+	.arrow > svg:hover {
+		fill: var(--darkLight);
+
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	}
+}
+
+@media (max-width: 1220px) {
+	.postBody {
+		width: 85%;
+	}
+}
+
+@media (max-width: 1024px) {
+	.wrapper {
+		gap: 50px;
+	}
+
+	.postBody {
+		width: 90%;
+		margin-top: 80px;
+		gap: 20px;
+	}
+
+	.backDiv {
+		gap: 15px;
+	}
+
+	.arrow > svg {
+		height: 11px;
+	}
+}
+
+@media (max-width: 580px) {
+	.wrapper {
+		gap: 30px;
+	}
+
+	.postBody {
+		grid-template-columns: 100%;
+
+		width: 90%;
+		gap: 40px;
+	}
+}
+
+@media (max-width: 400px) {
+	.postBody {
+		width: 95%;
+	}
+}

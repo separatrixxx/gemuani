@@ -1,0 +1,14 @@
+.blogDiv {
+	display: grid;
+
+	width: 100%;
+	grid-template-columns: auto;
+	gap: 30px;
+	justify-items: left;
+}
+
+@media (max-width: 1024px) {
+	.blogDiv {
+		gap: 20px;
+	}
+}

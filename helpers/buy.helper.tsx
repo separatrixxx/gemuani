@@ -3,6 +3,7 @@ import axios from "axios";
 import { ToastError, ToastSuccess } from "components/Toast/Toast";
 import { setLocale } from "./locale.helper";
 
+
 export async function buyHelper(cart: Cart[], name: string, email: string, phone: string,
     setErrorName: (e: any) => void, setErrorEmail: (e: any) => void, setErrorPhone: (e: any) => void,
     setLoading: (e: any) => void, setCart: (e: any) => void, router: any) {
