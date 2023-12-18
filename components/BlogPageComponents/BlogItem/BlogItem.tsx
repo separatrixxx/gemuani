@@ -4,10 +4,13 @@ import Image from 'next/image';
 import { Htag } from 'components/Htag/Htag';
 import { useRouter } from 'next/router';
 import { formatDate } from 'helpers/format.helper';
+// import BlogImage from "../../../../img/Blog1.webp";
 
 
 export const BlogItem = ({ id, image, title, text, date }: BlogItemProps): JSX.Element => {
     const router = useRouter();
+
+	// console.log(BlogImage.src)
     
 	return (
 		<div key={title} className={styles.blog} onClick={() => router.push('/blog/' + id)}>
@@ -18,6 +21,7 @@ export const BlogItem = ({ id, image, title, text, date }: BlogItemProps): JSX.E
 					alt={title}
 					width={1}
 					height={1}
+					priority={true}
 					unoptimized={true}
 				/>
 			</div>

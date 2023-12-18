@@ -3,17 +3,5 @@
 
 	width: 100% !important;
 	justify-items: center;
-	gap: 80px;
-}
-
-@media (max-width: 1024px) {
-	.wrapper {
-		gap: 50px;
-	}
-}
-
-@media (max-width: 580px) {
-	.wrapper {
-		gap: 30px;
-	}
+	gap: 60px;
 }

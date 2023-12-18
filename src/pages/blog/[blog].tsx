@@ -3,7 +3,6 @@ import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
 import { ParsedUrlQuery } from 'node:querystring';
 import { PostPage } from 'page_components/PostPage/PostPage';
 import { Blog } from 'interfaces/blog.interface';
-import axios, { AxiosResponse } from 'axios';
 
 
 export default function Post({ blog }: PostProps) {
@@ -28,13 +27,21 @@ export default function Post({ blog }: PostProps) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-	const { data: blog }: AxiosResponse<Blog[]> = await axios.get('https://telegram.gemuani.com/app/blog/getall');
-	
+	// const { data: blog }: AxiosResponse<Blog[]> = await axios.get('https://telegram.gemuani.com/app/blog/getall');
+
+	const blog: Blog = {
+		id: '0',
+		image: '/BlogImg.webp',
+		title: 'OPERA CROWN awards',
+		text: 'At the 3rd Tbilisi International Voice Competition OPERA CROWN, our company Gemuani, represented by Archil Jaliashvili, proudly awarded the third prize to Dinmukhamed Koshkinbayev from Kazakhstan. 🏆 We extend our heartfelt congratulations to him 🌟 and wish all participants continued success and inspiration in their musical journeys. 🎶🌍💫',
+		date: '2023-12-19',
+	};
+		
     const locales = ['en', 'ka', 'ru'];
 
     const paths: any[] = [];
 
-    blog.map(blog => {
+    [blog].map(blog => {
         return locales.map((locale) => {
             return paths.push({
                 params: { blog: '' + blog.id },
@@ -56,7 +63,15 @@ export const getStaticProps: GetStaticProps<PostProps> = async ({ params }: GetS
 		};
 	}
 	try {
-		const { data: blog }: AxiosResponse<Blog> = await axios.get('https://telegram.gemuani.com/app/blog/getone?id=' + params.blog);
+		// const { data: blog }: AxiosResponse<Blog> = await axios.get('https://telegram.gemuani.com/app/blog/getone?id=' + params.blog);
+
+		const blog: Blog = {
+			id: '0',
+			image: '/BlogImg.webp',
+			title: 'OPERA CROWN awards',
+			text: 'At the 3rd Tbilisi International Voice Competition OPERA CROWN, our company Gemuani, represented by Archil Jaliashvili, proudly awarded the third prize to Dinmukhamed Koshkinbayev from Kazakhstan. 🏆 We extend our heartfelt congratulations to him 🌟 and wish all participants continued success and inspiration in their musical journeys. 🎶🌍💫',
+			date: '2023-12-19',
+		};
 
 		return {
 			props: {

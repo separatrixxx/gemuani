@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Input } from 'components/ContactsPageComponents/Input/Input';
 import { setLocale } from 'helpers/locale.helper';
 import { useRouter } from 'next/router';
-import { addBlog, deleteBlog, showFile } from 'helpers/blog.helper';
+import { addBlog, deleteBlog } from 'helpers/blog.helper';
 import { Toaster } from 'react-hot-toast';
 import { LoadingDots } from 'components/CartPageComponents/LoadingDots/LoadingDots';
 import cn from 'classnames';
@@ -22,12 +22,18 @@ export const AdminPage = (): JSX.Element => {
     const [text, setText] = useState<string>('');
     const [id, setId] = useState<string>('');
 
+    const [selectedFile, setSelectedFile] = useState<any>(null);
+
     const [titleError, setTitleError] = useState<boolean>(false);
     const [textError, setTextError] = useState<boolean>(false);
     const [idError, setIdError] = useState<boolean>(false);
 
     const [loadingOne, setLoadingOne] = useState<boolean>(false);
     const [loadingTwo, setLoadingTwo] = useState<boolean>(false);
+
+    const handleFileChange = (event: any) => {
+        setSelectedFile(event.target.files[0]);
+    };
     
 	if (!isAdmin) {
         return (
@@ -67,11 +73,11 @@ export const AdminPage = (): JSX.Element => {
                         error={titleError} onChange={(e) => setTitle(e.target.value)} />
                     <Input type='area' text={setLocale(router.locale).blog_locales.text} value={text}
                         error={textError} onChange={(e) => setText(e.target.value)} />
-                    <input type="file" onChange={() => showFile(event)}></input>
+                    <input type="file" onChange={() => handleFileChange(event)} />
                     {
                         !loadingOne ?
                             <button className={styles.button} onClick={() => addBlog(
-                                title, text, setTitleError, setTextError, setLoadingOne, router
+                                title, text, selectedFile, setTitleError, setTextError, setLoadingOne, router
                             )}>
                                 {setLocale(router.locale).blog_locales.add_post}
                             </button>

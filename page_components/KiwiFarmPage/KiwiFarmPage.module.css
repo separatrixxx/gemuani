@@ -2,8 +2,10 @@
 	display: grid;
 
 	width: 100%;
+	height: 100vh;
+	grid-template-rows: auto auto;
+	gap: 60px;
 	justify-items: center;
-	gap: 80px;
 }
 
 .kiwiFarmBody {
@@ -30,10 +32,6 @@
 }
 
 @media (max-width: 1024px) {
-	.wrapper {
-		gap: 50px;
-	}
-
 	.kiwiFarmBody {
 		width: 90%;
 		margin-top: 80px;
@@ -42,10 +40,6 @@
 }
 
 @media (max-width: 580px) {
-	.wrapper {
-		gap: 30px;
-	}
-
 	.kiwiFarmBody {
 		gap: 10px;
 	}

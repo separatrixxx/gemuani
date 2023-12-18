@@ -2,8 +2,10 @@
 	display: grid;
 
 	width: 100%;
+	height: 100vh;
+	grid-template-rows: auto auto;
+	gap: 60px;
 	justify-items: center;
-	gap: 80px;
 }
 
 .contactsBody {
@@ -14,7 +16,6 @@
 	margin-top: 110px;
 	justify-items: left;
 	gap: 30px;
-	margin-bottom: 200px;
 }
 
 .contactsTitle {
@@ -79,15 +80,10 @@
 }
 
 @media (max-width: 1024px) {
-	.wrapper {
-		gap: 50px;
-	}
-
 	.contactsBody {
 		width: 90%;
 		margin-top: 80px;
 		gap: 20px;
-		margin-bottom: 400px;
 	}
 
 	.arrow {
@@ -100,16 +96,11 @@
 }
 
 @media (max-width: 580px) {
-	.wrapper {
-		gap: 30px;
-	}
-
 	.contactsBody {
 		grid-template-columns: 100%;
 
 		width: 90%;
 		gap: 40px;
-		margin-bottom: 0;
 	}
 
 	.infoBody {

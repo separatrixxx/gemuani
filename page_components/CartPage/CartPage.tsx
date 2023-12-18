@@ -46,7 +46,7 @@ export const CartPage = (): JSX.Element => {
 							cart.length > 0 ? 
 								<CartList cart={cart.reverse()} setCart={setCart} setAllCount={setCount} />
 							:
-								<Htag tag='l' className={styles.empty}>{setLocale(router.locale).cart_is_empty}</Htag>
+								<Htag tag='l'>{setLocale(router.locale).cart_is_empty}</Htag>
 						}
 						<BuyForm cart={cart} setCart={setCart} />
 					</div>

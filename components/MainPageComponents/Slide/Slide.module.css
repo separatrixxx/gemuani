@@ -1,4 +1,6 @@
 .slideBlock {
+	z-index: 2;
+
 	display: grid;
 	overflow: hidden;
 	align-items: center;

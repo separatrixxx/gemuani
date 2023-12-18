@@ -28,6 +28,11 @@
 }
 
 .text {
+	max-width: 800px;
+	overflow-wrap: break-word;
+
+	word-break: break-all;
+
 	font-weight: 500;
 }
 

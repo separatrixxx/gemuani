@@ -2,8 +2,10 @@
 	display: grid;
 
 	width: 100%;
+	height: 100vh;
+	grid-template-rows: auto auto;
+	gap: 60px;
 	justify-items: center;
-	gap: 80px;
 }
 
 .cartBody {
@@ -27,10 +29,6 @@
 	gap: 40px;
 }
 
-.empty {
-	margin-bottom: 200px !important;
-}
-
 @media (max-width: 1220px) {
 	.cartBody {
 		width: 85%;
@@ -38,18 +36,10 @@
 }
 
 @media (max-width: 1024px) {
-	.wrapper {
-		gap: 50px;
-	}
-
 	.cartBody {
 		width: 90%;
 		margin-top: 80px;
 		gap: 20px;
-	}
-
-	.empty {
-		margin-bottom: 320px;
 	}
 }
 
@@ -60,19 +50,11 @@
 }
 
 @media (max-width: 580px) {
-	.wrapper {
-		gap: 30px;
-	}
-
 	.cartBody {
 		grid-template-columns: 100%;
 
 		width: 90%;
 		gap: 40px;
-	}
-
-	.empty {
-		margin-bottom: 0;
 	}
 }
 
