@@ -31,7 +31,7 @@
 	max-width: 800px;
 	overflow-wrap: break-word;
 
-	word-break: break-all;
+	white-space: pre-line;
 
 	font-weight: 500;
 }
