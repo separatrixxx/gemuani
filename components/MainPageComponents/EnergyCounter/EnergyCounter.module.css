@@ -29,7 +29,7 @@
 }
 
 @media (max-width: 580px) {
-	.energyCounter {
+	.wrapper {
 		justify-self: center;
 
 		margin: 10px 0 -40px 0;
@@ -41,7 +41,7 @@
 }
 
 @media (max-width: 400px) {
-	.energyCounter {
+	.wrapper {
 		justify-self: center;
 
 		margin: 0 0 -30px 0;
