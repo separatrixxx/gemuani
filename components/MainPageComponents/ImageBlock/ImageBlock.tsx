@@ -34,7 +34,7 @@ export const ImageBlock = ({ text, image, imageMobile, ticker }: ImageBlockProps
 		);
 	} else {
 		return (
-			<div className={styles.imageBlock}>
+			<div id='imageBlock' className={styles.imageBlock}>
 				<Image className={styles.image} draggable='false'
 					loader={() => width > 1024 ? image : imageMobile}
 					src={width > 1024 ? image : imageMobile}

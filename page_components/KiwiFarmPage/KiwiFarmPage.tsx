@@ -7,6 +7,7 @@ import { setLocale } from 'helpers/locale.helper';
 import { TopElem } from 'components/TopElem/TopElem';
 import { TopButton } from 'components/MainPageComponents/TopButton/TopButton';
 import { AboutImageBlock } from 'components/AboutPageComponents/AboutImageBlock/AboutImageBlock';
+import { PadBlock } from 'components/MainPageComponents/PadBlock/PadBlock';
 
 
 export const KiwiFarmPage = (): JSX.Element => {
@@ -18,8 +19,8 @@ export const KiwiFarmPage = (): JSX.Element => {
 			<TopButton />
 			<div className={styles.wrapper}>
 				<Header />
+				<PadBlock title={setLocale(router.locale).kiwi_title.toUpperCase()} />
 				<div className={styles.kiwiFarmBody}>
-					<Htag tag='xxl' className={styles.kiwiFarmTitle}>{setLocale(router.locale).kiwi_farm_page.title1}</Htag>
 					<Htag tag='l'>{setLocale(router.locale).kiwi_farm_page.text1}</Htag>
 					<Htag tag='l'>{setLocale(router.locale).kiwi_farm_page.text2}</Htag>
 					<Htag tag='l'>{setLocale(router.locale).kiwi_farm_page.text3}</Htag>

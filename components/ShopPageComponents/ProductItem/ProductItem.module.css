@@ -1,4 +1,6 @@
 .product {
+	position: relative;
+
 	display: grid;
 
 	padding: 10px;
@@ -7,7 +9,6 @@
 	transition-duration: 300ms;
 
 	border-radius: 15px;
-	background: var(--backgroundDark);
 	justify-items: center;
 	gap: 20px;
 }
@@ -15,22 +16,91 @@
 .product:active {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-	filter: brightness(0.9);
+	background: var(--white);
+	filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+}
+
+.add {
+	position: absolute;
+	z-index: 1;
+	top: 10px;
+	left: 10px;
+
+	width: 17px;
+	height: 17px;
+	padding: 10px;
+
+	transition-duration: 300ms;
+
+	border: 1px solid var(--white);
+	border-radius: 9999px;
+}
+
+.add > svg {
+	width: 17px;
+	height: 17px;
+	fill: var(--dark);
+
+	transition-duration: 300ms;
+}
+
+.add:active {
+	border-color: var(--accent) !important;
+	background: var(--white) !important;
+}
+
+.add:active > svg {
+	fill: var(--accent) !important;
+}
+
+.product:active > .add {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	background: var(--accent);
+}
+
+.product:active > .add > svg {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	fill: var(--white);
 }
 
 .imageBlock {
+	position: relative;
+	z-index: 0;
+
 	display: grid;
 	overflow: hidden;
 
 	width: 100%;
 	height: fit-content;
+	padding: 20px;
 
 	border-radius: 15px;
+}
+
+.imageFruitBlock {
+	position: absolute;
+	right: 0;
+	bottom: 20px;
+
+	width: 120px;
+
+	transition-duration: 700ms;
 }
 
 .img {
 	width: 100%;
 	height: 100%;
+}
+
+.product:active > .imageBlock > .imageFruitBlock {
+	right: 10px;
+	bottom: 30px;
+
+	width: 150px;
+
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .productInfo {
@@ -51,7 +121,48 @@
 	.product:hover {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-		filter: brightness(0.9);
+		background: var(--white);
+		filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+	}
+
+	.add:hover {
+		border-color: var(--accent) !important;
+		background: var(--white) !important;
+	}
+
+	.add:hover > svg {
+		fill: var(--accent) !important;
+	}
+
+	.product:hover > .add {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		background: var(--accent);
+	}
+
+	.product:hover > .add > svg {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		fill: var(--white);
+	}
+
+	.product:hover > .imageBlock > .imageFruitBlock {
+		right: 10px;
+		bottom: 30px;
+
+		width: 150px;
+
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	}
+}
+
+@media (max-width: 1400px) {
+	.imageFruitBlock {
+		width: 100px;
+	}
+
+	.product:active > .imageBlock > .imageFruitBlock {
+		width: 130px;
 	}
 }
 
@@ -67,10 +178,48 @@
 	}
 }
 
+@media (max-width: 700px) {
+	.imageFruitBlock {
+		width: 75px;
+	}
+
+	.product:active > .imageBlock > .imageFruitBlock {
+		width: 105px;
+	}
+}
+
 @media (max-width: 580px) {
 	.product {
 		gap: 10px;
 
 		padding: 7px;
+	}
+
+	.imageFruitBlock {
+		width: 100px;
+	}
+
+	.product:active > .imageBlock > .imageFruitBlock {
+		width: 130px;
+	}
+}
+
+@media (max-width: 400px) {
+	.imageFruitBlock {
+		width: 150px;
+	}
+
+	.product:active > .imageBlock > .imageFruitBlock {
+		width: 180px;
+	}
+}
+
+@media (max-width: 300px) {
+	.imageFruitBlock {
+		width: 120px;
+	}
+
+	.product:active > .imageBlock > .imageFruitBlock {
+		width: 150px;
 	}
 }

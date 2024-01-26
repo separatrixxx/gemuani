@@ -12,15 +12,8 @@
 	display: grid;
 
 	width: 80%;
-	margin-top: 110px;
 	justify-items: left;
 	gap: 30px;
-}
-
-.blogTitle {
-	margin-bottom: 30px !important;
-
-	color: var(--primary) !important;
 }
 
 .empty {

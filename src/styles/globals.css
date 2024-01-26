@@ -8,9 +8,9 @@ body {
 	-ms-user-select: auto;
 	user-select: auto;
 
-	background: var(--background);
+	background: var(--white);
 
-	font-family: 'Roboto', sans-serif;
+	font-family: var(--font-family);
 	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 	-webkit-tap-highlight-color: transparent;
 }
@@ -26,12 +26,12 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-	background-color: var(--background);
+	background-color: var(--white);
 }
 
 ::-webkit-scrollbar-thumb {
 	border-radius: 30px;
-	background-color: var(--primary);
+	background-color: var(--accent);
 }
 
 a {
@@ -94,5 +94,5 @@ input[type="number"]:focus {
 	--light: #DDD;
 	--lighter: #F0F0F0;
 	--error: #FF1500;
-	--font-family: 'Helvetica', sans-serif;
+	--font-family: 'Gabarito', sans-serif;
 }

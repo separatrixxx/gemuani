@@ -9,6 +9,7 @@ import Arrow from './arrow.svg';
 import { TopElem } from 'components/TopElem/TopElem';
 import { TopButton } from 'components/MainPageComponents/TopButton/TopButton';
 import { Toaster } from 'react-hot-toast';
+import { PadBlock } from 'components/MainPageComponents/PadBlock/PadBlock';
 
 
 export const ContactsPage = (): JSX.Element => {
@@ -27,6 +28,7 @@ export const ContactsPage = (): JSX.Element => {
 			<TopButton />
 			<div className={styles.wrapper}>
 				<Header />
+				<PadBlock title={setLocale(router.locale).contacts_page.title1.toUpperCase()} />
 				<div className={styles.contactsBody}>
 					<ContactsForm />
 					<div className={styles.infoBody}>
@@ -40,7 +42,9 @@ export const ContactsPage = (): JSX.Element => {
 								</Htag>
 							</a>
 						</div>
-						<Htag tag='xxl' className={styles.contactsTitle}>{setLocale(router.locale).contacts_page.title3}</Htag>
+						<Htag tag='xxl' className={styles.contactsTitle}>
+							{setLocale(router.locale).contacts_page.title3}
+						</Htag>
 						<Htag tag='l'>
 							<span className={styles.wa}>WhatsApp:</span> +995 511 251 521
 						</Htag>

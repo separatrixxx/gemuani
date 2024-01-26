@@ -8,19 +8,21 @@
 	justify-items: center;
 }
 
+.amazonAndWolt {
+	position: fixed;
+	z-index: 1;
+	right: 20px;
+	bottom: 20px;
+
+	display: grid;
+}
+
 .shopBody {
 	display: grid;
 
 	width: 80%;
-	margin-top: 110px;
 	justify-items: left;
 	gap: 30px;
-}
-
-.shopTitle {
-	margin-bottom: 30px !important;
-
-	color: var(--primary) !important;
 }
 
 .shopLink {
@@ -33,7 +35,7 @@
 }
 
 .shopLink > svg {
-	height: 55px;
+	height: 20px;
 }
 
 .shopLink:active {
@@ -57,6 +59,10 @@
 @media (max-width: 1220px) {
 	.shopBody {
 		width: 85%;
+	}
+
+	.shopLink > svg {
+		height: 15px !important;
 	}
 }
 

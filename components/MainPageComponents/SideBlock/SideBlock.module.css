@@ -1,4 +1,6 @@
 .wrapper {
+	z-index: 1;
+
 	width: 80%;
 }
 
@@ -9,8 +11,9 @@
 	height: fit-content;
 	margin-top: 20px;
 
-	border-radius: 30px;
-	background: rgba(35, 148, 144, 0.5);
+	border-radius: 15px;
+	background: var(--lighter);
+	filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
 	grid-template-columns: 50% 50%;
 	grid-template-areas: "a b";
 }
@@ -27,7 +30,7 @@
 	width: 100%;
 	height: fit-content;
 
-	border-radius: 30px;
+	border-radius: 15px;
 	background: var(--primary);
 	grid-area: a;
 }

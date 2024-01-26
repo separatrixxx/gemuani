@@ -38,10 +38,9 @@
 	transition-duration: 300ms;
 }
 
-.arrow > svg:active {
-	fill: var(--darkLight);
-
+.arrow:active > svg {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transform: translateY(5px);
 }
 
 .title {
@@ -49,10 +48,9 @@
 }
 
 @media (min-width: 1024px) {
-	.arrow > svg:hover {
-		fill: var(--darkLight);
-
+	.arrow:hover > svg {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		transform: translateY(5px);
 	}
 }
 

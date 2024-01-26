@@ -17,14 +17,16 @@
 	cursor: pointer;
 	transition-duration: 300ms;
 
-	color: var(--white);
+	color: var(--dark);
+
+	font-weight: 700;
 }
 
 .lang:active,
 .langLink:active {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-	filter: brightness(0.9);
+	color: var(--accent);
 }
 
 .lang > svg {
@@ -36,7 +38,7 @@
 	.langLink:hover {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-		filter: brightness(0.9);
+		color: var(--accent);
 	}
 }
 

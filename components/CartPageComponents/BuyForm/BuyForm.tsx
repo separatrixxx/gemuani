@@ -7,6 +7,7 @@ import { Input } from 'components/ContactsPageComponents/Input/Input';
 import { buyHelper } from 'helpers/buy.helper';
 import { LoadingDots } from '../LoadingDots/LoadingDots';
 import cn from 'classnames';
+import { getTotalPrice } from 'helpers/cart.helper';
 
 
 export const BuyForm = ({ cart, setCart }: BuyFormProps): JSX.Element => {
@@ -21,6 +22,8 @@ export const BuyForm = ({ cart, setCart }: BuyFormProps): JSX.Element => {
     const [errorPhone, setErrorPhone] = useState<boolean>(false);
 
     const [loading, setLoading] = useState<boolean>(false);
+
+    const [totalPrice, setTotalPrice] = useState<number>(getTotalPrice(cart));
 
     return (
         <div className={cn(styles.formBody, {
@@ -37,7 +40,7 @@ export const BuyForm = ({ cart, setCart }: BuyFormProps): JSX.Element => {
             {
                 !loading ?
                     <button className={styles.button} onClick={() => buyHelper(
-                        cart, name, email, phone, setErrorName, setErrorEmail, setErrorPhone, setLoading, setCart, router)}>
+                        cart, name, email, phone, totalPrice, setErrorName, setErrorEmail, setErrorPhone, setLoading, setCart, router)}>
                         {setLocale(router.locale).buy}
                     </button>
                 :

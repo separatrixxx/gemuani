@@ -49,8 +49,9 @@ export const ProductInfo = ({ id, image, title, titleFull, description, price, c
 						</Htag>
 					</div>
 					<Htag tag='l' className={styles.titleFull}>{price + '₾'}</Htag>
+					<br />
 					<BuyButton isAdded={isAdded} setIsAdded={setIsAdded} id={id} image={image} title={title}
-						count={count} price={price} setCount={setCount} setAllCount={setAllCount} setCart={setCart} />
+						count={count} price={price} weight={weight} setCount={setCount} setAllCount={setAllCount} setCart={setCart} />
 				</div>
 			</div>
 			<div className={styles.descriptionDiv}>

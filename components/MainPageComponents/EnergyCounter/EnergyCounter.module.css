@@ -1,9 +1,13 @@
-.energyCounter {
+.wrapper {
 	margin: 20px 0 -50px 0;
+	justify-self: right !important;
+}
+
+.energyCounter {
+	z-index: 1;
 
 	font-weight: 700;
 	line-height: 120px;
-	justify-self: right;
 }
 
 .energyNumber {

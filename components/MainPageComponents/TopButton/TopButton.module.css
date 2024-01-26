@@ -14,29 +14,41 @@
 	cursor: pointer;
 	transition-duration: 300ms;
 
+	border: 1px solid var(--accent);
+
 	border-radius: 9999px;
-	background: var(--second);
+	background: var(--accent);
 	box-shadow: 0 29px 29px rgba(0, 0, 0, 0.09), 0 7px 16px rgba(0, 0, 0, 0.1);
 	justify-items: center;
 }
 
 .topButton > svg {
 	width: 20px;
-	fill: var(--white);
+
+	transition-duration: 300ms;
 
 	transform: rotate(180deg);
+	fill: var(--white);
 }
 
 .topButton:active {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-	filter: brightness(0.9);
+	background: var(--white);
+}
+
+.topButton:active > svg {
+	fill: var(--accent);
 }
 
 @media (min-width: 1024px) {
 	.topButton:hover {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-		filter: brightness(0.9);
+		background: var(--white);
+	}
+
+	.topButton:hover > svg {
+		fill: var(--accent);
 	}
 }

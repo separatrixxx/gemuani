@@ -1,18 +1,18 @@
 .buyButton {
 	width: fit-content;
-	padding: 10px 20px;
+	padding: 15px 60px;
 
 	cursor: pointer;
 	transition-duration: 300ms;
 
 	color: var(--white);
-	border: none;
-	border-radius: 10px;
-	background: var(--primary);
+	border: 1px solid var(--accent);
+	border-radius: 9999px;
+	background: var(--accent);
 }
 
 .isAdded {
-	color: var(--primary) !important;
+	color: var(--accent) !important;
 	background: var(--white) !important;
 }
 
@@ -21,6 +21,7 @@
 	align-items: center;
 
 	width: fit-content;
+	height: fit-content;
 	grid-template-columns: auto auto;
 	gap: 20px;
 }
@@ -28,30 +29,34 @@
 .buyButton:active {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-	background: var(--second);
+	color: var(--accent) !important;
+	background: var(--white) !important;
 }
 
 .isAdded:active {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-	background: var(--light) !important;
+	color: var(--white) !important;
+	background: var(--accent) !important;
 }
 
 @media (min-width: 1024px) {
 	.buyButton:hover {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-		background: var(--second);
+		color: var(--accent) !important;
+		background: var(--white) !important;
 	}
 
 	.isAdded:hover {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-		background: var(--light) !important;
+		color: var(--white) !important;
+		background: var(--accent) !important;
 	}
 }
 
-@media (max-width: 350px) {
+@media (max-width: 435px) {
 	.buyDiv {
 		grid-template-columns: auto;
 	}

@@ -24,11 +24,15 @@ export const Header = ({ count }: HeaderProps): JSX.Element => {
 
 	const [hiddenLinks, setHiddenLinks] = useState<boolean>(true);
 
+	useEffect(() => {
+		setCart(getCartAll());
+	}, []);
+
 	const links: Links[] = [
+		{ title: setLocale(router.locale).shop.toUpperCase(), link: 'shop' },
 		{ title: setLocale(router.locale).about.toUpperCase(), more: true },
 		{ title: setLocale(router.locale).blog.toUpperCase(), link: 'blog' },
 		{ title: setLocale(router.locale).contacts.toUpperCase(), link: 'contacts' },
-		{ title: setLocale(router.locale).shop.toUpperCase(), link: 'shop' },
 		{ title: setLocale(router.locale).partners.toUpperCase(), link: 'partners' },
 	];
 
@@ -102,17 +106,15 @@ export const Header = ({ count }: HeaderProps): JSX.Element => {
 
 	const [cart, setCart] = useState<Cart[]>([]);
 
-	useEffect(() => {
-		setCart(getCartAll());
-	}, []);
-
 	return (
 		<motion.header className={styles.header}
 			variants={variants}
 			initial={flag ? 'hidden' : 'visible'}
 			transition={{ duration: 0.3 }}
 			animate={flag ? 'hidden' : 'visible'}>
-			<Link href='/' className={styles.logo} aria-label="Go Home"><Logo /></Link>
+			<Link href='/' className={styles.logo} aria-label="Go Home">
+				<Logo />
+			</Link>
 			<motion.div className={styles.headerBlock}
 				variants={variantsBlock}
 				initial={open || width > 1024 ? 'visible' : 'hidden'}
@@ -121,28 +123,31 @@ export const Header = ({ count }: HeaderProps): JSX.Element => {
 				{links.map(l => (
 					!l.more ?
 						<Link href={"/" + l.link} key={l.link} style={hidden ? { display: 'none' } : { display: 'block' }}>
-							<Htag tag='m' className={styles.text}>{l.title}</Htag>
+							<Htag tag='s' className={cn(styles.text, {
+								[styles.shopLink]: l.link === 'shop',
+							})}>
+								{l.title}
+							</Htag>
 						</Link>
 						:
 						<div key={'u' + l.link} className={styles.moreDiv}
-							onMouseOver={() => {
+							onMouseOverCapture={() => {
 								if (width >= 1024) {
 									setHiddenLinks(false);
 								}
-							}} onMouseOut={() => {
+							}} onMouseOutCapture={() => {
 								if (width >= 1024) {
 									setHiddenLinks(true);
 								}
 							}}>
-							<Htag tag='m' className={cn(styles.text, styles.textArrow)}
+							<Htag tag='s' className={cn(styles.text, styles.textArrow)}
 								style={hidden ? { display: 'none' } : { display: 'block' }}>{l.title}
-
 								<motion.span className={styles.arrow}
 									variants={variantsHiddenArrow}
 									initial={!hiddenLinks ? 'active' : 'passive'}
 									transition={{ duration: 0.3 }}
 									animate={!hiddenLinks ? 'active' : 'passive'}>
-									< Arrow />
+									<Arrow />
 								</motion.span>
 								<motion.div className={styles.hiddenLinks}
 									variants={variantsHiddenDiv}
@@ -150,13 +155,19 @@ export const Header = ({ count }: HeaderProps): JSX.Element => {
 									transition={{ duration: 0.3 }}
 									animate={hiddenLinks ? 'active' : 'passive'}>
 									<Link href='/about'>
-										<Htag tag='m' className={styles.hiddenText}>{setLocale(router.locale).titles.about_title + ' Gemuani'}</Htag>
+										<Htag tag='m' className={styles.hiddenText}>
+											{setLocale(router.locale).titles.about_title + ' Gemuani'}
+										</Htag>
 									</Link>
 									<Link href='/kiwi_farm'>
-										<Htag tag='m' className={styles.hiddenText}>{setLocale(router.locale).titles.kiwi_farm_title}</Htag>
+										<Htag tag='m' className={styles.hiddenText}>
+											{setLocale(router.locale).titles.kiwi_farm_title}
+										</Htag>
 									</Link>
 									<Link href='/culture'>
-										<Htag tag='m' className={styles.hiddenText}>{setLocale(router.locale).titles.culture_history_title}</Htag>
+										<Htag tag='m' className={styles.hiddenText}>
+											{setLocale(router.locale).titles.culture_history_title}
+										</Htag>
 									</Link>
 								</motion.div>
 							</Htag>

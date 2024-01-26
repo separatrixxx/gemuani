@@ -6,6 +6,7 @@ export function setProduction(locale: string | undefined): Production[] {
 	const production1: Production = {
         id: '0',
         image: '/Production1.webp',
+        imageFruit: '/apple.webp',
         title: setLocale(locale).products.title1,
         titleShort: 'apple_cubes',
         titleFull: setLocale(locale).products.title1Full,
@@ -19,6 +20,7 @@ export function setProduction(locale: string | undefined): Production[] {
     const production2: Production = {
         id: '1',
         image: '/Production2.webp',
+        imageFruit: '/beetroot.webp',
         title: setLocale(locale).products.title2,
         titleShort: 'beetroot_crisps',
         titleFull: setLocale(locale).products.title2Full,
@@ -32,6 +34,7 @@ export function setProduction(locale: string | undefined): Production[] {
     const production3: Production = {
         id: '2',
         image: '/Production3.webp',
+        imageFruit: '/black_currant.webp',
         title: setLocale(locale).products.title3,
         titleShort: 'black_currant_crisps',
         titleFull: setLocale(locale).products.title3Full,
@@ -45,6 +48,7 @@ export function setProduction(locale: string | undefined): Production[] {
     const production4: Production = {
         id: '3',
         image: '/Production4.webp',
+        imageFruit: '/blueberry.webp',
         title: setLocale(locale).products.title4,
         titleShort: 'blueberry_crisps',
         titleFull: setLocale(locale).products.title4Full,
@@ -58,6 +62,7 @@ export function setProduction(locale: string | undefined): Production[] {
     const production5: Production = {
         id: '4',
         image: '/Production5.webp',
+        imageFruit: '/cherry.webp',
         title: setLocale(locale).products.title5,
         titleShort: 'cherry_crisps',
         titleFull: setLocale(locale).products.title5Full,
@@ -71,6 +76,7 @@ export function setProduction(locale: string | undefined): Production[] {
     const production6: Production = {
         id: '5',
         image: '/Production6.webp',
+        imageFruit: '/feijoa.webp',
         title: setLocale(locale).products.title6,
         titleShort: 'feijoa_crisps',
         titleFull: setLocale(locale).products.title6Full,
@@ -84,6 +90,7 @@ export function setProduction(locale: string | undefined): Production[] {
     const production7: Production = {
         id: '6',
         image: '/Production7.webp',
+        imageFruit: '/grape.webp',
         title: setLocale(locale).products.title7,
         titleShort: 'grape_crisps',
         titleFull: setLocale(locale).products.title7Full,
@@ -97,6 +104,7 @@ export function setProduction(locale: string | undefined): Production[] {
     const production8: Production = {
         id: '7',
         image: '/Production8.webp',
+        imageFruit: '/kiwi.webp',
         title: setLocale(locale).products.title8,
         titleShort: 'kiwi_crisps',
         titleFull: setLocale(locale).products.title8Full,
@@ -110,6 +118,7 @@ export function setProduction(locale: string | undefined): Production[] {
     const production9: Production = {
         id: '8',
         image: '/Production9.webp',
+        imageFruit: '/mandarin.webp',
         title: setLocale(locale).products.title9,
         titleShort: 'mandarin_crisps',
         titleFull: setLocale(locale).products.title9Full,
@@ -123,6 +132,7 @@ export function setProduction(locale: string | undefined): Production[] {
     const production10: Production = {
         id: '9',
         image: '/Production10.webp',
+        imageFruit: '/peach.webp',
         title: setLocale(locale).products.title10,
         titleShort: 'peach_cubes',
         titleFull: setLocale(locale).products.title10Full,
@@ -136,6 +146,7 @@ export function setProduction(locale: string | undefined): Production[] {
     const production11: Production = {
         id: '10',
         image: '/Production11.webp',
+        imageFruit: '/raspberry.webp',
         title: setLocale(locale).products.title11,
         titleShort: 'raspberry_crisps',
         titleFull: setLocale(locale).products.title11Full,
@@ -149,6 +160,7 @@ export function setProduction(locale: string | undefined): Production[] {
     const production12: Production = {
         id: '11',
         image: '/Production12.webp',
+        imageFruit: '/strawberry.webp',
         title: setLocale(locale).products.title12,
         titleShort: 'strawberry_crisps',
         titleFull: setLocale(locale).products.title12Full,

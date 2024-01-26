@@ -10,7 +10,6 @@
 	transition-duration: 300ms;
 
 	border-radius: 15px;
-	background: var(--backgroundDark);
 	grid-template-columns: auto 1fr;
 	justify-items: left;
 	gap: 20px;
@@ -19,7 +18,8 @@
 .blog:active {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-	filter: brightness(0.9);
+	background: var(--white);
+	filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
 }
 
 .imageBlock {
@@ -53,7 +53,7 @@
 }
 
 .title {
-	color: var(--primary);
+	color: var(--accent);
 }
 
 .text {
@@ -71,7 +71,8 @@
 	.blog:hover {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-		filter: brightness(0.9);
+		background: var(--white);
+		filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
 	}
 }
 

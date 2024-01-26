@@ -1,6 +1,7 @@
 export interface Production {
 	id: string,
 	image: string,
+	imageFruit: string,
 	title: string,
 	titleShort: string,
 	titleFull: string,

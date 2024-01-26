@@ -10,12 +10,6 @@
 	gap: 7px;
 }
 
-.learnMore:active {
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-	filter: brightness(0.9);
-}
-
 .learnMoreText {
 	color: var(--accent) !important;
 
@@ -26,14 +20,20 @@
 	width: 16px;
 	fill: var(--accent);
 
-	margin-bottom: 2px;
+	transition-duration: 300ms;
+}
+
+.learnMore:active > .arrow > svg {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	transform: translateX(5px);
 }
 
 @media (min-width: 1024px) {
-	.learnMore:hover {
+	.learnMore:hover > .arrow > svg {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-		filter: brightness(0.9);
+		transform: translateX(5px);
 	}
 }
 

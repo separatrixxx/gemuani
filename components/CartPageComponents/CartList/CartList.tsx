@@ -19,7 +19,10 @@ export const CartList = ({ cart, setCart, setAllCount }: CartListProps): JSX.Ele
 			[styles.margin1]: cart.length === 1,
 			[styles.margin2]: cart.length === 2,
 		})}>
-			<Htag tag='l' className={styles.title}>{setLocale(router.locale).total_cart_cost + ' ' + totalPrice + '₾'}</Htag>
+			<Htag tag='l' className={styles.title}>
+				{setLocale(router.locale).total_cart_cost + ' '}
+				<span className={styles.strike}>{totalPrice  + '₾'}</span> {Math.round(totalPrice) + '₾'}
+			</Htag>
 			{cart.map(c => (
 				<CartItem key={c.id} id={c.id} image={c.image} title={c.title} price={c.price} setAllCount={setAllCount}
 					totalPrice={totalPrice} setTotalPrice={setTotalPrice} setCart={setCart} />

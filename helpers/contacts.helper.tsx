@@ -18,11 +18,11 @@ export async function contactHelper(name: string, email: string, phone: string, 
     if (+name !== 0 && EMAIL_REGEXP.test(email) && PHONE_REGEXP.test(phone) && +message !== 0) {
         if (name !== null && email !== null && phone !== null && message !== null) {
             const data: Buy = {
-                name: name + ', ' + message,
-                email: email,
+                uname: name + ', ' + message,
                 phone: +phone,
-                url: 'https://www.gemuani.com/',
-                list_of_product: [],
+                email: email,
+                price: "0",
+                cart: "",
             }
 
             setLoading(true);

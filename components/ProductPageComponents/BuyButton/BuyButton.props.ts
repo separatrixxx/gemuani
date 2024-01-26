@@ -8,6 +8,7 @@ export interface BuyButtonProps extends DetailedHTMLProps<HTMLAttributes<HTMLBut
     title: string,
     count: number,
     price: number,
+    weight: number,
     setCount: (e: any) => void,
     setAllCount: (e: any) => void,
     setCart: (e: any) => void,

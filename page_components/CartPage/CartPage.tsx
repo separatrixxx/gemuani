@@ -12,6 +12,7 @@ import { Cart } from 'interfaces/cart.interface';
 import { CartList } from 'components/CartPageComponents/CartList/CartList';
 import { BuyForm } from 'components/CartPageComponents/BuyForm/BuyForm';
 import { Toaster } from 'react-hot-toast';
+import { PadBlock } from 'components/MainPageComponents/PadBlock/PadBlock';
 
 
 export const CartPage = (): JSX.Element => {
@@ -38,8 +39,8 @@ export const CartPage = (): JSX.Element => {
 			<TopButton />
 			<div className={styles.wrapper}>
 				<Header count={cart.length} />
+				<PadBlock title={setLocale(router.locale).cart.toUpperCase()} />
 				<div className={styles.cartBody}>
-					<Htag tag='xl' className={styles.title}>{setLocale(router.locale).cart}</Htag>
 					<Htag tag='m'>{setLocale(router.locale).cart_info}</Htag>
 					<div className={styles.cartList}>
 						{

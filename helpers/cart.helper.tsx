@@ -44,6 +44,7 @@ export function getCart(id: string): Cart {
         title: '',
         count: 0,
         price: 0,
+        weight: 0,
     };
 
     if (currentCart) {
@@ -61,7 +62,7 @@ export function getCart(id: string): Cart {
     return cart;
 }
 
-export function addToCart(id: string, image: string, title: string, price: number, setCount: (e: any) => void,
+export function addToCart(id: string, image: string, title: string, price: number, weight: number, setCount: (e: any) => void,
     setAllCount: (e: any) => void) {
     let currentCart = localStorage.getItem('cart');
 
@@ -71,6 +72,7 @@ export function addToCart(id: string, image: string, title: string, price: numbe
         title: title,
         count: 1,
         price: price,
+        weight: weight,
     };
 
     if (currentCart) {

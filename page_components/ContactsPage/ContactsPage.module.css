@@ -13,7 +13,6 @@
 	grid-template-columns: 50% 50%;
 
 	width: 80%;
-	margin-top: 110px;
 	justify-items: left;
 	gap: 30px;
 }
@@ -42,16 +41,6 @@
 	transition-duration: 300ms;
 
 	color: var(--accent) !important;
-}
-
-.view:active {
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-	filter: brightness(0.9);
-}
-
-.wa {
-	color: var(--accent);
 
 	font-weight: 700;
 }
@@ -63,13 +52,27 @@
 .arrow > svg {
 	width: 16px;
 	fill: var(--accent);
+
+	transition-duration: 300ms;
+}
+
+.view:active > .arrow > svg {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	transform: translateX(15px);
+}
+
+.wa {
+	color: var(--accent);
+
+	font-weight: 700;
 }
 
 @media (min-width: 1024px) {
-	.view:hover {
+	.view:hover > .arrow > svg {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-		filter: brightness(0.9);
+		transform: translateX(5px);
 	}
 }
 

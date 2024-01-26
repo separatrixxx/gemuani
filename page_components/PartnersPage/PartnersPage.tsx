@@ -13,6 +13,7 @@ import Partner4 from './partner4.svg';
 import Partner5 from './partner5.svg';
 import Partner6 from './partner6.svg';
 import cn from 'classnames';
+import { PadBlock } from 'components/MainPageComponents/PadBlock/PadBlock';
 
 
 export const PartnersPage = (): JSX.Element => {
@@ -24,20 +25,23 @@ export const PartnersPage = (): JSX.Element => {
 			<TopButton />
 			<div className={styles.wrapper}>
 				<Header />
+				<PadBlock title={setLocale(router.locale).partners.toUpperCase()} />
 				<div className={styles.partnersBody}>
-					<Htag tag='xxl' className={styles.partnersTitle}>{setLocale(router.locale).partners}</Htag>
 					<div className={styles.partnersDiv}>
-						<span className={styles.partnerLogo} style={{ cursor: 'pointer' }} onClick={() => router.push('https://tradewithgeorgia.com/companies/gemuani-ltd-1')}>
+						<span className={styles.partnerLogo} style={{ cursor: 'pointer' }} 
+							onClick={() => router.push('https://tradewithgeorgia.com/companies/gemuani-ltd-1')}>
 							<Partner1 />
 						</span>
-						<span className={styles.partnerLogo} style={{ cursor: 'pointer' }} onClick={() => router.push('https://rda.gov.ge/')}>
+						<span className={styles.partnerLogo} style={{ cursor: 'pointer' }} 
+							onClick={() => router.push('https://rda.gov.ge/')}>
 							<Partner2 />
 						</span>
 						<span className={cn(styles.partnerLogo, styles.partner3)} style={{ cursor: 'pointer' }}
 							onClick={() => router.push('https://www.gov.ge/home')}>
 							<Partner3 />
 						</span>
-						<span className={styles.partnerLogo} style={{ cursor: 'pointer' }} onClick={() => router.push('https://mrdi.gov.ge/en')}>
+						<span className={styles.partnerLogo} style={{ cursor: 'pointer' }} 
+							onClick={() => router.push('https://mrdi.gov.ge/en')}>
 							<Partner4 />
 						</span>
 						<span className={styles.partnerLogo}>

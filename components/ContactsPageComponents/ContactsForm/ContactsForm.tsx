@@ -1,5 +1,4 @@
 import styles from './ContactsForm.module.css';
-import { Htag } from 'components/Htag/Htag';
 import { setLocale } from 'helpers/locale.helper';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
@@ -26,7 +25,6 @@ export const ContactsForm = (): JSX.Element => {
 
     return (
         <div className={styles.formBody}>
-            <Htag tag='xxl' className={styles.contactsTitle}>{setLocale(router.locale).contacts_page.title1}</Htag>
             <div className={styles.inputsDiv}>
                 <Input type='name' text={setLocale(router.locale).contacts_page.name} value={name}
                     error={errorName} onChange={(e) => setName(e.target.value)} />

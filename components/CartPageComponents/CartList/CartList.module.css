@@ -17,6 +17,10 @@
 	margin-bottom: 70px;
 }
 
+.strike {
+	text-decoration: line-through var(--primary) !important;
+}
+
 @media (max-width: 1024px) {
 	.margin1 {
 		margin-bottom: 395px;

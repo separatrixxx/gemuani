@@ -9,6 +9,7 @@ import { TopElem } from 'components/TopElem/TopElem';
 import { TopButton } from 'components/MainPageComponents/TopButton/TopButton';
 import { useEffect, useState } from 'react';
 import { LearnMore } from 'components/MainPageComponents/LearnMore/LearnMore';
+import { PadBlock } from 'components/MainPageComponents/PadBlock/PadBlock';
 
 
 export const CulturePage = (): JSX.Element => {
@@ -34,6 +35,7 @@ export const CulturePage = (): JSX.Element => {
 			<TopButton />
 			<div className={styles.wrapper}>
 				<Header />
+				<PadBlock title={setLocale(router.locale).titles.culture_history_title.toUpperCase()} />
 				<div className={styles.cultureBody}>
 					<div className={styles.list}>
 						<Htag tag='m' className={styles.title} onClick={() => scrollIntoView(element1)}>

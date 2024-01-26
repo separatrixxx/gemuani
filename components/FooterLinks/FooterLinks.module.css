@@ -8,7 +8,7 @@
 .title {
 	height: fit-content;
 
-	color: var(--accent);
+	color: var(--white);
 
 	font-weight: 700 !important;
 }

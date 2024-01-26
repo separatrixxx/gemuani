@@ -37,6 +37,8 @@ export const MapBlock = ({ text, title, span }: MapBlockProps): JSX.Element => {
 
     const variants = {
         visible: {
+            top: topBlock,
+            left: leftBlock,
             display: 'grid',
         },
         hidden: {
@@ -55,7 +57,7 @@ export const MapBlock = ({ text, title, span }: MapBlockProps): JSX.Element => {
                         title={d.title} setTitle={setTitleDot} text={d.text} setText={setTextDot}
                         link={d.link} setTopBlock={setTopBlock} setLeftBlock={setLeftBlock} />
                 ))}
-                <motion.div className={styles.dotText} style={{ top: topBlock, left: leftBlock }}
+                <motion.div className={styles.dotText}
                     variants={variants}
                     initial={hidden ? 'hidden' : 'visible'}
                     transition={{ duration: 0.3 }}

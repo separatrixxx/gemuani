@@ -4,12 +4,13 @@ export interface Cart {
 	title: string,
 	count: number,
 	price: number,
+    weight: number,
 }
 
 export interface Buy {
-    name: string, 
-    email: string, 
+    uname: string,
     phone: number, 
-    url: string, 
-    list_of_product: Cart[], 
+    email: string, 
+    price: string, 
+    cart: string, 
 }

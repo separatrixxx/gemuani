@@ -8,14 +8,15 @@
 	width: 100%;
 	padding: 10px 0 10px 0;
 
-	background: var(--second);
+	background: var(--white);
+	filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
 	grid-template-columns: 200px auto 200px;
 	justify-items: center;
 	grid-template-areas: ". headerBlock .";
 }
 
 .logo {
-	width: 130px;
+	width: 100px;
 
 	cursor: pointer;
 	justify-self: right;
@@ -37,16 +38,20 @@
 }
 
 .text {
+	padding: 5px;
+
 	cursor: pointer;
 	transition-duration: 300ms;
 
-	color: var(--white) !important;
+	color: var(--dark) !important;
+
+	font-weight: 700;
 }
 
 .text:active {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-	color: var(--light) !important;
+	color: var(--accent) !important;
 }
 
 .textArrow {
@@ -64,22 +69,22 @@
 }
 
 .arrow > svg {
-	height: 6px;
+	height: 4px;
 
 	transition-duration: 300ms;
-	fill: var(--white);
+	fill: var(--darK);
 }
 
 .textArrow:active > span > svg {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-	fill: var(--light) !important;
+	fill: var(--dark) !important;
 }
 
 .textArrow:active {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-	color: var(--white) !important;
+	color: var(--accent) !important;
 }
 
 .moreDiv {
@@ -93,7 +98,7 @@
 	display: grid;
 
 	width: 180px !important;
-	margin-top: 180px;
+	margin-top: 160px;
 	padding: 10px 15px 10px 15px;
 
 	cursor: default;
@@ -128,21 +133,48 @@
 	justify-items: end;
 }
 
+@keyframes slideColor {
+	0%,
+	100% {
+		background: red;
+	}
+
+	50% {
+		background: linear-gradient(to right, red, pink);
+	}
+}
+
+.shopLink {
+	padding: 5px 15px;
+
+	color: var(--white) !important;
+	border-radius: 9999px;
+	background: var(--accent);
+}
+
+.shopLink:active {
+	color: var(--white) !important;
+}
+
 @media (min-width: 1024px) {
 	.text:hover {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-		color: var(--light) !important;
+		color: var(--accent) !important;
 	}
 
 	.text:hover > h1 {
+		color: var(--accent) !important;
+	}
+
+	.shopLink:hover {
 		color: var(--white) !important;
 	}
 
 	.textArrow:hover > span > svg {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-		fill: var(--light) !important;
+		fill: var(--accent) !important;
 	}
 
 	.hiddenText:hover {
@@ -209,6 +241,6 @@
 	}
 
 	.hiddenText {
-		color: var(--white) !important;
+		color: var(--dark) !important;
 	}
 }

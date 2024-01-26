@@ -24,13 +24,27 @@ export const Footer = (): JSX.Element => {
             <div className={styles.footerLinks}>
                 <FooterLinks title={setLocale(router.locale).footer.title1}>
                     <div className={styles.socialMediaBlock}>
-                        <a target='_blank' rel="noreferrer" href='https://www.facebook.com/gemuani' aria-label="Facebook"><Facebook /></a>
-                        <a target='_blank' rel="noreferrer" href='https://www.instagram.com/gemuani_ltd' aria-label="Instagram"><Instagram /></a>
-                        <a target='_blank' rel="noreferrer" href='https://www.linkedin.com/company/gemuani-healthy-food' aria-label="Linkedin"><Linkedin /></a>
-                        <a target='_blank' rel="noreferrer" href='https://www.youtube.com/@gemuani' aria-label="YouTube"><YouTube /></a>
-                        <a target='_blank' rel="noreferrer" href='https://t.me/gemuani' aria-label="Telegram"><Telegram /></a>
-                        <a target='_blank' rel="noreferrer" href='https://www.tiktok.com/@_gemuani_?_t=8h0NaOEWItO' aria-label="TikTok"><TikTok /></a>
-                        <a target='_blank' rel="noreferrer" href='https://twitter.com/GEMUANI_LTD' aria-label="X"><X /></a>
+                        <a target='_blank' rel="noreferrer" href='https://www.facebook.com/gemuani' aria-label="Facebook">
+                            <Facebook />
+                        </a>
+                        <a target='_blank' rel="noreferrer" href='https://www.instagram.com/gemuani_ltd' aria-label="Instagram">
+                            <Instagram />
+                        </a>
+                        <a target='_blank' rel="noreferrer" href='https://www.linkedin.com/company/gemuani-healthy-food' aria-label="Linkedin">
+                            <Linkedin />
+                        </a>
+                        <a target='_blank' rel="noreferrer" href='https://www.youtube.com/@gemuani' aria-label="YouTube">
+                            <YouTube />
+                        </a>
+                        <a target='_blank' rel="noreferrer" href='https://t.me/gemuani' aria-label="Telegram">
+                            <Telegram />
+                        </a>
+                        <a target='_blank' rel="noreferrer" href='https://www.tiktok.com/@_gemuani_?_t=8h0NaOEWItO' aria-label="TikTok">
+                            <TikTok />
+                        </a>
+                        <a target='_blank' rel="noreferrer" href='https://twitter.com/GEMUANI_LTD' aria-label="X">
+                            <X />
+                        </a>
                     </div>
                 </FooterLinks>
                 <FooterLinks title={setLocale(router.locale).footer.title2}>

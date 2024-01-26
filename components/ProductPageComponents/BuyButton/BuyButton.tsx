@@ -7,14 +7,14 @@ import { CounterDiv } from '../CounterDiv/CounterDiv';
 import cn from 'classnames';
 
 
-export const BuyButton = ({ isAdded, setIsAdded, id, image, title, count, price, setCount, setAllCount,
+export const BuyButton = ({ isAdded, setIsAdded, id, image, title, count, price, weight, setCount, setAllCount,
 	setCart }: BuyButtonProps): JSX.Element => {
 	const router = useRouter();
 	
 	if (!isAdded) {
 		return (
 			<button className={styles.buyButton} onClick={() => {
-				addToCart(id, image, title, price, setCount, setAllCount);
+				addToCart(id, image, title, price, weight, setCount, setAllCount);
 				setIsAdded(!isAdded);
 			}}>
 				{setLocale(router.locale).add_to_cart}

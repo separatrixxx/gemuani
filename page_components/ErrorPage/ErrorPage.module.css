@@ -6,7 +6,7 @@
 
 	transition-duration: 300ms;
 
-	background: var(--background);
+	background: var(--white);
 }
 
 .textBlock {

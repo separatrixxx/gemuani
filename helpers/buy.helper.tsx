@@ -4,7 +4,7 @@ import { ToastError, ToastSuccess } from "components/Toast/Toast";
 import { setLocale } from "./locale.helper";
 
 
-export async function buyHelper(cart: Cart[], name: string, email: string, phone: string,
+export async function buyHelper(cart: Cart[], name: string, email: string, phone: string, totalPrice: number,
     setErrorName: (e: any) => void, setErrorEmail: (e: any) => void, setErrorPhone: (e: any) => void,
     setLoading: (e: any) => void, setCart: (e: any) => void, router: any) {
     const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
@@ -18,12 +18,19 @@ export async function buyHelper(cart: Cart[], name: string, email: string, phone
         if (cart.length > 0) {
             if (name !== null && email !== null && phone !== null) {
                 const data: Buy = {
-                    name: name,
-                    email: email,
+                    uname: name,
                     phone: +phone,
-                    url: 'https://www.gemuani.com/',
-                    list_of_product: cart,
+                    email: email,
+                    price: "" + Math.round(totalPrice),
+                    cart: "",
+                };
+
+                let strCart: string = "";
+
+                for (let c of cart) {
+                    strCart += c.title + ' | ' + c.weight + 'g | ' + c.count + ', ';
                 }
+                strCart = strCart.slice(0, strCart.length - 2);
     
                 setLoading(true);
     

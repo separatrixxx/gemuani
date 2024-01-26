@@ -12,7 +12,6 @@
 	display: grid;
 
 	width: 80%;
-	margin-top: 110px;
 	justify-items: left;
 	gap: 30px;
 }

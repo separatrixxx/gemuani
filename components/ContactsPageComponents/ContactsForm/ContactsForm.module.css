@@ -15,16 +15,16 @@
 }
 
 .button {
-	width: 150px;
-	height: 40px;
+	width: fit-content;
+	padding: 15px 80px;
 
 	cursor: pointer;
 	transition-duration: 300ms;
 
 	color: var(--white);
-	border: none;
-	border-radius: 10px;
-	background: var(--primary);
+	border: 1px solid var(--accent);
+	border-radius: 9999px;
+	background: var(--accent);
 
 	font-size: 18px;
 }
@@ -32,7 +32,8 @@
 .button:active {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-	background: var(--second);
+	color: var(--accent) !important;
+	background: var(--white) !important;
 }
 
 .button_loading {
@@ -45,6 +46,9 @@
 
 @media (min-width: 1024px) {
 	.button:hover {
-		background: var(--second);
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		color: var(--accent) !important;
+		background: var(--white) !important;
 	}
 }

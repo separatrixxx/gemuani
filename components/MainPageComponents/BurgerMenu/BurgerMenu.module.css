@@ -18,13 +18,13 @@
 	height: 1px;
 
 	border-radius: 10px;
-	background: var(--white);
+	background: var(--dark);
 }
 
 .burgerMenu:active span {
 	transition-duration: 300ms;
 
-	background: var(--light);
+	background: var(--accent);
 }
 
 .burgerMenu span:nth-child(2),
@@ -36,7 +36,7 @@
 	.burgerMenu:hover span {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-		background: var(--light);
+		background: var(--accent);
 	}
 }
 

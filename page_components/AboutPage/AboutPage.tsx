@@ -7,6 +7,7 @@ import { Footer } from 'components/Footer/Footer';
 import { AboutImageBlock } from 'components/AboutPageComponents/AboutImageBlock/AboutImageBlock';
 import { TopElem } from 'components/TopElem/TopElem';
 import { TopButton } from 'components/MainPageComponents/TopButton/TopButton';
+import { PadBlock } from 'components/MainPageComponents/PadBlock/PadBlock';
 
 
 export const AboutPage = (): JSX.Element => {
@@ -18,8 +19,8 @@ export const AboutPage = (): JSX.Element => {
 			<TopButton />
 			<div className={styles.wrapper}>
 				<Header />
+				<PadBlock title={setLocale(router.locale).about_title.toUpperCase()} />
 				<div className={styles.aboutBody}>
-					<Htag tag='xxl' className={styles.aboutTitle}>{setLocale(router.locale).about_title}</Htag>
 					<Htag tag='l'>{setLocale(router.locale).about_page.text1}</Htag>
 					<Htag tag='l'>{setLocale(router.locale).about_page.text2}</Htag>
 					<AboutImageBlock image='/AboutImg1.webp' alt='about image 1' />

@@ -1,0 +1,83 @@
+.padBlock {
+	position: relative;
+
+	display: grid;
+	align-items: end;
+
+	width: 100%;
+	margin-top: 50px;
+	padding-top: 100px;
+	padding-bottom: 7px;
+
+	background: var(--dark);
+	justify-items: left;
+	grid-template-columns: auto 1fr;
+}
+
+.glow {
+	position: absolute;
+	top: -120px;
+
+	width: 80%;
+	height: 200px;
+
+	border-radius: 50%;
+	background: radial-gradient(50% 50% at 50% 50%, rgba(240, 77, 35, 0.5) 0%, rgba(240, 77, 35, 0) 100%);
+	justify-self: center;
+}
+
+.title {
+	color: var(--white);
+
+	font-size: 96px;
+}
+
+@media (max-width: 1024px) {
+	.padBlock {
+		margin-bottom: -60px;
+		padding-bottom: 10px;
+	}
+}
+
+@media (max-width: 800px) {
+	.title {
+		font-size: 80px;
+	}
+}
+
+@media (max-width: 650px) {
+	.padBlock {
+		margin-bottom: -100px;
+		padding-bottom: 6px;
+	}
+
+	.title {
+		font-size: 64px;
+	}
+}
+
+@media (max-width: 500px) {
+	.padBlock {
+		padding-bottom: 2px;
+	}
+
+	.title {
+		font-size: 52px;
+	}
+}
+
+@media (max-width: 400px) {
+	.title {
+		margin-bottom: -4px;
+
+		font-size: 44px;
+	}
+}
+
+@media (max-width: 330px) {
+	.title {
+		margin-bottom: -7px;
+
+		font-size: 32px;
+	}
+}
