@@ -50,18 +50,12 @@ export const MainImage = (): JSX.Element => {
 
 	return (
 		<div id='mainImage' className={styles.imageBlock}>
-			<Image className={cn(styles.mainImage, {
+			<video autoPlay={true} loop muted className={cn(styles.mainImage, {
 				[styles.darkness]: isVisible,
-			})}
-				draggable='false'
-				loader={() => image}
-				src={image}
-				alt='main image'
-				width={1}
-				height={1}
-				unoptimized={true}
-				priority={true}
-			/>
+			})}>
+				<source src="MainImage.webm" type="video/webm" />
+				<source src="MainImage.mp4" type="video/mp4" />
+			</video>
 			<div className={styles.titleDiv}>
 				<motion.h1 className={cn(styles.title, {
 					[styles.colored]: isVisible2,
