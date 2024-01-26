@@ -11,7 +11,7 @@
 	height: fit-content;
 	max-height: 100vh;
 
-	background: var(--primary);
+	background: var(--white);
 }
 
 .mainImage {
