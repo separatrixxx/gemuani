@@ -6,6 +6,7 @@ export function setProduction(locale: string | undefined): Production[] {
 	const production1: Production = {
         id: '0',
         image: '/Production1.webp',
+        image_1: '/Production1_1.webp',
         imageFruit: '/apple.webp',
         title: setLocale(locale).products.title1,
         titleShort: 'apple_cubes',
@@ -20,6 +21,7 @@ export function setProduction(locale: string | undefined): Production[] {
     const production2: Production = {
         id: '1',
         image: '/Production2.webp',
+        image_1: '/Production2_1.webp',
         imageFruit: '/beetroot.webp',
         title: setLocale(locale).products.title2,
         titleShort: 'beetroot_crisps',
@@ -34,6 +36,7 @@ export function setProduction(locale: string | undefined): Production[] {
     const production3: Production = {
         id: '2',
         image: '/Production3.webp',
+        image_1: '/Production3_1.webp',
         imageFruit: '/black_currant.webp',
         title: setLocale(locale).products.title3,
         titleShort: 'black_currant_crisps',
@@ -48,6 +51,7 @@ export function setProduction(locale: string | undefined): Production[] {
     const production4: Production = {
         id: '3',
         image: '/Production4.webp',
+        image_1: '/Production4_1.webp',
         imageFruit: '/blueberry.webp',
         title: setLocale(locale).products.title4,
         titleShort: 'blueberry_crisps',
@@ -62,6 +66,7 @@ export function setProduction(locale: string | undefined): Production[] {
     const production5: Production = {
         id: '4',
         image: '/Production5.webp',
+        image_1: '/Production5.webp',
         imageFruit: '/cherry.webp',
         title: setLocale(locale).products.title5,
         titleShort: 'cherry_crisps',
@@ -76,6 +81,7 @@ export function setProduction(locale: string | undefined): Production[] {
     const production6: Production = {
         id: '5',
         image: '/Production6.webp',
+        image_1: '/Production6_1.webp',
         imageFruit: '/feijoa.webp',
         title: setLocale(locale).products.title6,
         titleShort: 'feijoa_crisps',
@@ -90,6 +96,7 @@ export function setProduction(locale: string | undefined): Production[] {
     const production7: Production = {
         id: '6',
         image: '/Production7.webp',
+        image_1: '/Production7_1.webp',
         imageFruit: '/grape.webp',
         title: setLocale(locale).products.title7,
         titleShort: 'grape_crisps',
@@ -104,6 +111,7 @@ export function setProduction(locale: string | undefined): Production[] {
     const production8: Production = {
         id: '7',
         image: '/Production8.webp',
+        image_1: '/Production8_1.webp',
         imageFruit: '/kiwi.webp',
         title: setLocale(locale).products.title8,
         titleShort: 'kiwi_crisps',
@@ -118,6 +126,7 @@ export function setProduction(locale: string | undefined): Production[] {
     const production9: Production = {
         id: '8',
         image: '/Production9.webp',
+        image_1: '/Production9_1.webp',
         imageFruit: '/mandarin.webp',
         title: setLocale(locale).products.title9,
         titleShort: 'mandarin_crisps',
@@ -132,6 +141,7 @@ export function setProduction(locale: string | undefined): Production[] {
     const production10: Production = {
         id: '9',
         image: '/Production10.webp',
+        image_1: '/Production10_1.webp',
         imageFruit: '/peach.webp',
         title: setLocale(locale).products.title10,
         titleShort: 'peach_cubes',
@@ -146,6 +156,7 @@ export function setProduction(locale: string | undefined): Production[] {
     const production11: Production = {
         id: '10',
         image: '/Production11.webp',
+        image_1: '/Production11_1.webp',
         imageFruit: '/raspberry.webp',
         title: setLocale(locale).products.title11,
         titleShort: 'raspberry_crisps',
@@ -160,6 +171,7 @@ export function setProduction(locale: string | undefined): Production[] {
     const production12: Production = {
         id: '11',
         image: '/Production12.webp',
+        image_1: '/Production12_1.webp',
         imageFruit: '/strawberry.webp',
         title: setLocale(locale).products.title12,
         titleShort: 'strawberry_crisps',

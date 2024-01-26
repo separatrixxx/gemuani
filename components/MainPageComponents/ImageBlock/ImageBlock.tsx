@@ -27,7 +27,6 @@ export const ImageBlock = ({ text, image, imageMobile, ticker }: ImageBlockProps
 							height={1}
 							unoptimized={true}
 							loading="lazy"
-							layout="responsive"
 						/>
 					</div>
 					<Htag tag='xxl' className={styles.text}>{text}</Htag>

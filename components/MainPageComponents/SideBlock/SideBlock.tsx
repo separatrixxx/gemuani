@@ -22,7 +22,6 @@ export const SideBlock = ({ side, text, link, image, title, children }: SideBloc
 						height={1}
 						unoptimized={true}
 						loading="lazy"
-						layout="responsive"
 					/>
 				</div>
 				<div className={styles.textDiv}>

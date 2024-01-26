@@ -92,6 +92,7 @@
 .img {
 	width: 100%;
 	height: 100%;
+	user-select: none;
 }
 
 .product:active > .imageBlock > .imageFruitBlock {
@@ -115,6 +116,21 @@
 
 .title {
 	color: var(--primary);
+}
+
+.left,
+.right {
+	width: 50%;
+	height: 100%;
+	position: absolute;
+}
+
+.left {
+	justify-self: left;
+}
+
+.right {
+	justify-self: right;
 }
 
 @media (min-width: 1024px) {

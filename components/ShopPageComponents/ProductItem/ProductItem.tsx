@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 
-export const ProductItem = ({ id, image, imageFruit, title, price, weight, setAllCount, setCart }: ProductItemProps): JSX.Element => {
+export const ProductItem = ({ id, image, image_1, imageFruit, title, price, weight, setAllCount, setCart }: ProductItemProps): JSX.Element => {
     const router = useRouter();
 
 	const [count, setCount] = useState<number>(0);
@@ -28,6 +28,8 @@ export const ProductItem = ({ id, image, imageFruit, title, price, weight, setAl
 			transform: 'rotate(0deg)',
 		}
 	};
+
+	const [prodImage, setProdImage] = useState<string>(image);
     
 	return (
 		<div key={title} className={styles.product} onClick={() => router.push('/shop/' + id)}>
@@ -52,8 +54,8 @@ export const ProductItem = ({ id, image, imageFruit, title, price, weight, setAl
 			</motion.span>
 			<div className={styles.imageBlock}>
 				<Image className={styles.img} draggable='false'
-					loader={() => image}
-					src={image}
+					loader={() => prodImage}
+					src={prodImage}
 					alt={title}
 					width={1}
 					height={1}
@@ -69,6 +71,8 @@ export const ProductItem = ({ id, image, imageFruit, title, price, weight, setAl
 						unoptimized={true}
 					/>
 				</div>
+				<div className={styles.left} onMouseEnter={() => setProdImage(image)} />
+				<div className={styles.right} onMouseEnter={() => setProdImage(image_1)} onMouseLeave={() => setProdImage(image)} />
 			</div>
 			<div className={styles.productInfo}>
 				<Htag tag='m' className={styles.title}>{title}</Htag>
