@@ -1,13 +1,32 @@
 import { Cart } from "interfaces/cart.interface";
+import { Production } from "interfaces/production.interface";
+import { setProduction } from "./production.helper";
 
 
-export function getCartAll(): Cart[] {
+export function getCartAll(locale: string | undefined): Cart[] {
     let currentCart = localStorage.getItem('cart');
 
     if (currentCart) {
         let newCart: Cart[] = JSON.parse(currentCart);
 
-        return newCart;
+        let products: Production[] = setProduction(locale);
+
+        let newestCart: Cart[] = [];
+
+        for (let nc of newCart) {
+            let product: Cart = {
+                id: nc.id,
+                image: nc.image,
+                title: products[+nc.id].title,
+                count: nc.count,
+                price: nc.price,
+                weight: nc.weight,
+            };
+
+            newestCart.push(product);
+        }
+
+        return newestCart;
     } else {
         return [];
     }

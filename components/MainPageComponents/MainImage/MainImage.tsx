@@ -1,5 +1,4 @@
 import styles from './MainImage.module.css';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
@@ -10,7 +9,7 @@ import cn from 'classnames';
 export const MainImage = (): JSX.Element => {
 	const router = useRouter();
 	
-	const image = '/MainImage.gif';
+	// const image = '/MainImage.gif';
 
 	const [isVisible, setIsVisible] = useState<boolean>(false);
 	const [isVisible2, setIsVisible2] = useState<boolean>(false);

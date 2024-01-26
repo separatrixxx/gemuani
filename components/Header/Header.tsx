@@ -25,7 +25,7 @@ export const Header = ({ count }: HeaderProps): JSX.Element => {
 	const [hiddenLinks, setHiddenLinks] = useState<boolean>(true);
 
 	useEffect(() => {
-		setCart(getCartAll());
+		setCart(getCartAll(router.locale));
 	}, []);
 
 	const links: Links[] = [

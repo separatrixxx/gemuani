@@ -27,7 +27,7 @@ export const ShopPage = (): JSX.Element => {
 
 	useEffect(() => {
 		setCount(getCartCount());
-		setCart(getCartAll());
+		setCart(getCartAll(router.locale));
 	}, []);
 
 	const [flag, setFlag] = useState<boolean>(false);

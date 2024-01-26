@@ -21,7 +21,7 @@ export const ProductPage = ({ id, image, title, titleFull, description, price, c
 
 	useEffect(() => {
 		setCount(getCartCount());
-		setCart(getCartAll());
+		setCart(getCartAll(router.locale));
 	}, []);
 	
 	return (

@@ -23,7 +23,7 @@ export const CartPage = (): JSX.Element => {
 
 	useEffect(() => {
 		setCount(getCartCount());
-		setCart(getCartAll());
+		setCart(getCartAll(router.locale));
 	}, []);
 
 	return (
