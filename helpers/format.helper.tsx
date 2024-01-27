@@ -12,5 +12,5 @@ export function formatDate(date: string, router: any): string {
 
 	(firstNumberOfDay === '0') ? dayNew = secondNumberOfDay : dayNew = day;
 
-	return dayNew + ' ' + setLocale(router.locale).months[month] + ' ' + year + ' г.';
+	return dayNew + ' ' + setLocale(router.locale).months[month] + ' ' + year;
 }
