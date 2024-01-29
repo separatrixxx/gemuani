@@ -37,8 +37,34 @@
 	background: var(--white);
 }
 
+.shopLink {
+	cursor: pointer;
+	transition-duration: 300ms;
+
+	color: var(--accent) !important;
+}
+
+.shopLink > svg {
+	height: 30px;
+}
+
 .topButton:active > svg {
 	fill: var(--accent);
+}
+
+.amazonAndWolt {
+	position: fixed;
+	z-index: 3;
+	right: 20px;
+	bottom: 10px;
+
+	display: grid;
+}
+
+.shopLink:active {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	filter: brightness(0.9);
 }
 
 @media (min-width: 1024px) {
@@ -50,5 +76,27 @@
 
 	.topButton:hover > svg {
 		fill: var(--accent);
+	}
+
+	.shopLink:hover {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		filter: brightness(0.9);
+	}
+}
+
+@media (max-width: 1024px) {
+	.shopLink {
+		margin-bottom: 10px;
+	}
+
+	.shopLink > svg {
+		height: 25px;
+	}
+}
+
+@media (max-width: 580px) {
+	.shopLink {
+		margin-bottom: 10px;
 	}
 }

@@ -1,7 +1,7 @@
 export const en = {
 	locale: "en",
 	language: "English",
-	slogan: "natural Georgian freeze-dried fruits",
+	slogan: "the art of Natural Freeze Drying",
 	about_title: "ABOUT GEMUANI",
 	about_text: "is a Georgian company founded in 2011. We have grown to be the only producer of freeze-dried fruits and vegetables in Georgia, and in 2017 we launched a plant entirely using European equipment. Up to 95% of the products used in production are grown in Georgia, including on our plantation.",
 	kiwi_title: "KIWI FARMS",

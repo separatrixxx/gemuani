@@ -63,7 +63,7 @@ export const MainImage = (): JSX.Element => {
 					initial={isVisible ? 'visible' : 'hidden'}
 					transition={{ duration: 0.5 }}
 					animate={isVisible ? 'visible' : 'hidden'}>
-					{'GEMUANI -'}
+					{'GEMUANI'}
 				</motion.h1>
 				<motion.h1 className={cn(styles.title, styles.title2)}
 					variants={variants}

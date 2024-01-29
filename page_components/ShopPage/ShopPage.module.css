@@ -8,15 +8,6 @@
 	justify-items: center;
 }
 
-.amazonAndWolt {
-	position: fixed;
-	z-index: 1;
-	right: 20px;
-	bottom: 20px;
-
-	display: grid;
-}
-
 .shopBody {
 	display: grid;
 
@@ -25,44 +16,13 @@
 	gap: 30px;
 }
 
-.shopLink {
-	margin-bottom: 20px !important;
-
-	cursor: pointer;
-	transition-duration: 300ms;
-
-	color: var(--accent) !important;
-}
-
-.shopLink > svg {
-	height: 20px;
-}
-
-.shopLink:active {
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-	filter: brightness(0.9);
-}
-
 .marginTop {
 	margin-top: 30px !important;
-}
-
-@media (min-width: 1024px) {
-	.shopLink:hover {
-		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-		filter: brightness(0.9);
-	}
 }
 
 @media (max-width: 1220px) {
 	.shopBody {
 		width: 85%;
-	}
-
-	.shopLink > svg {
-		height: 15px !important;
 	}
 }
 
@@ -71,14 +31,6 @@
 		width: 90%;
 		margin-top: 80px;
 		gap: 20px;
-	}
-
-	.shopLink {
-		margin-bottom: 20px;
-	}
-
-	.shopLink > svg {
-		height: 40px;
 	}
 }
 
@@ -89,14 +41,6 @@
 
 	.link {
 		margin-left: 20px;
-	}
-
-	.shopLink {
-		margin-bottom: 25px;
-	}
-
-	.shopLink > svg {
-		height: 30px;
 	}
 }
 

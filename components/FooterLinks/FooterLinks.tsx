@@ -3,7 +3,6 @@ import styles from './FooterLinks.module.css';
 import { Htag } from 'components/Htag/Htag';
 
 
-
 export const FooterLinks = ({ title, children }: FooterLinksProps): JSX.Element => {
 	return (
 		<div className={styles.linksBlock}>

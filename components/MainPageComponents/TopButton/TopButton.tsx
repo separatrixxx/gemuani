@@ -4,6 +4,9 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useScrollY } from 'hooks/useScrollY';
 import { useResizeH } from 'hooks/useResize';
+import { Htag } from 'components/Htag/Htag';
+import Amazon from './amazon.svg';
+import Wolt from './wolt.svg';
 
 
 export const TopButton = (): JSX.Element => {
@@ -34,13 +37,40 @@ export const TopButton = (): JSX.Element => {
 		setFlag(false);
 	}
 
+	const variantsAW = {
+		visible: {
+			transform: 'translate(0%, -100%)',
+		},
+		hidden: {
+			transform: 'translate(0%, 0%)',
+		}
+	};
+
 	return (
-		<motion.div className={styles.topButton} onClick={() => scrollIntoView(element)}
-            variants={variants}
-			initial={flag ? 'visible' : 'hidden'}
-			transition={{ duration: 0.3 }}
-			animate={flag ? 'visible' : 'hidden'}>
-            <Arrow />
-        </motion.div>
+		<>
+			<motion.div className={styles.amazonAndWolt}
+				variants={variantsAW}
+				initial={flag ? 'visible' : 'hidden'}
+				transition={{ duration: 0.3 }}
+				animate={flag ? 'visible' : 'hidden'}>
+				<a rel='noreferrer' target='_blank' href='https://www.amazon.com/s?k=GEMUANI&ref=bl_dp_s_web_0'>
+					<Htag tag='xl' className={styles.shopLink}>
+						<Amazon />
+					</Htag>
+				</a>
+				<a rel='noreferrer' target='_blank' href='https://wolt.com/ka/geo/tbilisi/venue/wolt-market-marijani/gemuani-chiri-martsqvis-krispi-10gr-itemid-647f279fbe1e2eace68ee7e0'>
+					<Htag tag='xl' className={styles.shopLink}>
+						<Wolt />
+					</Htag>
+				</a>
+			</motion.div>
+			<motion.div className={styles.topButton} onClick={() => scrollIntoView(element)}
+				variants={variants}
+				initial={flag ? 'visible' : 'hidden'}
+				transition={{ duration: 0.3 }}
+				animate={flag ? 'visible' : 'hidden'}>
+				<Arrow />
+			</motion.div>
+		</>
 	);
 };
