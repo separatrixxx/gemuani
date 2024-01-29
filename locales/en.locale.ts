@@ -311,4 +311,6 @@ export const en = {
 		post_deleted_succesfully: "Post deleted successfully",
 		post_deleted_error: "An error occurred while deleting a post",
 	},
+	vitamins: "Vitamins and nutrients",
+	download: "Download file",
 };

@@ -38,6 +38,11 @@ export const ProductInfo = ({ id, image, title, description, country, sort, sort
 									+ (sort[sortNum].weight * 0.035274).toFixed(2) + ' ' + setLocale(router.locale).ounces}
 							</span>
 						</Htag>
+						<Htag tag='m' className={styles.text}>{setLocale(router.locale).vitamins + ': '}
+							<span className={cn(styles.bold, styles.download)} onClick={() => router.push('/vitamins.xlsx')}>
+								{setLocale(router.locale).download}
+							</span>
+						</Htag>
 					</div>
 					<Htag tag='l' className={styles.titleFull}>{sort[sortNum].price + '₾'}</Htag>
 					<div className={styles.sortDiv}>

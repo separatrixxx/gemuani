@@ -311,4 +311,6 @@ export const ru = {
 		post_deleted_succesfully: "Пост успешно удалён",
 		post_deleted_error: "Произошла ошибка при удалении поста",
 	},
+	vitamins: "Витамины и полезные вещества",
+	download: "Скачать файл",
 };

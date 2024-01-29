@@ -84,11 +84,28 @@
 	border-color: var(--accent);
 }
 
+.download {
+	cursor: pointer;
+	transition-duration: 300ms;
+}
+
+.download:active {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	filter: brightness(0.9);
+}
+
 @media (min-width: 1024px) {
 	.sortTitle:hover {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 		border-color: var(--accent);
+	}
+
+	.download:hover {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	
+		filter: brightness(0.9);
 	}
 }
 

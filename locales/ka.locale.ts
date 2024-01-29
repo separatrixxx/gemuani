@@ -311,4 +311,6 @@ export const ka = {
 		post_deleted_succesfully: "პოსტი წარმატებით წაიშალა",
 		post_deleted_error: "პოსტის წაშლისას მოხდა შეცდომა",
 	},
+	vitamins: "ვიტამინები და საკვები ნივთიერებები",
+	download: "Გადმოწერეთ ფაილი",
 };
