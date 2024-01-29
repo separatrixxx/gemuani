@@ -401,35 +401,6 @@ export function setProduction(locale: string | undefined): Production[] {
 
     const production12: Production = {
         id: '11',
-        image: '/Production1.webp',
-        image_1: '/Production1_1.webp',
-        imageFruit: '/orange.webp',
-        title: setLocale(locale).products.title12,
-        titleShort: 'orange',
-        description: setLocale(locale).products.description12,
-        link: '',
-        country: setLocale(locale).georgia,
-        price: 21.75,
-        sort: [
-            {
-                id: 0,
-                title: setLocale(locale).products.product12.title1,
-                titleFull: setLocale(locale).products.product12.titleFull1,
-                weight: 50,
-                price: 21.75,
-            },
-            {
-                id: 1,
-                title: setLocale(locale).products.product12.title2,
-                titleFull: setLocale(locale).products.product12.titleFull2,
-                weight: 150,
-                price: 123.3,
-            },
-        ],
-    };
-
-    const production13: Production = {
-        id: '12',
         image: '/Production13.webp',
         image_1: '/Production13_1.webp',
         imageFruit: '/peach.webp',
@@ -478,8 +449,8 @@ export function setProduction(locale: string | undefined): Production[] {
         ],
     };
 
-    const production14: Production = {
-        id: '13',
+    const production13: Production = {
+        id: '12',
         image: '/Production14.webp',
         image_1: '/Production14_1.webp',
         imageFruit: '/raspberry.webp',
@@ -521,8 +492,8 @@ export function setProduction(locale: string | undefined): Production[] {
         ],
     };
 
-    const production15: Production = {
-        id: '14',
+    const production14: Production = {
+        id: '13',
         image: '/Production15.webp',
         image_1: '/Production15_1.webp',
         imageFruit: '/strawberry.webp',
@@ -586,6 +557,5 @@ export function setProduction(locale: string | undefined): Production[] {
     };
 
     return [production1, production2, production3, production4, production5, production6, production7,
-        production8, production9, production10, production11, production12, production13, production14,
-        production15];
+        production8, production9, production10, production11, production12, production13, production14];
 }
