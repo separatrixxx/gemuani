@@ -55,6 +55,9 @@ export const Footer = (): JSX.Element => {
                         <Link href='sitemap.xml'>
                             <Htag tag='m' className={styles.link}>{setLocale(router.locale).site_map}</Htag>
                         </Link>
+                        <Link href='/'>
+                            <Htag tag='m' className={styles.link}>{setLocale(router.locale).privacy_policy}</Htag>
+                        </Link>
                     </div>
                 </FooterLinks>
                 <FooterLinks title={setLocale(router.locale).footer.title3}>
