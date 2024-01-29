@@ -55,6 +55,7 @@
 
 .sortDiv {
 	display: grid;
+
 	width: fit-content;
 	margin: 10px 0;
 	gap: 10px;
@@ -63,16 +64,18 @@
 
 .sortTitle {
 	padding: 5px 15px;
-	border-radius: 9999px;
-	border: 1px solid var(--dark);
+
 	cursor: pointer;
 	transition-duration: 300ms;
+
+	border: 1px solid var(--dark);
+	border-radius: 9999px;
 }
 
 .active {
-	background: var(--accent);
 	color: var(--white);
 	border-color: var(--accent);
+	background: var(--accent);
 }
 
 .sortTitle:active {
@@ -88,7 +91,6 @@
 		border-color: var(--accent);
 	}
 }
-
 
 @media (max-width: 1024px) {
 	.productInfoDiv {

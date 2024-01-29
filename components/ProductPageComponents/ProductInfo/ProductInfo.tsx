@@ -3,8 +3,6 @@ import styles from './ProductInfo.module.css';
 import Image from 'next/image';
 import { Htag } from 'components/Htag/Htag';
 import { BuyButton } from '../BuyButton/BuyButton';
-import { useEffect, useState } from 'react';
-import { getCart } from 'helpers/cart.helper';
 import { setLocale } from 'helpers/locale.helper';
 import { useRouter } from 'next/router';
 import cn from 'classnames';

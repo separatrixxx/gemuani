@@ -2,12 +2,11 @@ import { BuyFormProps } from './BuyForm.props';
 import styles from './BuyForm.module.css';
 import { setLocale } from 'helpers/locale.helper';
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Input } from 'components/ContactsPageComponents/Input/Input';
 import { buyHelper } from 'helpers/buy.helper';
 import { LoadingDots } from '../LoadingDots/LoadingDots';
 import cn from 'classnames';
-import { getTotalPrice } from 'helpers/cart.helper';
 
 
 export const BuyForm = ({ cart, setCart }: BuyFormProps): JSX.Element => {
@@ -23,9 +22,9 @@ export const BuyForm = ({ cart, setCart }: BuyFormProps): JSX.Element => {
 
     const [loading, setLoading] = useState<boolean>(false);
 
-    let totalPrice: number = 0;
+    let totalPrice = 0;
 
-    for (let c of cart) {
+    for (const c of cart) {
         totalPrice += c.price * c.count;
     }
 

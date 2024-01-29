@@ -24,7 +24,7 @@ export const EnergyCounter = ({ energyNumber }: EnergyCounterProps): JSX.Element
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-      }, []);
+      }, [handleScroll]);
     
     useEffect(() => {
         let id: NodeJS.Timeout;

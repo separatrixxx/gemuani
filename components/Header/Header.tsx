@@ -26,7 +26,7 @@ export const Header = ({ count }: HeaderProps): JSX.Element => {
 
 	useEffect(() => {
 		setCart(getCartAll(router.locale));
-	}, []);
+	}, [router.locale]);
 
 	const links: Links[] = [
 		{ title: setLocale(router.locale).shop.toUpperCase(), link: 'shop' },
