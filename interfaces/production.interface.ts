@@ -5,10 +5,17 @@ export interface Production {
 	imageFruit: string,
 	title: string,
 	titleShort: string,
-	titleFull: string,
 	description: string,
 	link: string,
-	price: number,
 	country: string,
+	price: number,
+	sort: Sort[],
+}
+
+export interface Sort {
+	id: number,
+	title: string,
+	titleFull: string,
 	weight: number,
+	price: number,
 }

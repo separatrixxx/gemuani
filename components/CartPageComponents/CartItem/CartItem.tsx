@@ -19,7 +19,7 @@ export const CartItem = ({ id, image, title, price, setAllCount, totalPrice, set
 	if (count > 0) {
 		return (
 			<div key={title} className={styles.cart}>
-				<div className={styles.imageBlock} onClick={() => router.push('/shop/' + id)}>
+				<div className={styles.imageBlock} onClick={() => router.push('/shop/' + id.slice(0, id.length - 2))}>
 					<Image className={styles.img} draggable='false'
 						loader={() => image}
 						src={image}

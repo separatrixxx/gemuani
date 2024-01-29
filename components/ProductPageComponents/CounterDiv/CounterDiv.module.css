@@ -100,3 +100,26 @@
 		background: var(--light);
 	}
 }
+
+@media (max-width: 1024px) {
+	.minusPlus {
+		width: 30px;
+		height: 30px;
+	}
+
+	.delete > svg {
+		height: 16px !important;
+	}
+}
+
+@media (max-width: 580px) {
+	.minusPlus {
+		width: 25px;
+		height: 25px;
+	}
+
+	.delete > svg {
+		height: 14px !important;
+	}
+}
+

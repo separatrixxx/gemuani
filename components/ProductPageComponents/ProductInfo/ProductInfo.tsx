@@ -7,19 +7,12 @@ import { useEffect, useState } from 'react';
 import { getCart } from 'helpers/cart.helper';
 import { setLocale } from 'helpers/locale.helper';
 import { useRouter } from 'next/router';
+import cn from 'classnames';
 
 
-export const ProductInfo = ({ id, image, title, titleFull, description, price, country, weight,
-	setAllCount, setCart }: ProductInfoProps): JSX.Element => {
+export const ProductInfo = ({ id, image, title, description, country, sort, sortNum,
+	setAllCount, setCart, setSortNum, isAdded, count, setIsAdded, setCount }: ProductInfoProps): JSX.Element => {
 	const router = useRouter();
-
-	const [isAdded, setIsAdded] = useState<boolean>(false);
-	const [count, setCount] = useState<number>(0);
-
-	useEffect(() => {
-		setIsAdded(getCart(id).count > 0);
-		setCount(getCart(id).count);
-	}, [id]);
 	
 	return (
 		<>
@@ -36,22 +29,32 @@ export const ProductInfo = ({ id, image, title, titleFull, description, price, c
 					/>
 				</div>
 				<div className={styles.textDiv}>
-					<Htag tag='l' className={styles.titleFull}>{titleFull}</Htag>
+					<Htag tag='l' className={styles.titleFull}>{sort[sortNum].titleFull}</Htag>
 					<div className={styles.moreInfo}>
 						<Htag tag='m' className={styles.text}>{setLocale(router.locale).country_of_origin + ': '}
 							<span className={styles.bold}>{country}</span>
 						</Htag>
 						<Htag tag='m' className={styles.text}>{setLocale(router.locale).weight + ': '}
 							<span className={styles.bold}>
-								{weight + ' ' + setLocale(router.locale).gram + ' | ' 
-									+ (weight * 0.035274).toFixed(2) + ' ' + setLocale(router.locale).ounces}
+								{sort[sortNum].weight + ' ' + setLocale(router.locale).gram + ' | ' 
+									+ (sort[sortNum].weight * 0.035274).toFixed(2) + ' ' + setLocale(router.locale).ounces}
 							</span>
 						</Htag>
 					</div>
-					<Htag tag='l' className={styles.titleFull}>{price + '₾'}</Htag>
-					<br />
-					<BuyButton isAdded={isAdded} setIsAdded={setIsAdded} id={id} image={image} title={title}
-						count={count} price={price} weight={weight} setCount={setCount} setAllCount={setAllCount} setCart={setCart} />
+					<Htag tag='l' className={styles.titleFull}>{sort[sortNum].price + '₾'}</Htag>
+					<div className={styles.sortDiv}>
+						{sort.map(s => (
+							<Htag key={s.id} tag='s' className={cn(styles.sortTitle, {
+								[styles.active]: s.id === sortNum,
+							})} onClick={() => setSortNum(s.id)}>
+								{s.title + ' | ' + s.weight}
+							</Htag>
+						))}
+					</div>
+					<BuyButton isAdded={isAdded} setIsAdded={setIsAdded} id={id + '_' + sort[sortNum].id} image={image}
+						title={title + ' | ' + sort[sortNum].title + ' | ' + sort[sortNum].weight} count={count} 
+						price={sort[sortNum].price} weight={sort[sortNum].weight}
+						setCount={setCount} setAllCount={setAllCount} setCart={setCart} />
 				</div>
 			</div>
 			<div className={styles.descriptionDiv}>

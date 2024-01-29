@@ -2,6 +2,8 @@ import { Buy, Cart } from "interfaces/cart.interface";
 import axios from "axios";
 import { ToastError, ToastSuccess } from "components/Toast/Toast";
 import { setLocale } from "./locale.helper";
+import { Production } from "interfaces/production.interface";
+import { setProduction } from "./production.helper";
 
 
 export async function buyHelper(cart: Cart[], name: string, email: string, phone: string, totalPrice: number,
@@ -17,21 +19,25 @@ export async function buyHelper(cart: Cart[], name: string, email: string, phone
     if (+name !== 0 && EMAIL_REGEXP.test(email) && PHONE_REGEXP.test(phone)) {
         if (cart.length > 0) {
             if (name !== null && email !== null && phone !== null) {
+                let products: Production[] = setProduction('en');
+
+                let cartStr = "";
+
+                for (let c of cart) {
+                    cartStr += products[+c.id.slice(0, c.id.length - 2)].title + ' ' 
+                        + products[+c.id.slice(0, c.id.length - 2)].sort[+c.id.slice(2, c.id.length)].title
+                        + ' | ' + c.weight + 'g | ' + c.count + ', ';
+                }
+                cartStr = cartStr.slice(0, cartStr.length - 2);
+
                 const data: Buy = {
                     uname: name,
                     phone: +phone,
                     email: email,
                     price: "" + Math.round(totalPrice),
-                    cart: "",
+                    cart: cartStr,
                 };
 
-                let strCart: string = "";
-
-                for (let c of cart) {
-                    strCart += c.title + ' | ' + c.weight + 'g | ' + c.count + ', ';
-                }
-                strCart = strCart.slice(0, strCart.length - 2);
-    
                 setLoading(true);
     
                 await axios.post(process.env.NEXT_PUBLIC_DOMAIN + '', data)

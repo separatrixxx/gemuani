@@ -11,9 +11,9 @@ export default function Product({ product }: ProductProps) {
 		<>
 			<Head>
 				<title>{'Gemuani - ' + product.title}</title>
-				<meta name='description' content={product.titleFull} />
+				<meta name='description' content={product.title} />
 				<meta property='og:title' content={product.title} />
-				<meta property='og:description' content={product.titleFull} />
+				<meta property='og:description' content={product.title} />
 				<meta name='robots' content='index, nosnippet' />
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
 				<meta property='og:url' content={'https://www.gemuani.com/shop/' + product.id} />
@@ -22,8 +22,8 @@ export default function Product({ product }: ProductProps) {
 				<meta charSet="utf-8" />
 				<link rel="icon" href="/logo.svg" type='image/svg+xml' />
 			</Head>
-			<ProductPage id={product.id} image={product.image} title={product.title} titleFull={product.titleFull}
-				description={product.description} price={product.price} country={product.country} weight={product.weight} />
+			<ProductPage id={product.id} image={product.image} title={product.title} description={product.description}
+				country={product.country} sort={product.sort} />
 		</>
 	);
 }

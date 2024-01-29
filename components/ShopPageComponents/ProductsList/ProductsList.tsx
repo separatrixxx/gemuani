@@ -7,8 +7,8 @@ export const ProductsList = ({ production, setAllCount, setCart }: ProductsListP
 	return (
 		<div className={styles.productionDiv}>
 			{production.map(p => (
-				<ProductItem key={p.id} id={p.id} image={p.image} image_1={p.image_1} imageFruit={p.imageFruit} title={p.title} price={p.price} weight={p.weight}
-					setAllCount={setAllCount} setCart={setCart} />
+				<ProductItem key={p.id} id={p.id} image={p.image} image_1={p.image_1} imageFruit={p.imageFruit} title={p.title} 
+					price={p.price} sort={p.sort} setAllCount={setAllCount} setCart={setCart} />
 			))}
 		</div>
 	);

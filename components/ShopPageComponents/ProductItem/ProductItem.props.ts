@@ -1,4 +1,6 @@
+import { Sort } from 'interfaces/production.interface';
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
+
 
 export interface ProductItemProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
     id: string,
@@ -7,7 +9,7 @@ export interface ProductItemProps extends DetailedHTMLProps<HTMLAttributes<HTMLD
     imageFruit: string,
 	title: string,
     price: number,
-    weight: number,
+    sort: Sort[],
     setAllCount: (e: any) => void,
     setCart: (e: any) => void,
 }

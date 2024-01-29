@@ -17,7 +17,9 @@ export function getCartAll(locale: string | undefined): Cart[] {
             let product: Cart = {
                 id: nc.id,
                 image: nc.image,
-                title: products[+nc.id].title,
+                title: products[+nc.id.slice(0, nc.id.length - 2)].title + ' | ' 
+                    + products[+nc.id.slice(0, nc.id.length - 2)].sort[+nc.id.slice(2, nc.id.length)].title + ' | '
+                    + nc.weight,
                 count: nc.count,
                 price: nc.price,
                 weight: nc.weight,

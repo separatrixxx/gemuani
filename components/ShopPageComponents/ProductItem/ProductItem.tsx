@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 
-export const ProductItem = ({ id, image, image_1, imageFruit, title, price, weight, setAllCount, setCart }: ProductItemProps): JSX.Element => {
+export const ProductItem = ({ id, image, image_1, imageFruit, title, price, sort, setAllCount, setCart }: ProductItemProps): JSX.Element => {
     const router = useRouter();
 
 	const [count, setCount] = useState<number>(0);
@@ -42,7 +42,8 @@ export const ProductItem = ({ id, image, image_1, imageFruit, title, price, weig
 					event.stopPropagation();
 					
 					if (!isAdded) {
-						addToCart(id, image, title, price, weight, setCount, setAllCount);
+						addToCart(id + '_' + sort[0].id, image, title + ' | ' + sort[0].title + ' | ' + sort[0].weight,
+							price, sort[0].weight, setCount, setAllCount);
 					} else {
 						removeFromCart(id, setCount, setAllCount, setCart);
 					}
@@ -75,7 +76,7 @@ export const ProductItem = ({ id, image, image_1, imageFruit, title, price, weig
 				<div className={styles.right} onMouseEnter={() => setProdImage(image_1)} onMouseLeave={() => setProdImage(image)} />
 			</div>
 			<div className={styles.productInfo}>
-				<Htag tag='m' className={styles.title}>{title}</Htag>
+				<Htag tag='m' className={styles.title}>{'GEMUANI ' + title}</Htag>
 				<Htag tag='s' className={styles.price}>{price + '₾'}</Htag>
 			</div>
 		</div>
