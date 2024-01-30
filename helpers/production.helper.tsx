@@ -556,6 +556,6 @@ export function setProduction(locale: string | undefined): Production[] {
         ],
     };
 
-    return [production1, production2, production3, production4, production5, production6, production7,
-        production8, production9, production10, production11, production12, production13, production14];
+    return [production1, production3, production4, production5, production6, production7, production8, 
+        production9, production10, production12, production13, production14, production2, production11];
 }

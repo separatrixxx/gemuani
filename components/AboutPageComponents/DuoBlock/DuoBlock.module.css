@@ -1,0 +1,30 @@
+.duoBlock {
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 30px;
+    grid-template-areas: 
+            ". a";
+}
+
+.rightSide {
+    grid-template-areas: 
+            "a .";
+}
+
+.text {
+    grid-area: a;
+    text-align: justify;
+    white-space: pre-line;
+}
+
+@media (max-width: 580px) {
+	.duoBlock {
+        grid-template-columns: auto;
+        grid-template-areas: 
+            "."
+            "a";
+    }
+}
+
