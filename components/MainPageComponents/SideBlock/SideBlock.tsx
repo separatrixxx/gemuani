@@ -24,8 +24,7 @@ export const SideBlock = ({ side, text, link, image, video, title, children }: S
 								loader={() => image}
 								src={image}
 								alt='side image'
-								width={width > 1250 ? width * 0.4 : width > 1024 ? width * 0.425 : width > 845 ? 
-									width * 0.45 : width > 400 ? width * 0.9 : width * 0.95}
+								width={1}
 								height={1}
 								unoptimized={true}
 								loading="lazy"

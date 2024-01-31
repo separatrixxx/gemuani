@@ -20,9 +20,10 @@ export const ImageBlock = ({ text, image, imageMobile, ticker }: ImageBlockProps
 				<div className={styles.imageBlock}>
 					<div className={styles.imageDiv}>
 						<Image className={styles.image} draggable='false'
+							loader={() => image}
 							src={width > 1024 ? image : imageMobile}
 							alt='image'
-							width={width}
+							width={1}
 							height={1}
 							unoptimized={true}
 							loading="lazy"
