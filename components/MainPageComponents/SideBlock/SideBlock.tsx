@@ -6,24 +6,37 @@ import { LearnMore } from '../LearnMore/LearnMore';
 import cn from 'classnames';
 
 
-export const SideBlock = ({ side, text, link, image, title, children }: SideBlockProps): JSX.Element => {
+export const SideBlock = ({ side, text, link, image, videoMp4, videoWebm, title, children }: SideBlockProps): JSX.Element => {
 	return (
 		<div className={styles.wrapper}>
 			<Htag tag='xxl' className={styles.titleText}>{title}</Htag>
 			<div className={styles.sideBlock}>
-				<div className={cn(styles.imageBlock, {
-					[styles.rightImageBlock]: side === 'right',
-				})}>
-					<Image className={styles.sideImage} draggable='false'
-						loader={() => image}
-						src={image}
-						alt='side image'
-						width={1}
-						height={1}
-						unoptimized={true}
-						loading="lazy"
-					/>
-				</div>
+				{
+					image ? 
+						<div className={cn(styles.imageBlock, {
+							[styles.rightImageBlock]: side === 'right',
+						})}>
+							<Image className={styles.sideImage} draggable='false'
+								loader={() => image}
+								src={image}
+								alt='side image'
+								width={1}
+								height={1}
+								unoptimized={true}
+								loading="lazy"
+							/>
+						</div>
+					: videoMp4 && videoWebm ?
+						<video autoPlay={true} loop muted className={cn(styles.imageBlock, {
+							[styles.rightImageBlock]: side === 'right',
+						})}>
+							<source src={videoWebm} type="video/webm" />
+							<source src={videoMp4} type="video/mp4" />
+						</video>
+					:
+						<></>
+
+				}
 				<div className={styles.textDiv}>
 					<Htag tag='xl' className={cn({
 						[styles.textLeft]: side === 'left',
