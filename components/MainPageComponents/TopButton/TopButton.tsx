@@ -53,12 +53,14 @@ export const TopButton = (): JSX.Element => {
 				initial={flag ? 'visible' : 'hidden'}
 				transition={{ duration: 0.3 }}
 				animate={flag ? 'visible' : 'hidden'}>
-				<a rel='noreferrer' target='_blank' href='https://www.amazon.com/GEMUANI-Freeze-Dried-Feijoa-Crisps/dp/B0C3RP22G2/ref=sr_1_2?keywords=GEMUANI&qid=1706684437&sr=8-2'>
+				<a rel='noreferrer' target='_blank' aria-label='amazon link'
+					href='https://www.amazon.com/GEMUANI-Freeze-Dried-Feijoa-Crisps/dp/B0C3RP22G2/ref=sr_1_2?keywords=GEMUANI&qid=1706684437&sr=8-2'>
 					<Htag tag='xl' className={styles.shopLink}>
 						<Amazon />
 					</Htag>
 				</a>
-				<a rel='noreferrer' target='_blank' href='https://wolt.com/ka/geo/tbilisi/venue/wolt-market-marijani/gemuani-chiri-martsqvis-krispi-10gr-itemid-647f279fbe1e2eace68ee7e0'>
+				<a rel='noreferrer' target='_blank' aria-label='wolt link'
+					href='https://wolt.com/ka/geo/tbilisi/venue/wolt-market-marijani/gemuani-chiri-martsqvis-krispi-10gr-itemid-647f279fbe1e2eace68ee7e0'>
 					<Htag tag='xl' className={styles.shopLink}>
 						<Wolt />
 					</Htag>

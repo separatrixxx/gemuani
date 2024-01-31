@@ -52,8 +52,8 @@ export const MainImage = (): JSX.Element => {
 			<video autoPlay={true} loop muted className={cn(styles.mainImage, {
 				[styles.darkness]: isVisible,
 			})}>
-				<source src="MainImage.webm" type="video/webm" />
 				<source src="MainImage.mp4" type="video/mp4" />
+				<source src="MainImage.webm" type="video/webm" />
 			</video>
 			<div className={styles.titleDiv}>
 				<motion.h1 className={cn(styles.title, {

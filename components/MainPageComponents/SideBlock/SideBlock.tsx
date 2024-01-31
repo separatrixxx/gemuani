@@ -3,10 +3,14 @@ import styles from './SideBlock.module.css';
 import Image from 'next/image';
 import { Htag } from 'components/Htag/Htag';
 import { LearnMore } from '../LearnMore/LearnMore';
+import { useResizeW } from 'hooks/useResize';
 import cn from 'classnames';
 
 
 export const SideBlock = ({ side, text, link, image, videoMp4, videoWebm, title, children }: SideBlockProps): JSX.Element => {
+	const width = useResizeW();
+
+	
 	return (
 		<div className={styles.wrapper}>
 			<Htag tag='xxl' className={styles.titleText}>{title}</Htag>
@@ -20,7 +24,8 @@ export const SideBlock = ({ side, text, link, image, videoMp4, videoWebm, title,
 								loader={() => image}
 								src={image}
 								alt='side image'
-								width={1}
+								width={width > 1250 ? width * 0.4 : width > 1024 ? width * 0.425 : width > 845 ? 
+									width * 0.45 : width > 400 ? width * 0.9 : width * 0.95}
 								height={1}
 								unoptimized={true}
 								loading="lazy"

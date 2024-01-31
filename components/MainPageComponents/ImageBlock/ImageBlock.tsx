@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import { Ticker } from '../Ticker/Ticker';
 import { Htag } from 'components/Htag/Htag';
 import Image from 'next/image';
-import { useResizeW } from 'hooks/useResize';
+import { useResizeH, useResizeW } from 'hooks/useResize';
 
 
 export const ImageBlock = ({ text, image, imageMobile, ticker }: ImageBlockProps): JSX.Element => {
@@ -20,10 +20,9 @@ export const ImageBlock = ({ text, image, imageMobile, ticker }: ImageBlockProps
 				<div className={styles.imageBlock}>
 					<div className={styles.imageDiv}>
 						<Image className={styles.image} draggable='false'
-							loader={() => width > 1024 ? image : imageMobile}
 							src={width > 1024 ? image : imageMobile}
 							alt='image'
-							width={1}
+							width={width}
 							height={1}
 							unoptimized={true}
 							loading="lazy"
