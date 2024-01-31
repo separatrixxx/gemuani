@@ -43,8 +43,8 @@ export const HomePage = (): JSX.Element => {
                         title={setLocale(router.locale).about_title} span='GEMUANI' />
                     <SideBlock side='left' text={setLocale(router.locale).kiwi_text} link='kiwi_farm' image='/KiwiImage.gif'
                         title={setLocale(router.locale).kiwi_title} />
-                    <ImageBlock text={setLocale(router.locale).mountains_text} image='/MountainsImage.webp' imageMobile='/MountainsImageMobile.webp'
-                        ticker={false} />
+                    {/* <ImageBlock text={setLocale(router.locale).mountains_text} image='/MountainsImage.webp' imageMobile='/MountainsImageMobile.webp'
+                        ticker={false} /> */}
                     <SideBlock side='right' text={setLocale(router.locale).energy_text} image='/EnergyImage.webp'
                         title={setLocale(router.locale).energy_title}>
                         <EnergyCounter energyNumber={413} />
