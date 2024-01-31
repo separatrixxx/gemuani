@@ -18,7 +18,7 @@ import { useEffect, useState } from 'react';
 export const HomePage = (): JSX.Element => {
     const router = useRouter();
 
-    const [height, setHeight] = useState<number>(0);
+    const [height, setHeight] = useState<number>(1080);
 
     useEffect(() => {
         const imageBlock = document.getElementById('mainImage');
