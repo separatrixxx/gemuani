@@ -5,8 +5,7 @@ export interface SideBlockProps extends DetailedHTMLProps<HTMLAttributes<HTMLDiv
 	text: string,
 	link?: string,
 	image?: string,
-	videoMp4?: string,
-	videoWebm?: string,
+	video?: string,
 	title: string,
 	children?: ReactNode,
 }

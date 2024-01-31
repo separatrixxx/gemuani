@@ -8,8 +8,6 @@ import cn from 'classnames';
 
 export const MainImage = (): JSX.Element => {
 	const router = useRouter();
-	
-	// const image = '/MainImage.gif';
 
 	const [isVisible, setIsVisible] = useState<boolean>(false);
 	const [isVisible2, setIsVisible2] = useState<boolean>(false);
@@ -53,7 +51,6 @@ export const MainImage = (): JSX.Element => {
 				[styles.darkness]: isVisible,
 			})}>
 				<source src="MainImage.mp4" type="video/mp4" />
-				<source src="MainImage.webm" type="video/webm" />
 			</video>
 			<div className={styles.titleDiv}>
 				<motion.h1 className={cn(styles.title, {

@@ -41,8 +41,8 @@ export const HomePage = (): JSX.Element => {
                 <div className={styles.unfixedWrapper} style={{ marginTop: height + 'px' }}>
                     <TextBlock text={setLocale(router.locale).about_text} link='about'
                         title={setLocale(router.locale).about_title} span='GEMUANI' />
-                    <SideBlock side='left' text={setLocale(router.locale).kiwi_text} link='kiwi_farm' videoMp4='/KiwiImage.mp4'
-                        videoWebm='/KiwiImage.webm' title={setLocale(router.locale).kiwi_title} />
+                    <SideBlock side='left' text={setLocale(router.locale).kiwi_text} link='kiwi_farm' video='/KiwiImage.mp4'
+                        title={setLocale(router.locale).kiwi_title} />
                     {/* <ImageBlock text={setLocale(router.locale).mountains_text} image='/MountainsImage.webp' imageMobile='/MountainsImageMobile.webp'
                         ticker={false} /> */}
                     <SideBlock side='right' text={setLocale(router.locale).energy_text} image='/EnergyImage.webp'
@@ -58,8 +58,8 @@ export const HomePage = (): JSX.Element => {
                     {/* <Slider /> */}
                     <TextBlock text={setLocale(router.locale).history_text} link='culture'
                         title={setLocale(router.locale).history_title} />
-                    <SideBlock side='left' text={setLocale(router.locale).climate_text} videoMp4='/ClimateImage.mp4'
-                        videoWebm='/ClimateImage.webm' title={setLocale(router.locale).climate_title} />
+                    <SideBlock side='left' text={setLocale(router.locale).climate_text} video='/ClimateImage.mp4'
+                        title={setLocale(router.locale).climate_title} />
                     {/* <WorldBlock text={setLocale(router.locale).world_text} title={setLocale(router.locale).world_title} /> */}
                     <BlogBlock text={setLocale(router.locale).blog_text} link='blog' />
                     <Footer />

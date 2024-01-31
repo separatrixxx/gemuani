@@ -7,7 +7,7 @@ import { useResizeW } from 'hooks/useResize';
 import cn from 'classnames';
 
 
-export const SideBlock = ({ side, text, link, image, videoMp4, videoWebm, title, children }: SideBlockProps): JSX.Element => {
+export const SideBlock = ({ side, text, link, image, video, title, children }: SideBlockProps): JSX.Element => {
 	const width = useResizeW();
 
 	
@@ -31,12 +31,11 @@ export const SideBlock = ({ side, text, link, image, videoMp4, videoWebm, title,
 								loading="lazy"
 							/>
 						</div>
-					: videoMp4 && videoWebm ?
+					: video ?
 						<video autoPlay={true} loop muted className={cn(styles.imageBlock, {
 							[styles.rightImageBlock]: side === 'right',
 						})}>
-							<source src={videoWebm} type="video/webm" />
-							<source src={videoMp4} type="video/mp4" />
+							<source src={video} type="video/mp4" />
 						</video>
 					:
 						<></>
