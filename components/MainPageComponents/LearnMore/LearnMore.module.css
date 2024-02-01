@@ -3,12 +3,12 @@
 	align-items: end;
 
 	width: fit-content;
+	margin-top: 60px;
 
 	cursor: pointer;
 	transition-duration: 300ms;
 	grid-template-columns: 1fr auto;
 	gap: 7px;
-	margin-top: 60px;
 }
 
 .learnMoreText {
