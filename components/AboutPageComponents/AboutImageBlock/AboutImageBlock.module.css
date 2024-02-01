@@ -8,7 +8,6 @@
 
 	background: var(--primary);
 	justify-items: center;
-	filter: brightness(0.9);
 }
 
 .image {
@@ -26,11 +25,62 @@
 	.imageBlock {
 		width: 80%;
 		border-radius: 15px;
+		max-height: 200px;
+	}
+}
+
+@media (max-width: 530px) {
+	.imageBlock {
+		max-height: 185px;
+	}
+}
+
+@media (max-width: 500px) {
+	.imageBlock {
+		max-height: 175px;
+	}
+}
+
+@media (max-width: 480px) {
+	.imageBlock {
+		max-height: 170px;
+	}
+}
+
+@media (max-width: 460px) {
+	.imageBlock {
+		max-height: 160px;
+	}
+}
+
+@media (max-width: 450px) {
+	.imageBlock {
+		max-height: 150px;
+	}
+}
+
+@media (max-width: 370px) {
+	.imageBlock {
+		max-height: 140px;
+	}
+}
+
+@media (max-width: 350px) {
+	.imageBlock {
+		max-height: 130px;
 	}
 }
 
 @media (max-width: 300px) {
 	.imageBlock {
+		max-height: 110px;
+		border-radius: 10px;
+	}
+}
+
+@media (max-width: 250px) {
+	.imageBlock {
+		max-height: 100px;
 		border-radius: 10px;
 	}
 }
