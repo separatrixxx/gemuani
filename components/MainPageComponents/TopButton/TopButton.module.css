@@ -58,6 +58,7 @@
 	height: 30px;
 	border-radius: 2px;
 	margin-bottom: 7px;
+	user-select: none;
 }
 
 .topButton:active > svg {
