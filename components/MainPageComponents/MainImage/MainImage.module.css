@@ -88,10 +88,6 @@
 }
 
 @media (max-width: 570px) {
-	.titleDiv {
-		margin-top: -50px;
-	}
-
 	.title {
 		font-size: 48px;
 	}
@@ -104,10 +100,6 @@
 }
 
 @media (max-width: 460px) {
-	.titleDiv {
-		margin-top: -70px;
-	}
-
 	.title {
 		font-size: 32px;
 	}
@@ -120,10 +112,6 @@
 }
 
 @media (max-width: 370px) {
-	.titleDiv {
-		margin-top: -70px;
-	}
-
 	.title {
 		font-size: 24px;
 	}

@@ -40,7 +40,7 @@ export const SideBlock = ({ side, text, link, image, video, title, children }: S
 					<Htag tag='xl' className={cn({
 						[styles.textLeft]: side === 'left',
 						[styles.textRight]: side === 'right',
-					})}>{text + text + text}</Htag>
+					})}>{text}</Htag>
 					{children ? children : <></>}
 					{link ? <LearnMore link={link} /> : <></>}
 				</div>

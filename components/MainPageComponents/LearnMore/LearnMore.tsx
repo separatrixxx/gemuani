@@ -12,7 +12,7 @@ export const LearnMore = ({ link, marginTop, colorWhite }: LearnMoreProps): JSX.
 	const router = useRouter();
 
 	return (
-		<Link href={link} className={styles.learnMore} style={{ marginTop: marginTop ? marginTop : '60px' }}>
+		<Link href={link} className={styles.learnMore} style={{ marginTop: marginTop ? marginTop : '' }}>
 			<Htag tag='l' className={cn(styles.learnMoreText, {
 				[styles.colorWhite]: colorWhite,
 			})}>
