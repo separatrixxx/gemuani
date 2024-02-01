@@ -4,6 +4,7 @@
 
 	width: 50%;
 	height: fit-content;
+	max-height: 300px;
 
 	border-radius: 15px;
 	background: var(--primary);
@@ -17,6 +18,7 @@
 @media (max-width: 1024px) {
 	.imageBlock {
 		border-radius: 20px;
+		max-height: 200px;
 	}
 }
 
@@ -24,5 +26,24 @@
 	.imageBlock {
 		width: 80%;
 		border-radius: 15px;
+	}
+}
+
+@media (max-width: 500px) {
+	.imageBlock {
+		max-height: 175px;
+	}
+}
+
+@media (max-width: 400px) {
+	.imageBlock {
+		max-height: 150px;
+	}
+}
+
+@media (max-width: 300px) {
+	.imageBlock {
+		max-height: 110px;
+		border-radius: 10px;
 	}
 }
