@@ -1,3 +1,4 @@
+import { TopButtonProps } from './TopButton.props';
 import styles from './TopButton.module.css';
 import Arrow from './arrow.svg';
 import { useEffect, useState } from 'react';
@@ -7,9 +8,14 @@ import { useResizeH } from 'hooks/useResize';
 import { Htag } from 'components/Htag/Htag';
 import Amazon from './amazon.svg';
 import Wolt from './wolt.svg';
+import { useRouter } from 'next/router';
+import { setLocale } from 'helpers/locale.helper';
+import cn from 'classnames';
 
 
-export const TopButton = (): JSX.Element => {
+export const TopButton = ({ isShop }: TopButtonProps): JSX.Element => {
+	const router = useRouter();
+
     const [element, setElement] = useState<Element | null>(null);
 
     useEffect(() => {
@@ -39,6 +45,9 @@ export const TopButton = (): JSX.Element => {
 
 	const variantsAW = {
 		visible: {
+			transform: 'translate(0%, -60%)',
+		},
+		visibleShop: {
 			transform: 'translate(0%, -100%)',
 		},
 		hidden: {
@@ -50,9 +59,16 @@ export const TopButton = (): JSX.Element => {
 		<>
 			<motion.div className={styles.amazonAndWolt}
 				variants={variantsAW}
-				initial={flag ? 'visible' : 'hidden'}
+				initial={flag ? isShop ? 'visibleShop' : 'visible' : 'hidden'}
 				transition={{ duration: 0.3 }}
-				animate={flag ? 'visible' : 'hidden'}>
+				animate={flag ? isShop ? 'visibleShop' : 'visible' : 'hidden'}>
+				{ !isShop ?
+					<Htag tag='m' className={cn(styles.shopLink, styles.shopLinkText)} onClick={() => router.push('/shop')}>
+						{setLocale(router.locale).shop.toUpperCase()}
+					</Htag>
+					:
+					<></>
+				}
 				<a rel='noreferrer' target='_blank' aria-label='amazon link'
 					href='https://www.amazon.com/GEMUANI-Freeze-Dried-Feijoa-Crisps/dp/B0C3RP22G2/ref=sr_1_2?keywords=GEMUANI&qid=1706684437&sr=8-2'>
 					<Htag tag='xl' className={styles.shopLink}>

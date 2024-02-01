@@ -41,11 +41,23 @@
 	cursor: pointer;
 	transition-duration: 300ms;
 
-	color: var(--accent) !important;
+	color: var(--white) !important;
+	font-weight: 700;
 }
 
 .shopLink > svg {
 	height: 30px;
+}
+
+.shopLinkText {
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	width: 100%;
+	background: var(--accent);
+	height: 30px;
+	border-radius: 2px;
+	margin-bottom: 7px;
 }
 
 .topButton:active > svg {
@@ -93,10 +105,19 @@
 	.shopLink > svg {
 		height: 25px;
 	}
+
+	.shopLinkText {
+		height: 25px;
+		margin-bottom: 15px;
+	}
 }
 
 @media (max-width: 580px) {
 	.shopLink {
 		margin-bottom: 10px;
+	}
+
+	.shopLinkText {
+		margin-bottom: 15px;
 	}
 }

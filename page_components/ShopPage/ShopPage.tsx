@@ -29,7 +29,7 @@ export const ShopPage = (): JSX.Element => {
 	return (
 		<>
 			<TopElem />
-			<TopButton />
+			<TopButton isShop={true} />
 			<div className={styles.wrapper}>
 				<Header count={count} />
 				<PadBlock title={setLocale(router.locale).shop.toUpperCase()} />
