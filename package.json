@@ -11,7 +11,7 @@
     "export": "next export",
     "lint": "next lint",
     "stylelint": "stylelint \"**/*.css\" --fix",
-    "check": "stylelint \"**/*.css\" --fix, next lint && next build"
+    "check": "stylelint \"**/*.css\" --fix && next lint && next build"
   },
   "dependencies": {
     "@next/bundle-analyzer": "^13.5.4",

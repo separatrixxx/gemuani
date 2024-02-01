@@ -3,14 +3,10 @@ import styles from './SideBlock.module.css';
 import Image from 'next/image';
 import { Htag } from 'components/Htag/Htag';
 import { LearnMore } from '../LearnMore/LearnMore';
-import { useResizeW } from 'hooks/useResize';
 import cn from 'classnames';
 
 
 export const SideBlock = ({ side, text, link, image, video, title, children }: SideBlockProps): JSX.Element => {
-	const width = useResizeW();
-
-	
 	return (
 		<div className={styles.wrapper}>
 			<Htag tag='xxl' className={styles.titleText}>{title}</Htag>
@@ -44,7 +40,7 @@ export const SideBlock = ({ side, text, link, image, video, title, children }: S
 					<Htag tag='xl' className={cn({
 						[styles.textLeft]: side === 'left',
 						[styles.textRight]: side === 'right',
-					})}>{text}</Htag>
+					})}>{text + text + text}</Htag>
 					{children ? children : <></>}
 					{link ? <LearnMore link={link} /> : <></>}
 				</div>

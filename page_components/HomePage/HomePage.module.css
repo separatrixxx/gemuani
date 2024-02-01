@@ -5,18 +5,3 @@
 	justify-items: center;
 	gap: 60px;
 }
-
-.unfixedWrapper {
-	position: relative;
-
-	display: grid;
-
-	width: 100% !important;
-	margin-top: 100vh;
-	padding-top: 60px;
-
-	border-radius: 15px 15px 0 0;
-	background: var(--white);
-	justify-items: center;
-	gap: 60px;
-}

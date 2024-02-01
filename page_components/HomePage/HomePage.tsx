@@ -12,24 +12,10 @@ import { Footer } from 'components/Footer/Footer';
 import { TopButton } from 'components/MainPageComponents/TopButton/TopButton';
 import { TopElem } from 'components/TopElem/TopElem';
 import { MapBlock } from 'components/MainPageComponents/MapBlock/MapBlock';
-import { useEffect, useState } from 'react';
 
 
 export const HomePage = (): JSX.Element => {
     const router = useRouter();
-
-    const [height, setHeight] = useState<number>(1080);
-
-    useEffect(() => {
-        const imageBlock = document.getElementById('mainImage');
-      
-        if (imageBlock) {
-            setHeight(imageBlock.clientHeight);
-            window.addEventListener('resize', function(){
-                setHeight(imageBlock.clientHeight);
-            });
-        }
-      }, []);
 
     return (
         <>
@@ -38,32 +24,30 @@ export const HomePage = (): JSX.Element => {
             <TopButton />
             <div className={styles.wrapper}>
                 <MainImage />
-                <div className={styles.unfixedWrapper} style={{ marginTop: height + 'px' }}>
-                    <TextBlock text={setLocale(router.locale).about_text} link='about'
-                        title={setLocale(router.locale).about_title} span='GEMUANI' />
-                    <SideBlock side='left' text={setLocale(router.locale).kiwi_text} link='kiwi_farm' video='/KiwiImage.mp4'
-                        title={setLocale(router.locale).kiwi_title} />
-                    {/* <ImageBlock text={setLocale(router.locale).mountains_text} image='/MountainsImage.webp' imageMobile='/MountainsImageMobile.webp'
-                        ticker={false} /> */}
-                    <SideBlock side='right' text={setLocale(router.locale).energy_text} image='/EnergyImage.webp'
-                        title={setLocale(router.locale).energy_title}>
-                        <EnergyCounter energyNumber={413} />
-                    </SideBlock>
-                    {/* <ShopBlock text={setLocale(router.locale).shop_text} link='shop' image='/ShopImage.webp'
-                        title={setLocale(router.locale).shop_title} /> */}
-                    <ImageBlock text={setLocale(router.locale).production_text} image='/ProductionImage.webp' imageMobile='/ProductionImageMobile.webp'
-                        ticker={false} />
-                    <MapBlock text={setLocale(router.locale).map_text}
-                        title={setLocale(router.locale).map_title} span='GEMUANI' />
-                    {/* <Slider /> */}
-                    <TextBlock text={setLocale(router.locale).history_text} link='culture'
-                        title={setLocale(router.locale).history_title} />
-                    <SideBlock side='left' text={setLocale(router.locale).climate_text} video='/ClimateImage.mp4'
-                        title={setLocale(router.locale).climate_title} />
-                    {/* <WorldBlock text={setLocale(router.locale).world_text} title={setLocale(router.locale).world_title} /> */}
-                    <BlogBlock text={setLocale(router.locale).blog_text} link='blog' />
-                    <Footer />
-                </div>
+                <TextBlock text={setLocale(router.locale).about_text} link='about'
+                    title={setLocale(router.locale).about_title} span='GEMUANI' />
+                <SideBlock side='left' text={setLocale(router.locale).kiwi_text} link='kiwi_farm' video='/KiwiImage.mp4'
+                    title={setLocale(router.locale).kiwi_title} />
+                {/* <ImageBlock text={setLocale(router.locale).mountains_text} image='/MountainsImage.webp' imageMobile='/MountainsImageMobile.webp'
+                    ticker={false} /> */}
+                <SideBlock side='right' text={setLocale(router.locale).energy_text} image='/EnergyImage.webp'
+                    title={setLocale(router.locale).energy_title}>
+                    <EnergyCounter energyNumber={413} />
+                </SideBlock>
+                {/* <ShopBlock text={setLocale(router.locale).shop_text} link='shop' image='/ShopImage.webp'
+                    title={setLocale(router.locale).shop_title} /> */}
+                <ImageBlock text={setLocale(router.locale).production_text} image='/ProductionImage.webp' imageMobile='/ProductionImageMobile.webp'
+                    ticker={false} />
+                <MapBlock text={setLocale(router.locale).map_text}
+                    title={setLocale(router.locale).map_title} span='GEMUANI' />
+                {/* <Slider /> */}
+                <TextBlock text={setLocale(router.locale).history_text} link='culture'
+                    title={setLocale(router.locale).history_title} />
+                <SideBlock side='left' text={setLocale(router.locale).climate_text} video='/ClimateImage.mp4'
+                    title={setLocale(router.locale).climate_title} />
+                {/* <WorldBlock text={setLocale(router.locale).world_text} title={setLocale(router.locale).world_title} /> */}
+                <BlogBlock text={setLocale(router.locale).blog_text} link='blog' />
+                <Footer />
             </div>
         </>
     );

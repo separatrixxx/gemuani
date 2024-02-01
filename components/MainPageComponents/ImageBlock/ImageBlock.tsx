@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import { Ticker } from '../Ticker/Ticker';
 import { Htag } from 'components/Htag/Htag';
 import Image from 'next/image';
-import { useResizeH, useResizeW } from 'hooks/useResize';
+import { useResizeW } from 'hooks/useResize';
 
 
 export const ImageBlock = ({ text, image, imageMobile, ticker }: ImageBlockProps): JSX.Element => {

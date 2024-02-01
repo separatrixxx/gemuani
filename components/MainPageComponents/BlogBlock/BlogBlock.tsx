@@ -11,7 +11,7 @@ export const BlogBlock = ({ text, link }: BlogBlockProps): JSX.Element => {
 			<Pattern className={styles.pattern} />
 			<div className={styles.blogBody}>
 				<Htag tag='xxl' className={styles.blogText}>{text}</Htag>
-				<LearnMore link={link} />
+				<LearnMore link={link} colorWhite={true} />
 			</div>
 			<Pattern className={styles.pattern} />
 		</div>

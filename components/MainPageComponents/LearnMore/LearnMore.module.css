@@ -16,11 +16,19 @@
 	font-weight: 700 !important;
 }
 
+.colorWhite {
+	color: var(--white) !important;
+}
+
 .arrow > svg {
 	width: 16px;
 	fill: var(--accent);
 
 	transition-duration: 300ms;
+}
+
+.arrowWhite > svg {
+	fill: var(--white);
 }
 
 .learnMore:active > .arrow > svg {
