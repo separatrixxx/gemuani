@@ -122,7 +122,8 @@ export const Header = ({ count }: HeaderProps): JSX.Element => {
 				style={width > 1024 ? { gridTemplateColumns: `repeat(${links.length}, auto)` } : { gridTemplateRows: `repeat(${links.length}, auto)` }}>
 				{links.map(l => (
 					!l.more ?
-						<Link href={"/" + l.link} key={l.link} style={hidden ? { display: 'none' } : { display: 'block' }}>
+						<Link href={"/" + l.link} key={l.link} className={styles.relativeLink}
+							style={hidden ? { display: 'none' } : { display: 'block' }}>
 							<Htag tag='s' className={cn(styles.text, {
 								[styles.shopLink]: l.link === 'shop',
 							})}>

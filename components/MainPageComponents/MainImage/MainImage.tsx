@@ -59,14 +59,16 @@ export const MainImage = (): JSX.Element => {
 					variants={variants}
 					initial={isVisible ? 'visible' : 'hidden'}
 					transition={{ duration: 0.5 }}
-					animate={isVisible ? 'visible' : 'hidden'}>
+					animate={isVisible ? 'visible' : 'hidden'}
+					onClick={() => router.push('/shop')}>
 					{'GEMUANI'}
 				</motion.h1>
 				<motion.h1 className={cn(styles.title, styles.title2)}
 					variants={variants}
 					initial={isVisible2 ? 'visible' : 'hidden'}
 					transition={{ duration: 0.5 }}
-					animate={isVisible2 ? 'visible' : 'hidden'}>
+					animate={isVisible2 ? 'visible' : 'hidden'}
+					onClick={() => router.push('/shop')}>
 					{setLocale(router.locale).slogan}
 				</motion.h1>
 			</div>

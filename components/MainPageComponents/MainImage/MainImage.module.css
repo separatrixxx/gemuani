@@ -37,13 +37,13 @@
 }
 
 .title {
-	cursor: default !important;
 	transition-duration: 300ms;
 
 	color: var(--white);
 
 	font-size: 96px;
 	line-height: normal;
+	cursor: pointer;
 }
 
 .title2 {
@@ -53,10 +53,28 @@
 	text-align: center;
 
 	font-size: 60px;
+	transition-duration: 300ms;
+	cursor: pointer;
 }
 
 .colored {
 	color: var(--accent);
+}
+
+.title:active,
+.title2:active {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	filter: brightness(0.9);
+}
+
+@media (min-width: 1024px) {
+	.title:hover,
+	.title2:hover {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	
+		filter: brightness(0.9);
+	}
 }
 
 @media (max-width: 1300px) {
