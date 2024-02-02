@@ -6,7 +6,7 @@
 	display: grid;
 	overflow: hidden;
 
-	width: 100%;
+	width: 99.999%;
 	height: fit-content;
 	max-height: 100vh;
 

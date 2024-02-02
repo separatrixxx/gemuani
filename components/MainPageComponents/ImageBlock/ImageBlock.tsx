@@ -43,7 +43,6 @@ export const ImageBlock = ({ text, image, imageMobile, ticker }: ImageBlockProps
 					width={1}
 					height={1}
 					unoptimized={true}
-					priority={true}
 				/>
 				<Htag tag='xxl' className={styles.text}>{text}</Htag>
 			</div>

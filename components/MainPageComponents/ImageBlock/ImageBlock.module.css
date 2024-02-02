@@ -3,7 +3,7 @@
 	overflow: hidden;
 	align-items: center;
 
-	width: 100%;
+	width: 99.999%;
 	height: fit-content;
 
 	background: var(--primary);
