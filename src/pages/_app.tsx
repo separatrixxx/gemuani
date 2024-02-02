@@ -3,26 +3,11 @@ import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import React, { useEffect } from 'react';
+import React from 'react';
 
-
-declare global {
-  interface Window {
-    dataLayer: any[];
-  }
-}
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
-
-  useEffect(() => {
-    window.dataLayer = window.dataLayer || [];
-    function gtag(...args: any) {
-      window.dataLayer.push(args);
-    }
-    gtag('js', new Date());
-    gtag('config', 'G-8L6JH5P8S0');
-  }, []);
 
   return (
     <>
