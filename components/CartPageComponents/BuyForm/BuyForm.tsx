@@ -15,6 +15,7 @@ export const BuyForm = ({ cart, setCart }: BuyFormProps): JSX.Element => {
     const [name, setName] = useState<string>('');
     const [email, setEmail] = useState<string>('');
     const [phone, setPhone] = useState<string>('');
+    const [comment, setComment] = useState<string>('');
 
     const [errorName, setErrorName] = useState<boolean>(false);
     const [errorEmail, setErrorEmail] = useState<boolean>(false);
@@ -39,11 +40,13 @@ export const BuyForm = ({ cart, setCart }: BuyFormProps): JSX.Element => {
                     error={errorEmail} onChange={(e) => setEmail(e.target.value)} />
                 <Input type='phone' text={setLocale(router.locale).phone_number} value={phone}
                     error={errorPhone} onChange={(e) => setPhone(e.target.value)} />
+                <Input type='message' text={setLocale(router.locale).comment} value={comment}
+                    error={false} onChange={(e) => setComment(e.target.value)} />
             </div>
             {
                 !loading ?
                     <button className={styles.button} onClick={() => buyHelper(
-                        cart, name, email, phone, totalPrice, setErrorName, setErrorEmail, setErrorPhone, setLoading, setCart, router)}>
+                        cart, name, email, phone, totalPrice, comment, setErrorName, setErrorEmail, setErrorPhone, setLoading, setCart, router)}>
                         {setLocale(router.locale).buy}
                     </button>
                 :

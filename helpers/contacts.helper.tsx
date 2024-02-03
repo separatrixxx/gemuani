@@ -18,11 +18,12 @@ export async function contactHelper(name: string, email: string, phone: string, 
     if (+name !== 0 && EMAIL_REGEXP.test(email) && PHONE_REGEXP.test(phone) && +message !== 0) {
         if (name !== null && email !== null && phone !== null && message !== null) {
             const data: Buy = {
-                uname: name + ', ' + message,
+                uname: name,
                 phone: +phone,
                 email: email,
                 price: "0",
                 cart: "",
+                comment: message,
             }
 
             setLoading(true);

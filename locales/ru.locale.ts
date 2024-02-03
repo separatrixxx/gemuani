@@ -314,4 +314,5 @@ export const ru = {
 	vitamins: "Витамины и полезные вещества",
 	download: "Скачать файл",
 	privacy_policy: "Политика конфиденциальности",
+	comment: "КОММЕНТАРИЙ",
 };

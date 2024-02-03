@@ -12,5 +12,6 @@ export interface Buy {
     phone: number, 
     email: string, 
     price: string, 
-    cart: string, 
+    cart: string,
+    comment: string,
 }

@@ -314,4 +314,5 @@ export const en = {
 	vitamins: "Vitamins and nutrients",
 	download: "Download file",
 	privacy_policy: "Privacy Policy",
+	comment: "COMMENT",
 };

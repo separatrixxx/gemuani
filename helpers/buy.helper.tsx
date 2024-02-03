@@ -7,7 +7,7 @@ import { setProduction } from "./production.helper";
 
 
 export async function buyHelper(cart: Cart[], name: string, email: string, phone: string, totalPrice: number,
-    setErrorName: (e: any) => void, setErrorEmail: (e: any) => void, setErrorPhone: (e: any) => void,
+    comment: string, setErrorName: (e: any) => void, setErrorEmail: (e: any) => void, setErrorPhone: (e: any) => void,
     setLoading: (e: any) => void, setCart: (e: any) => void, router: any) {
     const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
     const PHONE_REGEXP = /^[\+]?[(]?[0-9]{1,4}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/iu;
@@ -36,6 +36,7 @@ export async function buyHelper(cart: Cart[], name: string, email: string, phone
                     email: email,
                     price: "" + Math.round(totalPrice),
                     cart: cartStr,
+                    comment: comment,
                 };
 
                 setLoading(true);
