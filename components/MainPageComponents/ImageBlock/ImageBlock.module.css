@@ -1,4 +1,6 @@
 .imageBlock {
+	position: relative;
+
 	display: grid;
 	overflow: hidden;
 	align-items: center !important;
@@ -25,12 +27,10 @@
 	display: grid;
 	overflow: hidden;
 
-	width: 99.999%;
+	width: 100%;
 	height: fit-content;
 
 	background: var(--primary);
-	align-items: center !important;
-	justify-items: center !important;
 }
 
 .image {

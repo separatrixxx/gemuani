@@ -42,6 +42,7 @@
 	transition-duration: 300ms;
 
 	color: var(--white) !important;
+
 	font-weight: 700;
 }
 
@@ -51,14 +52,17 @@
 
 .shopLinkText {
 	display: grid;
-	justify-items: center;
 	align-items: center;
+
 	width: 100%;
-	background: var(--accent);
 	height: 30px;
-	border-radius: 2px;
 	margin-bottom: 7px;
+
 	user-select: none;
+
+	border-radius: 2px;
+	background: var(--accent);
+	justify-items: center;
 }
 
 .topButton:active > svg {

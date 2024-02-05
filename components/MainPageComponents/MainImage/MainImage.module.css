@@ -37,24 +37,25 @@
 }
 
 .title {
+	cursor: pointer;
 	transition-duration: 300ms;
 
 	color: var(--white);
 
 	font-size: 96px;
 	line-height: normal;
-	cursor: pointer;
 }
 
 .title2 {
 	width: 90%;
 	margin-top: -30px;
 
+	cursor: pointer;
+	transition-duration: 300ms;
+
 	text-align: center;
 
 	font-size: 60px;
-	transition-duration: 300ms;
-	cursor: pointer;
 }
 
 .colored {
@@ -72,7 +73,7 @@
 	.title:hover,
 	.title2:hover {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	
+
 		filter: brightness(0.9);
 	}
 }

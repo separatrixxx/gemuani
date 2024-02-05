@@ -24,6 +24,7 @@
 @media (max-width: 580px) {
 	.imageBlock {
 		width: 80%;
+
 		border-radius: 15px;
 	}
 }
