@@ -31,6 +31,7 @@
 	position: absolute;
 
 	display: grid;
+	grid-template-rows: auto 1fr;
 
 	height: fit-content !important;
 	justify-items: center;
