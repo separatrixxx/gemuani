@@ -34,6 +34,7 @@
 
 	height: fit-content !important;
 	justify-items: center;
+	background: red;
 }
 
 .title {
@@ -44,6 +45,7 @@
 
 	font-size: 96px;
 	line-height: normal;
+	background: blue;
 }
 
 .title2 {
@@ -56,6 +58,7 @@
 	text-align: center;
 
 	font-size: 60px;
+	background: green;
 }
 
 .colored {
