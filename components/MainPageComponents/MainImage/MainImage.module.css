@@ -35,6 +35,7 @@
 
 	height: fit-content !important;
 	justify-items: center;
+	align-items: center;
 	background: red;
 }
 
