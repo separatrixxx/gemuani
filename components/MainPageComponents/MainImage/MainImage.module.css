@@ -5,13 +5,13 @@
 
 	display: grid;
 	overflow: hidden;
+	align-items: center;
 
 	width: 99.999%;
 	height: fit-content;
 	max-height: 100vh;
 
 	background: var(--dark);
-	align-items: center;
 	justify-items: center;
 }
 
@@ -29,10 +29,12 @@
 
 .titleDiv {
 	position: absolute;
-    display: grid;
-    min-height: 0;
-    max-height: 100vh;
-    justify-items: center;
+
+	display: grid;
+
+	min-height: 0;
+	max-height: 100vh;
+	justify-items: center;
 }
 
 .title {
