@@ -38,7 +38,7 @@
 	padding-bottom: 20px;
 	grid-template-columns: auto auto auto 1fr;
 	gap: 50px;
-	align-items: center;
+	position: relative;
 }
 
 .link {
