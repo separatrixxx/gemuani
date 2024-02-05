@@ -16,9 +16,10 @@ export const ProductItem = ({ id, image, image_1, imageFruit, title, price, sort
 	const [isAdded, setIsAdded] = useState<boolean>(false);
 
 	useEffect(() => {
-		setIsAdded(getCart(id).count > 0);
-		setCount(getCart(id).count);
+		setIsAdded(getCart(id + '_' + sort[0].id).count > 0);
+		setCount(getCart(id + '_' + sort[0].id).count);
 	}, [id]);
+	
 
 	const variants = {
 		added: {

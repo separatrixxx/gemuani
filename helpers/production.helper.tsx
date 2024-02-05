@@ -45,45 +45,9 @@ export function setProduction(locale: string | undefined): Production[] {
             },
         ],
     };
-    
+
     const production2: Production = {
         id: '1',
-        image: '/Production2.webp',
-        image_1: '/Production2_1.webp',
-        imageFruit: '/banana.webp',
-        title: setLocale(locale).products.title2,
-        titleShort: 'banana',
-        description: setLocale(locale).products.description2,
-        link: '',
-        country: setLocale(locale).georgia,
-        price: 3.8,
-        sort: [
-            {
-                id: 0,
-                title: setLocale(locale).products.product2.title1,
-                titleFull: setLocale(locale).products.product2.titleFull1,
-                weight: 10,
-                price: 3.8,
-            },
-            {
-                id: 1,
-                title: setLocale(locale).products.product2.title1,
-                titleFull: setLocale(locale).products.product2.titleFull1,
-                weight: 70,
-                price: 20.88,
-            },
-            {
-                id: 2,
-                title: setLocale(locale).products.product2.title1,
-                titleFull: setLocale(locale).products.product2.titleFull1,
-                weight: 150,
-                price: 41.27,
-            },
-        ],
-    };
-
-    const production3: Production = {
-        id: '2',
         image: '/Production3.webp',
         image_1: '/Production3_1.webp',
         imageFruit: '/beetroot.webp',
@@ -118,8 +82,8 @@ export function setProduction(locale: string | undefined): Production[] {
         ],
     };
 
-    const production4: Production = {
-        id: '3',
+    const production3: Production = {
+        id: '2',
         image: '/Production4.webp',
         image_1: '/Production4_1.webp',
         imageFruit: '/black_currant.webp',
@@ -140,8 +104,8 @@ export function setProduction(locale: string | undefined): Production[] {
         ],
     };
 
-    const production5: Production = {
-        id: '4',
+    const production4: Production = {
+        id: '3',
         image: '/Production5.webp',
         image_1: '/Production5_1.webp',
         imageFruit: '/blueberry.webp',
@@ -190,8 +154,8 @@ export function setProduction(locale: string | undefined): Production[] {
         ],
     };
 
-    const production6: Production = {
-        id: '5',
+    const production5: Production = {
+        id: '4',
         image: '/Production6.webp',
         image_1: '/Production6.webp',
         imageFruit: '/cherry.webp',
@@ -219,8 +183,8 @@ export function setProduction(locale: string | undefined): Production[] {
         ],
     };
 
-    const production7: Production = {
-        id: '6',
+    const production6: Production = {
+        id: '5',
         image: '/Production7.webp',
         image_1: '/Production7_1.webp',
         imageFruit: '/feijoa.webp',
@@ -248,8 +212,8 @@ export function setProduction(locale: string | undefined): Production[] {
         ],
     };
 
-    const production8: Production = {
-        id: '7',
+    const production7: Production = {
+        id: '6',
         image: '/Production8.webp',
         image_1: '/Production8_1.webp',
         imageFruit: '/grape.webp',
@@ -277,8 +241,8 @@ export function setProduction(locale: string | undefined): Production[] {
         ],
     };
 
-    const production9: Production = {
-        id: '8',
+    const production8: Production = {
+        id: '7',
         image: '/Production9.webp',
         image_1: '/Production9_1.webp',
         imageFruit: '/kiwi.webp',
@@ -320,8 +284,8 @@ export function setProduction(locale: string | undefined): Production[] {
         ],
     };
 
-    const production10: Production = {
-        id: '9',
+    const production9: Production = {
+        id: '8',
         image: '/Production10.webp',
         image_1: '/Production10_1.webp',
         imageFruit: '/mandarin.webp',
@@ -363,44 +327,8 @@ export function setProduction(locale: string | undefined): Production[] {
         ],
     };
 
-    const production11: Production = {
-        id: '10',
-        image: '/Production11.webp',
-        image_1: '/Production11_1.webp',
-        imageFruit: '/melon.webp',
-        title: setLocale(locale).products.title11,
-        titleShort: 'melon',
-        description: setLocale(locale).products.description11,
-        link: '',
-        country: setLocale(locale).georgia,
-        price: 6,
-        sort: [
-            {
-                id: 0,
-                title: setLocale(locale).products.product11.title1,
-                titleFull: setLocale(locale).products.product11.titleFull1,
-                weight: 10,
-                price: 6,
-            },
-            {
-                id: 1,
-                title: setLocale(locale).products.product11.title1,
-                titleFull: setLocale(locale).products.product11.titleFull1,
-                weight: 40,
-                price: 31.5,
-            },
-            {
-                id: 2,
-                title: setLocale(locale).products.product11.title2,
-                titleFull: setLocale(locale).products.product11.titleFull2,
-                weight: 25,
-                price: 17.7,
-            },
-        ],
-    };
-
-    const production12: Production = {
-        id: '11',
+    const production10: Production = {
+        id: '9',
         image: '/Production13.webp',
         image_1: '/Production13_1.webp',
         imageFruit: '/peach.webp',
@@ -449,8 +377,8 @@ export function setProduction(locale: string | undefined): Production[] {
         ],
     };
 
-    const production13: Production = {
-        id: '12',
+    const production11: Production = {
+        id: '10',
         image: '/Production14.webp',
         image_1: '/Production14_1.webp',
         imageFruit: '/raspberry.webp',
@@ -492,8 +420,8 @@ export function setProduction(locale: string | undefined): Production[] {
         ],
     };
 
-    const production14: Production = {
-        id: '13',
+    const production12: Production = {
+        id: '11',
         image: '/Production15.webp',
         image_1: '/Production15_1.webp',
         imageFruit: '/strawberry.webp',
@@ -556,6 +484,78 @@ export function setProduction(locale: string | undefined): Production[] {
         ],
     };
 
-    return [production1, production3, production4, production5, production6, production7, production8, 
-        production9, production10, production12, production13, production14, production2, production11];
+    const production13: Production = {
+        id: '12',
+        image: '/Production2.webp',
+        image_1: '/Production2_1.webp',
+        imageFruit: '/banana.webp',
+        title: setLocale(locale).products.title2,
+        titleShort: 'banana',
+        description: setLocale(locale).products.description2,
+        link: '',
+        country: setLocale(locale).georgia,
+        price: 3.8,
+        sort: [
+            {
+                id: 0,
+                title: setLocale(locale).products.product2.title1,
+                titleFull: setLocale(locale).products.product2.titleFull1,
+                weight: 10,
+                price: 3.8,
+            },
+            {
+                id: 1,
+                title: setLocale(locale).products.product2.title1,
+                titleFull: setLocale(locale).products.product2.titleFull1,
+                weight: 70,
+                price: 20.88,
+            },
+            {
+                id: 2,
+                title: setLocale(locale).products.product2.title1,
+                titleFull: setLocale(locale).products.product2.titleFull1,
+                weight: 150,
+                price: 41.27,
+            },
+        ],
+    };
+
+    const production14: Production = {
+        id: '13',
+        image: '/Production11.webp',
+        image_1: '/Production11_1.webp',
+        imageFruit: '/melon.webp',
+        title: setLocale(locale).products.title11,
+        titleShort: 'melon',
+        description: setLocale(locale).products.description11,
+        link: '',
+        country: setLocale(locale).georgia,
+        price: 6,
+        sort: [
+            {
+                id: 0,
+                title: setLocale(locale).products.product11.title1,
+                titleFull: setLocale(locale).products.product11.titleFull1,
+                weight: 10,
+                price: 6,
+            },
+            {
+                id: 1,
+                title: setLocale(locale).products.product11.title1,
+                titleFull: setLocale(locale).products.product11.titleFull1,
+                weight: 40,
+                price: 31.5,
+            },
+            {
+                id: 2,
+                title: setLocale(locale).products.product11.title2,
+                titleFull: setLocale(locale).products.product11.titleFull2,
+                weight: 25,
+                price: 17.7,
+            },
+        ],
+    };
+
+    return [production1, production2, production3, production4, production5, production6, production7, 
+        production8, production9, production10, production11, production12, production13, production14];
 }
