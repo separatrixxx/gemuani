@@ -36,14 +36,17 @@ export const ImageBlock = ({ text, image, imageMobile, ticker }: ImageBlockProps
 	} else {
 		return (
 			<div id='imageBlock' className={styles.imageBlock}>
-				<Image className={styles.image} draggable='false'
-					loader={() => width > 1024 ? image : imageMobile}
-					src={width > 1024 ? image : imageMobile}
-					alt='image'
-					width={1}
-					height={1}
-					unoptimized={true}
-				/>
+				<div className={styles.imageDiv}>
+					<Image className={styles.image} draggable='false'
+						loader={() => image}
+						src={width > 1024 ? image : imageMobile}
+						alt='image'
+						width={1}
+						height={1}
+						unoptimized={true}
+						loading="lazy"
+					/>
+				</div>
 				<Htag tag='xxl' className={styles.text}>{text}</Htag>
 			</div>
 		);
