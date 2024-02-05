@@ -1,15 +1,15 @@
 .imageBlock {
 	position: relative;
 
-	display: grid;
+	display: flex;
 	overflow: hidden;
 	align-items: center !important;
+	justify-content: center !important;
 
-	width: 99.999%;
+	width: 100%;
 	height: fit-content;
 
 	background: var(--primary);
-	justify-items: center !important;
 	filter: brightness(0.9);
 }
 
