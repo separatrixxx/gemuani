@@ -1,13 +1,13 @@
 .imageBlock {
 	display: grid;
 	overflow: hidden;
-	align-items: center;
+	align-items: center !important;
 
 	width: 99.999%;
 	height: fit-content;
 
 	background: var(--primary);
-	justify-items: center;
+	justify-items: center !important;
 	filter: brightness(0.9);
 }
 
