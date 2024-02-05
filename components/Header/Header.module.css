@@ -93,12 +93,13 @@
 
 .hiddenLinks {
 	position: absolute;
+	top: 0;
 	left: 0;
 
 	display: grid;
 
 	width: 180px !important;
-	margin-top: 160px;
+	margin-top: 20px;
 	padding: 10px 15px 10px 15px;
 
 	cursor: default;
