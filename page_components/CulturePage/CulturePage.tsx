@@ -35,7 +35,7 @@ export const CulturePage = (): JSX.Element => {
 			<TopButton />
 			<div className={styles.wrapper}>
 				<Header />
-				<PadBlock title={setLocale(router.locale).titles.culture_history_title.toUpperCase()} />
+				<PadBlock title={setLocale(router.locale).culture.toUpperCase()} />
 				<div className={styles.cultureBody}>
 					<div className={styles.list}>
 						<Htag tag='m' className={styles.title} onClick={() => scrollIntoView(element1)}>

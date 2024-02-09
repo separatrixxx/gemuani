@@ -192,12 +192,7 @@
 	}
 }
 
-@media (max-width: 450px) {
-	.footerBottom {
-		grid-template-columns: auto;
-		gap: 20px;
-	}
-
+@media (max-width: 520px) {
 	.linksDiv {
 		display: grid;
 
@@ -206,13 +201,23 @@
 	}
 }
 
+
+@media (max-width: 450px) {
+	.footerBottom {
+		grid-template-columns: auto;
+		gap: 20px;
+	}
+}
+
+@media (max-width: 380px) {
+	.linksDiv {
+		grid-template-columns: auto;
+	}
+}
+
 @media (max-width: 300px) {
 	.footerBottom {
 		grid-template-columns: auto;
 		gap: 10px;
-	}
-
-	.linksDiv {
-		grid-template-columns: repeat(1, auto);
 	}
 }

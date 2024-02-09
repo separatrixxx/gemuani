@@ -4,7 +4,7 @@ export const en = {
 	slogan: "The art of Freeze Drying. 100% Natural fruits, berries and vegetable from Georgia",
 	about_title: "ABOUT GEMUANI",
 	about_text: "is a Georgian company founded in 2011. We have grown to be the only producer of freeze-dried fruits and vegetables in Georgia, and in 2017 we launched a plant entirely using European equipment. Up to 95% of the products used in production are grown in Georgia, including on our plantation.",
-	kiwi_title: "KIWI FARMS",
+	kiwi_title: "KIWI FARM",
 	kiwi_text: 'In 2011, Gemuani began production at a modern, high-tech kiwi plantation located in Mengrelia, which is considered the most "delicious" region of Georgia.',
 	learn_more: "learn more",
 	shop_title: "Our Products",
@@ -266,7 +266,7 @@ export const en = {
 			titleFull4: "GEMUANI Strawberry Cubes – Bite-Sized Freeze-Dried Strawberry Pieces | Non-GMO & Vegan-Friendly | No Added Sugar, Preservatives, or Additives | Gluten-Free and a Rich Source of Natural Vitamins and Flavorful Strawberry Essence",
 		},
 	},
-	partners: "Our Partners",
+	partners: "Partners",
 	site_map: "Site Map",
 	cart: "Cart",
 	add_to_cart: "Add to Cart",
@@ -315,4 +315,5 @@ export const en = {
 	download: "Download file",
 	privacy_policy: "Privacy Policy",
 	comment: "COMMENT",
+	culture: "Culture",
 };
