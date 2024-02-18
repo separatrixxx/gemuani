@@ -76,7 +76,7 @@ export const TopButton = ({ isShop }: TopButtonProps): JSX.Element => {
 					</Htag>
 				</a>
 				<a rel='noreferrer' target='_blank' aria-label='wolt link'
-					href='https://wolt.com/ka/geo/tbilisi/venue/wolt-market-marijani/gemuani-chiri-martsqvis-krispi-10gr-itemid-647f279fbe1e2eace68ee7e0'>
+					href='https://wolt.com/ka/geo/tbilisi/venue/gemuani-abashidze'>
 					<Htag tag='xl' className={styles.shopLink}>
 						<Wolt />
 					</Htag>
