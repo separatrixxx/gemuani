@@ -24,10 +24,10 @@ export const Footer = (): JSX.Element => {
             <div className={styles.footerLinks}>
                 <FooterLinks title={setLocale(router.locale).footer.title1}>
                     <div className={styles.socialMediaBlock}>
-                        <a target='_blank' rel="noreferrer" href='https://www.facebook.com/gemuani' aria-label="Facebook">
+                        <a target='_blank' rel="noreferrer" href='https://www.facebook.com/profile.php?id=61556484098079&mibextid=LQQJ4d' aria-label="Facebook">
                             <Facebook />
                         </a>
-                        <a target='_blank' rel="noreferrer" href='https://www.instagram.com/gemuani_ltd' aria-label="Instagram">
+                        <a target='_blank' rel="noreferrer" href='https://www.instagram.com/gemuani.ge?igsh=N2ZiMXpjZzhjOHk=' aria-label="Instagram">
                             <Instagram />
                         </a>
                         <a target='_blank' rel="noreferrer" href='https://www.linkedin.com/company/gemuani-healthy-food' aria-label="Linkedin">
