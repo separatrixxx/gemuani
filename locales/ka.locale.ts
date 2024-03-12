@@ -316,4 +316,5 @@ export const ka = {
 	privacy_policy: "კონფიდენციალურობა",
 	comment: "კომენტარი",
 	culture: "კულტურა",
+	see_more_here: 'იხილეთ მეტი აქ',
 };

@@ -316,4 +316,5 @@ export const ru = {
 	privacy_policy: "Политика конфиденциальности",
 	comment: "КОММЕНТАРИЙ",
 	culture: "Культура",
+	see_more_here: 'Посмотрите больше здесь',
 };

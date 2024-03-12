@@ -96,6 +96,30 @@
 	margin-right: 100px;
 }
 
+.byBlock {
+	display: grid;
+	align-items: center;
+	align-self: end;
+	justify-items: center;
+
+	height: fit-content;
+	padding-bottom: 10px;
+
+	background: var(--dark);
+}
+
+.byBanana {
+	transition-duration: 300ms;
+
+	color: var(--white);
+}
+
+.byBanana:active {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	color: var(--banana);
+}
+
 @media (min-width: 1024px) {
 	.link:hover {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -107,6 +131,12 @@
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 		fill: var(--light);
+	}
+
+	.byBanana:hover {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		color: var(--banana);
 	}
 }
 
@@ -200,7 +230,6 @@
 		grid-template-columns: repeat(2, auto);
 	}
 }
-
 
 @media (max-width: 450px) {
 	.footerBottom {

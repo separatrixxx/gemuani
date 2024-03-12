@@ -81,6 +81,13 @@ export const Footer = (): JSX.Element => {
                 </Htag>
                 <LocaleChange />
             </div>
+            <div className={styles.byBlock}>
+                <a target='_blank' rel="noreferrer" href='http://banana.codes/' aria-label="banana codes">
+                    <Htag tag='s' className={styles.byBanana}>
+                        by 🍌 codes
+                    </Htag>
+                </a>
+            </div>
         </div>
     );
 };

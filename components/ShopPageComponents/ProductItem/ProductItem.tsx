@@ -18,7 +18,7 @@ export const ProductItem = ({ id, image, image_1, imageFruit, title, price, sort
 	useEffect(() => {
 		setIsAdded(getCart(id + '_' + sort[0].id).count > 0);
 		setCount(getCart(id + '_' + sort[0].id).count);
-	}, [id]);
+	}, [id, sort]);
 	
 
 	const variants = {

@@ -316,4 +316,5 @@ export const en = {
 	privacy_policy: "Privacy Policy",
 	comment: "COMMENT",
 	culture: "Culture",
+	see_more_here: 'See more here',
 };

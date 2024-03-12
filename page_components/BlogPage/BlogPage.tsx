@@ -19,7 +19,7 @@ export const BlogPage = (): JSX.Element => {
 	const [blog, setBlog] = useState<Blog[]>([]);	
 
 	useEffect(() => {
-		getBlog(setBlog);
+		setBlog(getBlog().reverse());
 	}, []);
 
 	return (

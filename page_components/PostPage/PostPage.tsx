@@ -10,7 +10,7 @@ import { useRouter } from 'next/router';
 import { PostInfo } from 'components/PostPageComponents/PostInfo/PostInfo';
 
 
-export const PostPage = ({ id, image, title, text, date }: PostPageProps): JSX.Element => {
+export const PostPage = ({ id, image, title, text, date, links }: PostPageProps): JSX.Element => {
 	const router = useRouter();
 	
 	return (
@@ -26,7 +26,7 @@ export const PostPage = ({ id, image, title, text, date }: PostPageProps): JSX.E
 						</span>
 						<Htag tag='xl' className={styles.title}>{title}</Htag>
 					</div>
-					<PostInfo image={image} title={title} text={text} date={date} />
+					<PostInfo image={image} title={title} text={text} date={date} links={links} />
 				</div>
 				<Footer />
 			</div>

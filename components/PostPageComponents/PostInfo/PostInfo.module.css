@@ -40,6 +40,55 @@
 	font-weight: 600;
 }
 
+.imagesDiv {
+	display: grid;
+
+	width: fit-content;
+	grid-template-columns: repeat(3, 33.333%);
+	gap: 20px;
+}
+
+.linksBlock {
+	display: grid;
+
+	width: fit-content;
+	grid-template-columns: auto;
+}
+
+.linksDiv {
+	display: grid;
+	grid-template-columns: repeat(10, auto);
+	gap: 30px;
+
+	margin-top: 25px;
+}
+
+.linksDiv > a {
+	width: fit-content;
+}
+
+.linksDiv > a > svg {
+	width: 30px;
+	fill: var(--accent);
+
+	cursor: pointer;
+	transition-duration: 300ms;
+}
+
+.linksDiv > a > svg:active {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	filter: brightness(0.9);
+}
+
+@media (min-width: 1024px) {
+	.linksDiv > a > svg:hover {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		filter: brightness(0.9);
+	}
+}
+
 @media (max-width: 1024px) {
 	.postInfoDiv {
 		grid-template-columns: 30% 1fr;
@@ -48,10 +97,26 @@
 	.imageBlock {
 		border-radius: 10px;
 	}
+
+	.imagesDiv {
+		grid-template-columns: repeat(2, 40%);
+	}
 }
 
 @media (max-width: 580px) {
 	.postInfoDiv {
 		grid-template-columns: auto;
+	}
+
+	.imagesDiv {
+		grid-template-columns: auto;
+	}
+
+	.linksDiv {
+		gap: 25px;
+	}
+
+	.linksDiv > a > svg {
+		width: 25px;
 	}
 }

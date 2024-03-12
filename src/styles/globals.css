@@ -94,5 +94,6 @@ input[type="number"]:focus {
 	--light: #DDD;
 	--lighter: #F0F0F0;
 	--error: #FF1500;
+	--banana: #FFC803;
 	--font-family: 'Gabarito', sans-serif;
 }
