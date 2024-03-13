@@ -7,7 +7,7 @@ import { ToastError, ToastSuccess } from "components/Toast/Toast";
 export function getBlog(): Blog[] {
     const blog1: Blog = {
         id: '0',
-        image: ['/BlogImg2.webp'],
+        image: ['/BlogImg2.webp', '/BlogImg2_1.webp', '/BlogImg2_2.webp'],
         title: 'GOOLFOOD 2024',
         text: "Gemuani, the leader in Georgian freeze-dried fruits and vegetables 🍇🍎, are pleased to join GULFOOD 2024 in Dubai 🌍 from 19 to 23 February 2024, a major global food and beverage exhibition 🥘🌐.\nGemuani will present its high-quality freeze-dried Georgian products 🍒🥦 at GULFOOD 2024, presenting Georgia's culinary heritage and innovation in the country pavilion👩‍🍳.\nOur presence at GULFOOD 2024 reflects our commitment to promoting Georgian products around the world 🌏 and our desire to explore new opportunities and share our culinary passion ❤️🍴.\nJoin us at GULFOOD 2024, where tradition meets innovation, and experience the taste of Georgia with Gemuani 🤝🍽.",
         date: '2024-02-19',
@@ -19,6 +19,9 @@ export function getBlog(): Blog[] {
         title: 'Grüne Woche 2024',
         text: "Our company Gemuani is participating in the prestigious Grüne Woche 2024! 🌱🚜 A hub for innovation in food, agriculture and horticulture, this international exhibition is perfectly aligned with our values ​​​​and goals. Join us from 19 to 28 January in Berlin as we showcase our products and network with global industry leaders. 🌍",
         date: '2024-01-19',
+        links: {
+            fb: ['https://m.facebook.com/story.php?story_fbid=pfbid0JcKvbRmy6FSiJgGDYX6f4QCyY2EwGWeLEiL95a8fCE7e7Qsj7uVZE4o4jyq8HhJWl&id=100070763990011&mibextid=WC7FNe'],
+        }
     };
 
     const blog3: Blog = {
