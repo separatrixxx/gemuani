@@ -46,7 +46,7 @@ export const ContactsPage = (): JSX.Element => {
 							{setLocale(router.locale).contacts_page.title3}
 						</Htag>
 						<Htag tag='l'>
-							<span className={styles.wa}>WhatsApp:</span> +995 511 251 521
+							<span className={styles.wa}>WhatsApp:</span> +995 511 251 520
 						</Htag>
 					</div>
 				</div>
