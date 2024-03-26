@@ -1,6 +1,6 @@
 import {CounterDivProps } from './CounterDiv.props';
 import styles from './CounterDiv.module.css';
-import { Htag } from 'components/Htag/Htag';
+import { Htag } from 'components/Common/Htag/Htag';
 import { removeFromCart, plusMinusCart } from 'helpers/cart.helper';
 import Delete from './delete.svg';
 import cn from 'classnames';

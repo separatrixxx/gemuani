@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useScrollY } from 'hooks/useScrollY';
 import { useResizeH } from 'hooks/useResize';
-import { Htag } from 'components/Htag/Htag';
+import { Htag } from 'components/Common/Htag/Htag';
 import Amazon from './amazon.svg';
 import Wolt from './wolt.svg';
 import { useRouter } from 'next/router';

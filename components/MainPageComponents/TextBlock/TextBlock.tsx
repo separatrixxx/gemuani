@@ -1,6 +1,6 @@
 import { TextBlockProps } from './TextBlock.props';
 import styles from './TextBlock.module.css';
-import { Htag } from 'components/Htag/Htag';
+import { Htag } from 'components/Common/Htag/Htag';
 import { LearnMore } from '../LearnMore/LearnMore';
 
 

@@ -2,7 +2,7 @@ import { EnergyCounterProps } from './EnergyCounter.props';
 import styles from './EnergyCounter.module.css';
 import { useRouter } from 'next/router';
 import { setLocale } from 'helpers/locale.helper';
-import { Htag } from 'components/Htag/Htag';
+import { Htag } from 'components/Common/Htag/Htag';
 import { useEffect, useRef, useState } from 'react';
 
 

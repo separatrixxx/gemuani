@@ -1,7 +1,7 @@
 import { SideBlockProps } from './SideBlock.props';
 import styles from './SideBlock.module.css';
 import Image from 'next/image';
-import { Htag } from 'components/Htag/Htag';
+import { Htag } from 'components/Common/Htag/Htag';
 import { LearnMore } from '../LearnMore/LearnMore';
 import cn from 'classnames';
 

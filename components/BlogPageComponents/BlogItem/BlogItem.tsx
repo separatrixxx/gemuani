@@ -1,7 +1,7 @@
 import { BlogItemProps } from './BlogItem.props';
 import styles from './BlogItem.module.css';
 import Image from 'next/image';
-import { Htag } from 'components/Htag/Htag';
+import { Htag } from 'components/Common/Htag/Htag';
 import { useRouter } from 'next/router';
 import { formatDate } from 'helpers/format.helper';
 

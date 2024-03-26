@@ -1,8 +1,8 @@
 import styles from './ShopPage.module.css';
 import { useRouter } from 'next/router';
-import { Header } from 'components/Header/Header';
-import { Footer } from 'components/Footer/Footer';
-import { TopElem } from 'components/TopElem/TopElem';
+import { Header } from 'components/HeaderComponents/Header/Header';
+import { Footer } from 'components/FooterComponents/Footer/Footer';
+import { TopElem } from 'components/Common/TopElem/TopElem';
 import { TopButton } from 'components/MainPageComponents/TopButton/TopButton';
 import { ProductsList } from 'components/ShopPageComponents/ProductsList/ProductsList';
 import { setProduction } from 'helpers/production.helper';

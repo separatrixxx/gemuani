@@ -1,6 +1,6 @@
 import { HeaderProps } from './Header.props';
 import styles from './Header.module.css';
-import { Htag } from 'components/Htag/Htag';
+import { Htag } from 'components/Common/Htag/Htag';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import Logo from './logo_icon.svg';
@@ -12,8 +12,8 @@ import { Links } from 'interfaces/components.interface';
 import { useRouter } from 'next/router';
 import { setLocale } from 'helpers/locale.helper';
 import { BurgerMenu } from 'components/MainPageComponents/BurgerMenu/BurgenMenu';
-import { HeaderLocaleChange } from 'components/HeaderLocaleChange/HeaderLocaleChange';
-import { HeaderCart } from 'components/HeaderCart/HeaderCart';
+import { HeaderLocaleChange } from 'components/HeaderComponents/HeaderLocaleChange/HeaderLocaleChange';
+import { HeaderCart } from 'components/HeaderComponents/HeaderCart/HeaderCart';
 import { getCartAll } from 'helpers/cart.helper';
 import { Cart } from 'interfaces/cart.interface';
 import cn from 'classnames';

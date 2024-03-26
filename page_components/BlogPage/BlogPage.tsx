@@ -1,12 +1,12 @@
 import styles from './BlogPage.module.css';
-import { Header } from 'components/Header/Header';
-import { Footer } from 'components/Footer/Footer';
-import { TopElem } from 'components/TopElem/TopElem';
+import { Header } from 'components/HeaderComponents/Header/Header';
+import { Footer } from 'components/FooterComponents/Footer/Footer';
+import { TopElem } from 'components/Common/TopElem/TopElem';
 import { TopButton } from 'components/MainPageComponents/TopButton/TopButton';
 import { BlogList } from 'components/BlogPageComponents/BlogList/BlogList';
 import { getBlog } from 'helpers/blog.helper';
 import { useRouter } from 'next/router';
-import { Htag } from 'components/Htag/Htag';
+import { Htag } from 'components/Common/Htag/Htag';
 import { setLocale } from 'helpers/locale.helper';
 import { useEffect, useState } from 'react';
 import { Blog } from 'interfaces/blog.interface';

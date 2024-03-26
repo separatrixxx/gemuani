@@ -1,5 +1,5 @@
 import styles from './Footer.module.css';
-import { Htag } from 'components/Htag/Htag';
+import { Htag } from 'components/Common/Htag/Htag';
 import { setLocale } from 'helpers/locale.helper';
 import { useRouter } from 'next/router';
 import { format } from 'date-fns';
@@ -12,7 +12,7 @@ import Telegram from './tg.svg';
 import TikTok from './tt.svg';
 import X from './tw.svg';
 import { LocaleChange } from 'components/MainPageComponents/LocaleChange/LocaleChange';
-import { FooterLinks } from 'components/FooterLinks/FooterLinks';
+import { FooterLinks } from 'components/FooterComponents/FooterLinks/FooterLinks';
 import Link from 'next/link';
 
 

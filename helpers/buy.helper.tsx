@@ -1,6 +1,6 @@
 import { Buy, Cart } from "interfaces/cart.interface";
 import axios from "axios";
-import { ToastError, ToastSuccess } from "components/Toast/Toast";
+import { ToastError, ToastSuccess } from "components/Common/Toast/Toast";
 import { setLocale } from "./locale.helper";
 import { Production } from "interfaces/production.interface";
 import { setProduction } from "./production.helper";

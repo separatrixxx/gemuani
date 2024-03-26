@@ -1,6 +1,6 @@
 import { WorldBlockProps } from './WorldBlock.props';
 import styles from './WorldBlock.module.css';
-import { Htag } from 'components/Htag/Htag';
+import { Htag } from 'components/Common/Htag/Htag';
 import { ImageBlock } from '../ImageBlock/ImageBlock';
 
 

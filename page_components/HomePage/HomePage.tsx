@@ -4,13 +4,13 @@ import { setLocale } from 'helpers/locale.helper';
 import { BlogBlock } from 'components/MainPageComponents/BlogBlock/BlogBlock';
 import { MainImage } from 'components/MainPageComponents/MainImage/MainImage';
 import { TextBlock } from 'components/MainPageComponents/TextBlock/TextBlock';
-import { Header } from 'components/Header/Header';
+import { Header } from 'components/HeaderComponents/Header/Header';
+import { Footer } from 'components/FooterComponents/Footer/Footer';
+import { TopElem } from 'components/Common/TopElem/TopElem';
 import { SideBlock } from 'components/MainPageComponents/SideBlock/SideBlock';
 import { ImageBlock } from 'components/MainPageComponents/ImageBlock/ImageBlock';
 import { EnergyCounter } from 'components/MainPageComponents/EnergyCounter/EnergyCounter';
-import { Footer } from 'components/Footer/Footer';
 import { TopButton } from 'components/MainPageComponents/TopButton/TopButton';
-import { TopElem } from 'components/TopElem/TopElem';
 import { MapBlock } from 'components/MainPageComponents/MapBlock/MapBlock';
 
 

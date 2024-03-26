@@ -1,7 +1,7 @@
 import { CartItemProps } from './CartItem.props';
 import styles from './CartItem.module.css';
 import Image from 'next/image';
-import { Htag } from 'components/Htag/Htag';
+import { Htag } from 'components/Common/Htag/Htag';
 import { useRouter } from 'next/router';
 import { CounterDiv } from 'components/ProductPageComponents/CounterDiv/CounterDiv';
 import { useEffect, useState } from 'react';

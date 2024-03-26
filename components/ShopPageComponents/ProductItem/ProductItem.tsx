@@ -1,7 +1,7 @@
 import { ProductItemProps } from './ProductItem.props';
 import styles from './ProductItem.module.css';
 import Image from 'next/image';
-import { Htag } from 'components/Htag/Htag';
+import { Htag } from 'components/Common/Htag/Htag';
 import { useRouter } from 'next/router';
 import Add from './add.svg';
 import { addToCart, getCart, removeFromCart } from 'helpers/cart.helper';
@@ -12,7 +12,7 @@ import { motion } from 'framer-motion';
 export const ProductItem = ({ id, image, image_1, imageFruit, title, price, sort, setAllCount, setCart }: ProductItemProps): JSX.Element => {
     const router = useRouter();
 
-	const [count, setCount] = useState<number>(0);
+	const [_, setCount] = useState<number>(0);
 	const [isAdded, setIsAdded] = useState<boolean>(false);
 
 	useEffect(() => {

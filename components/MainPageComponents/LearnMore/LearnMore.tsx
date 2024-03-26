@@ -1,6 +1,6 @@
 import { LearnMoreProps } from './LearnMore.props';
 import styles from './LearnMore.module.css';
-import { Htag } from 'components/Htag/Htag';
+import { Htag } from 'components/Common/Htag/Htag';
 import { setLocale } from 'helpers/locale.helper';
 import { useRouter } from 'next/router';
 import Arrow from './arrow.svg';

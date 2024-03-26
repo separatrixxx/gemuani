@@ -1,10 +1,9 @@
 import styles from './PartnersPage.module.css';
 import { useRouter } from 'next/router';
-import { Htag } from 'components/Htag/Htag';
-import { Header } from 'components/Header/Header';
-import { Footer } from 'components/Footer/Footer';
+import { Header } from 'components/HeaderComponents/Header/Header';
+import { Footer } from 'components/FooterComponents/Footer/Footer';
+import { TopElem } from 'components/Common/TopElem/TopElem';
 import { setLocale } from 'helpers/locale.helper';
-import { TopElem } from 'components/TopElem/TopElem';
 import { TopButton } from 'components/MainPageComponents/TopButton/TopButton';
 import Partner1 from './partner1.svg';
 import Partner2 from './partner2.svg';
@@ -12,8 +11,8 @@ import Partner3 from './partner3.svg';
 import Partner4 from './partner4.svg';
 import Partner5 from './partner5.svg';
 import Partner6 from './partner6.svg';
-import cn from 'classnames';
 import { PadBlock } from 'components/MainPageComponents/PadBlock/PadBlock';
+import cn from 'classnames';
 
 
 export const PartnersPage = (): JSX.Element => {

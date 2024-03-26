@@ -1,6 +1,6 @@
 import { DuoBlockProps } from './DuoBlock.props';
 import styles from './DuoBlock.module.css';
-import { Htag } from 'components/Htag/Htag';
+import { Htag } from 'components/Common/Htag/Htag';
 import cn from 'classnames';
 
 

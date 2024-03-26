@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from "axios";
 import { Blog } from "interfaces/blog.interface";
 import { setLocale } from "./locale.helper";
-import { ToastError, ToastSuccess } from "components/Toast/Toast";
+import { ToastError, ToastSuccess } from "components/Common/Toast/Toast";
 
 
 export function getBlog(): Blog[] {

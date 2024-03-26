@@ -3,7 +3,7 @@ import styles from './ImageBlock.module.css';
 import { setLocale } from 'helpers/locale.helper';
 import { useRouter } from 'next/router';
 import { Ticker } from '../Ticker/Ticker';
-import { Htag } from 'components/Htag/Htag';
+import { Htag } from 'components/Common/Htag/Htag';
 import Image from 'next/image';
 import { useResizeW } from 'hooks/useResize';
 

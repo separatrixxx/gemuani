@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import Arrow from './arrow.svg';
 import { setLocale } from 'helpers/locale.helper';
 import Link from 'next/link';
-import { Htag } from 'components/Htag/Htag';
+import { Htag } from 'components/Common/Htag/Htag';
 
 
 export const ShopBlock = ({ text, link, image, title }: ShopBlockProps): JSX.Element => {

@@ -1,6 +1,6 @@
 import { FooterLinksProps } from './FooterLinks.props';
 import styles from './FooterLinks.module.css';
-import { Htag } from 'components/Htag/Htag';
+import { Htag } from 'components/Common/Htag/Htag';
 
 
 export const FooterLinks = ({ title, children }: FooterLinksProps): JSX.Element => {

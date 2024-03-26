@@ -1,7 +1,7 @@
 import { ProductInfoProps } from './ProductInfo.props';
 import styles from './ProductInfo.module.css';
 import Image from 'next/image';
-import { Htag } from 'components/Htag/Htag';
+import { Htag } from 'components/Common/Htag/Htag';
 import { BuyButton } from '../BuyButton/BuyButton';
 import { setLocale } from 'helpers/locale.helper';
 import { useRouter } from 'next/router';

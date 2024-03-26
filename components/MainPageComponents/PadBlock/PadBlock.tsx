@@ -1,6 +1,7 @@
 import { PadBlockProps } from './PadBlock.props';
 import styles from './PadBlock.module.css';
-import { Htag } from 'components/Htag/Htag';
+import { Htag } from 'components/Common/Htag/Htag';
+
 
 export const PadBlock = ({ title }: PadBlockProps): JSX.Element => {
 	return (

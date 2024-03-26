@@ -1,6 +1,6 @@
 import { SlideProps } from './Slide.props';
 import styles from './Slide.module.css';
-import { Htag } from 'components/Htag/Htag';
+import { Htag } from 'components/Common/Htag/Htag';
 import Image from 'next/image';
 import { useResizeW } from 'hooks/useResize';
 

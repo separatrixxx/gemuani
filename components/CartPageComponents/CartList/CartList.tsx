@@ -1,7 +1,7 @@
 import { CartListProps } from './CartList.props';
 import styles from './CartList.module.css';
 import { CartItem } from '../CartItem/CartItem';
-import { Htag } from 'components/Htag/Htag';
+import { Htag } from 'components/Common/Htag/Htag';
 import { useRouter } from 'next/router';
 import { setLocale } from 'helpers/locale.helper';
 import { useState } from 'react';

@@ -1,6 +1,6 @@
 import { TickerProps } from './Ticker.props';
 import styles from './Ticker.module.css';
-import { Htag } from 'components/Htag/Htag';
+import { Htag } from 'components/Common/Htag/Htag';
 import cn from 'classnames';
 
 

@@ -1,12 +1,12 @@
 import styles from './ContactsPage.module.css';
 import { useRouter } from 'next/router';
-import { Htag } from 'components/Htag/Htag';
-import { Header } from 'components/Header/Header';
-import { Footer } from 'components/Footer/Footer';
+import { Htag } from 'components/Common/Htag/Htag';
+import { Header } from 'components/HeaderComponents/Header/Header';
+import { Footer } from 'components/FooterComponents/Footer/Footer';
+import { TopElem } from 'components/Common/TopElem/TopElem';
 import { setLocale } from 'helpers/locale.helper';
 import { ContactsForm } from 'components/ContactsPageComponents/ContactsForm/ContactsForm';
 import Arrow from './arrow.svg';
-import { TopElem } from 'components/TopElem/TopElem';
 import { TopButton } from 'components/MainPageComponents/TopButton/TopButton';
 import { Toaster } from 'react-hot-toast';
 import { PadBlock } from 'components/MainPageComponents/PadBlock/PadBlock';

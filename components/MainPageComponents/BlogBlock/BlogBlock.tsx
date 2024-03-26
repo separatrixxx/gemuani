@@ -1,7 +1,7 @@
 import { BlogBlockProps } from './BlogBlock.props';
 import styles from './BlogBlock.module.css';
 import Pattern from './pattern.svg';
-import { Htag } from 'components/Htag/Htag';
+import { Htag } from 'components/Common/Htag/Htag';
 import { LearnMore } from '../LearnMore/LearnMore';
 
 

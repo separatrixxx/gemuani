@@ -3,7 +3,7 @@ import styles from './ErrorPage.module.css';
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { setLocale } from "helpers/locale.helper";
-import { Htag } from 'components/Htag/Htag';
+import { Htag } from 'components/Common/Htag/Htag';
 import Logo from './logo_icon.svg';
 import Mountain from './mountain.svg';
 

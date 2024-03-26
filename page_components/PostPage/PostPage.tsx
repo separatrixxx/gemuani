@@ -1,10 +1,10 @@
 import { PostPageProps } from './PostPage.props';
 import styles from './PostPage.module.css';
-import { Header } from 'components/Header/Header';
-import { Footer } from 'components/Footer/Footer';
-import { TopElem } from 'components/TopElem/TopElem';
+import { Header } from 'components/HeaderComponents/Header/Header';
+import { Footer } from 'components/FooterComponents/Footer/Footer';
+import { TopElem } from 'components/Common/TopElem/TopElem';
 import { TopButton } from 'components/MainPageComponents/TopButton/TopButton';
-import { Htag } from 'components/Htag/Htag';
+import { Htag } from 'components/Common/Htag/Htag';
 import Arrow from './arrow.svg';
 import { useRouter } from 'next/router';
 import { PostInfo } from 'components/PostPageComponents/PostInfo/PostInfo';

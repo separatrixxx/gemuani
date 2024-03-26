@@ -1,6 +1,6 @@
 import { MapBlockProps } from './MapBlock.props';
 import styles from './MapBlock.module.css';
-import { Htag } from 'components/Htag/Htag';
+import { Htag } from 'components/Common/Htag/Htag';
 import Map from './map.svg';
 import { motion } from 'framer-motion';
 import { useState } from 'react';

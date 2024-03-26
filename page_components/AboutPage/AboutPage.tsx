@@ -1,11 +1,11 @@
 import styles from './AboutPage.module.css';
 import { useRouter } from 'next/router';
 import { setLocale } from 'helpers/locale.helper';
-import { Htag } from 'components/Htag/Htag';
-import { Header } from 'components/Header/Header';
-import { Footer } from 'components/Footer/Footer';
+import { Htag } from 'components/Common/Htag/Htag';
+import { Header } from 'components/HeaderComponents/Header/Header';
+import { Footer } from 'components/FooterComponents/Footer/Footer';
 import { AboutImageBlock } from 'components/AboutPageComponents/AboutImageBlock/AboutImageBlock';
-import { TopElem } from 'components/TopElem/TopElem';
+import { TopElem } from 'components/Common/TopElem/TopElem';
 import { TopButton } from 'components/MainPageComponents/TopButton/TopButton';
 import { PadBlock } from 'components/MainPageComponents/PadBlock/PadBlock';
 import { DuoBlock } from 'components/AboutPageComponents/DuoBlock/DuoBlock';

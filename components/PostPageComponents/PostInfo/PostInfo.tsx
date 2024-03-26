@@ -1,7 +1,7 @@
 import { PostInfoProps } from './PostInfo.props';
 import styles from './PostInfo.module.css';
 import Image from 'next/image';
-import { Htag } from 'components/Htag/Htag';
+import { Htag } from 'components/Common/Htag/Htag';
 import { useRouter } from 'next/router';
 import { formatDate } from 'helpers/format.helper';
 import { setLocale } from 'helpers/locale.helper';
