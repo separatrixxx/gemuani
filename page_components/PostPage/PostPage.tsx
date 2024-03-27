@@ -3,7 +3,7 @@ import styles from './PostPage.module.css';
 import { Header } from 'components/HeaderComponents/Header/Header';
 import { Footer } from 'components/FooterComponents/Footer/Footer';
 import { TopElem } from 'components/Common/TopElem/TopElem';
-import { TopButton } from 'components/MainPageComponents/TopButton/TopButton';
+import { TopButton } from 'components/Common/TopButton/TopButton';
 import { Htag } from 'components/Common/Htag/Htag';
 import Arrow from './arrow.svg';
 import { useRouter } from 'next/router';

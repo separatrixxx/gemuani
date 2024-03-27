@@ -10,7 +10,7 @@ import { TopElem } from 'components/Common/TopElem/TopElem';
 import { SideBlock } from 'components/MainPageComponents/SideBlock/SideBlock';
 import { ImageBlock } from 'components/MainPageComponents/ImageBlock/ImageBlock';
 import { EnergyCounter } from 'components/MainPageComponents/EnergyCounter/EnergyCounter';
-import { TopButton } from 'components/MainPageComponents/TopButton/TopButton';
+import { TopButton } from 'components/Common/TopButton/TopButton';
 import { MapBlock } from 'components/MainPageComponents/MapBlock/MapBlock';
 
 

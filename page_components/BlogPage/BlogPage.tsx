@@ -2,7 +2,7 @@ import styles from './BlogPage.module.css';
 import { Header } from 'components/HeaderComponents/Header/Header';
 import { Footer } from 'components/FooterComponents/Footer/Footer';
 import { TopElem } from 'components/Common/TopElem/TopElem';
-import { TopButton } from 'components/MainPageComponents/TopButton/TopButton';
+import { TopButton } from 'components/Common/TopButton/TopButton';
 import { BlogList } from 'components/BlogPageComponents/BlogList/BlogList';
 import { getBlog } from 'helpers/blog.helper';
 import { useRouter } from 'next/router';

@@ -5,7 +5,7 @@ import { Header } from 'components/HeaderComponents/Header/Header';
 import { Footer } from 'components/FooterComponents/Footer/Footer';
 import { TopElem } from 'components/Common/TopElem/TopElem';
 import { setLocale } from 'helpers/locale.helper';
-import { TopButton } from 'components/MainPageComponents/TopButton/TopButton';
+import { TopButton } from 'components/Common/TopButton/TopButton';
 import { useEffect, useState } from 'react';
 import { getCartAll, getCartCount, getTotalPrice } from 'helpers/cart.helper';
 import { Cart } from 'interfaces/cart.interface';

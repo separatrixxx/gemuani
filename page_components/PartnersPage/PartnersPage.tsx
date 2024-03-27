@@ -4,7 +4,7 @@ import { Header } from 'components/HeaderComponents/Header/Header';
 import { Footer } from 'components/FooterComponents/Footer/Footer';
 import { TopElem } from 'components/Common/TopElem/TopElem';
 import { setLocale } from 'helpers/locale.helper';
-import { TopButton } from 'components/MainPageComponents/TopButton/TopButton';
+import { TopButton } from 'components/Common/TopButton/TopButton';
 import Partner1 from './partner1.svg';
 import Partner2 from './partner2.svg';
 import Partner3 from './partner3.svg';

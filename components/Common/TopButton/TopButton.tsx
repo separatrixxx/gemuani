@@ -11,6 +11,7 @@ import Wolt from './wolt.svg';
 import { useRouter } from 'next/router';
 import { setLocale } from 'helpers/locale.helper';
 import cn from 'classnames';
+import { amazonLink, woltLink } from 'helpers/links.helper';
 
 
 export const TopButton = ({ isShop }: TopButtonProps): JSX.Element => {
@@ -70,13 +71,13 @@ export const TopButton = ({ isShop }: TopButtonProps): JSX.Element => {
 					<></>
 				}
 				<a rel='noreferrer' target='_blank' aria-label='amazon link'
-					href='https://www.amazon.com/GEMUANI-Freeze-Dried-Feijoa-Crisps/dp/B0C3RP22G2/ref=sr_1_2?keywords=GEMUANI&qid=1706684437&sr=8-2'>
+					href={amazonLink}>
 					<Htag tag='xl' className={styles.shopLink}>
 						<Amazon />
 					</Htag>
 				</a>
 				<a rel='noreferrer' target='_blank' aria-label='wolt link'
-					href='https://wolt.com/ka/geo/tbilisi/venue/gemuani-abashidze'>
+					href={woltLink}>
 					<Htag tag='xl' className={styles.shopLink}>
 						<Wolt />
 					</Htag>

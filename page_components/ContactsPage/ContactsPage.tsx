@@ -7,7 +7,7 @@ import { TopElem } from 'components/Common/TopElem/TopElem';
 import { setLocale } from 'helpers/locale.helper';
 import { ContactsForm } from 'components/ContactsPageComponents/ContactsForm/ContactsForm';
 import Arrow from './arrow.svg';
-import { TopButton } from 'components/MainPageComponents/TopButton/TopButton';
+import { TopButton } from 'components/Common/TopButton/TopButton';
 import { Toaster } from 'react-hot-toast';
 import { PadBlock } from 'components/MainPageComponents/PadBlock/PadBlock';
 

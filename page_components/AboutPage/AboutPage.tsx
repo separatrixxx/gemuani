@@ -6,7 +6,7 @@ import { Header } from 'components/HeaderComponents/Header/Header';
 import { Footer } from 'components/FooterComponents/Footer/Footer';
 import { AboutImageBlock } from 'components/AboutPageComponents/AboutImageBlock/AboutImageBlock';
 import { TopElem } from 'components/Common/TopElem/TopElem';
-import { TopButton } from 'components/MainPageComponents/TopButton/TopButton';
+import { TopButton } from 'components/Common/TopButton/TopButton';
 import { PadBlock } from 'components/MainPageComponents/PadBlock/PadBlock';
 import { DuoBlock } from 'components/AboutPageComponents/DuoBlock/DuoBlock';
 
