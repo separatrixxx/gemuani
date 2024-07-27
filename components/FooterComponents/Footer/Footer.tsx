@@ -14,6 +14,7 @@ import X from './tw.svg';
 import { LocaleChange } from 'components/MainPageComponents/LocaleChange/LocaleChange';
 import { FooterLinks } from 'components/FooterComponents/FooterLinks/FooterLinks';
 import Link from 'next/link';
+import { facebookLink, instagramLink, linkedinLink, telegramLink, tiktokLink, twitterLink, youtubeLink } from 'helpers/links.helper';
 
 
 export const Footer = (): JSX.Element => {
@@ -24,25 +25,25 @@ export const Footer = (): JSX.Element => {
             <div className={styles.footerLinks}>
                 <FooterLinks title={setLocale(router.locale).footer.title1}>
                     <div className={styles.socialMediaBlock}>
-                        <a target='_blank' rel="noreferrer" href='https://www.facebook.com/profile.php?id=61556484098079&mibextid=LQQJ4d' aria-label="Facebook">
+                        <a target='_blank' rel="noreferrer" href={facebookLink} aria-label="Facebook">
                             <Facebook />
                         </a>
-                        <a target='_blank' rel="noreferrer" href='https://www.instagram.com/gemuani.ge?igsh=N2ZiMXpjZzhjOHk=' aria-label="Instagram">
+                        <a target='_blank' rel="noreferrer" href={instagramLink} aria-label="Instagram">
                             <Instagram />
                         </a>
-                        <a target='_blank' rel="noreferrer" href='https://www.linkedin.com/company/gemuani-healthy-food' aria-label="Linkedin">
+                        <a target='_blank' rel="noreferrer" href={linkedinLink} aria-label="Linkedin">
                             <Linkedin />
                         </a>
-                        <a target='_blank' rel="noreferrer" href='https://www.youtube.com/@gemuani' aria-label="YouTube">
+                        <a target='_blank' rel="noreferrer" href={youtubeLink} aria-label="YouTube">
                             <YouTube />
                         </a>
-                        <a target='_blank' rel="noreferrer" href='https://t.me/gemuani' aria-label="Telegram">
+                        <a target='_blank' rel="noreferrer" href={telegramLink} aria-label="Telegram">
                             <Telegram />
                         </a>
-                        <a target='_blank' rel="noreferrer" href='https://www.tiktok.com/@_gemuani_?_t=8h0NaOEWItO' aria-label="TikTok">
+                        <a target='_blank' rel="noreferrer" href={tiktokLink} aria-label="TikTok">
                             <TikTok />
                         </a>
-                        <a target='_blank' rel="noreferrer" href='https://twitter.com/GEMUANI_LTD' aria-label="X">
+                        <a target='_blank' rel="noreferrer" href={twitterLink} aria-label="X">
                             <X />
                         </a>
                     </div>

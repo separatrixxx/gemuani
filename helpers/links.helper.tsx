@@ -1,2 +1,9 @@
-export let amazonLink = 'https://www.amazon.com/stores/Gemuani/page/0A3BAA6D-C584-40F5-B521-E30ADF7D9B3D?ref_=ast_bln';
-export let woltLink = 'https://wolt.com/ka/geo/tbilisi/venue/gemuani-abashidze';
+export const amazonLink = 'https://www.amazon.com/stores/Gemuani/page/0A3BAA6D-C584-40F5-B521-E30ADF7D9B3D?ref_=ast_bln';
+export const woltLink = 'https://wolt.com/ka/geo/tbilisi/venue/gemuani-abashidze';
+export const facebookLink = 'https://www.facebook.com/profile.php?id=61562351907733&mibextid=LQQJ4d';
+export const instagramLink = 'https://www.instagram.com/healthy.food.ge?igsh=djhjd25vbzdwdjAy';
+export const linkedinLink = 'https://www.linkedin.com/company/gemuani-healthy-food';
+export const youtubeLink = 'https://www.youtube.com/@gemuani';
+export const telegramLink = 'https://t.me/gemuani';
+export const tiktokLink = 'https://www.tiktok.com/@_gemuani_?_t=8h0NaOEWItO';
+export const twitterLink = 'https://twitter.com/GEMUANI_LTD';
