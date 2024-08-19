@@ -46,7 +46,15 @@ export function getBlog(): Blog[] {
         }
     };
 
-    return [blog1, blog2, blog3, blog4];
+    const blog5: Blog = {
+        id: '4',
+        image: ['/BlogImg5_1.webp', '/BlogImg5_2.webp', '/BlogImg5_3.webp', '/BlogImg5_4.webp', '/BlogImg5_5.webp', '/BlogImg5_6.webp'],
+        title: 'USAID Delegation Visits Gemuani Plant',
+        text: "Our Gemuani plant was recently visited by a delegation from USAID. During the visit, we discussed prospects for further cooperation and potential investments in the development of our production. We thank USAID for their interest and support of our activities. This collaboration will allow us to expand our production capacities, implement innovative technologies, and improve the quality of our products.",
+        date: '2024-08-19',
+    };
+
+    return [blog5, blog1, blog2, blog3, blog4];
 }
 
 // export async function getBlog(setBlog: (e: any) => void) {
