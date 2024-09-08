@@ -32,8 +32,13 @@
 .infoBlock {
 	display: grid;
 
+	width: fit-content;
 	height: fit-content;
 	gap: 20px;
+}
+
+.infoBlock > a {
+	width: fit-content;
 }
 
 .view {
