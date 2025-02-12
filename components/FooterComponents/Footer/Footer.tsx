@@ -83,7 +83,7 @@ export const Footer = (): JSX.Element => {
                 <LocaleChange />
             </div>
             <div className={styles.byBlock}>
-                <a target='_blank' rel="noreferrer" href='http://t.me/separatrix' aria-label="banana codes">
+                <a target='_blank' rel="noreferrer" href='http://t.me/separatrix' aria-label="by separatrix">
                     <Htag tag='s' className={styles.bySeparatrix}>
                         by separatrix
                     </Htag>
