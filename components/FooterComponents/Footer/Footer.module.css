@@ -108,16 +108,16 @@
 	background: var(--dark);
 }
 
-.byBanana {
+.bySeparatrix {
 	transition-duration: 300ms;
 
 	color: var(--white);
 }
 
-.byBanana:active {
+.bySeparatrix:active {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-	color: var(--banana);
+	color: var(--accent);
 }
 
 @media (min-width: 1024px) {
@@ -133,10 +133,10 @@
 		fill: var(--light);
 	}
 
-	.byBanana:hover {
+	.bySeparatrix:hover {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-		color: var(--banana);
+		color: var(--accent);
 	}
 }
 
